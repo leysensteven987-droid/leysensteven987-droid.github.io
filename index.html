@@ -18,6 +18,7 @@
     --border: #1e3530;
     --crimson: #e8365d;
     --teal: #00ffe0;
+    --toshi: #8fd9ff;
     --text: #d8f0ea;
     --muted: #5a8a7a;
     --dim: #3a6058;
@@ -130,6 +131,86 @@
   }
   a.card .go::after { content: " →"; }
 
+  /* ── Tōshi: dedicated featured block (her own brand blue) ── */
+  a.toshi {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 660px;            /* aligns with the 2-card grid (320·2 + 20 gap) */
+    margin: 20px 0 0;
+    text-decoration: none;
+    background:
+      radial-gradient(120% 160% at 88% -20%, #15394433 0%, transparent 55%),
+      var(--card);
+    border: 1px solid #2a4f5a;
+    border-radius: 10px;
+    padding: 24px 28px;
+    overflow: hidden;
+    animation: fadeIn 0.9s ease;
+    transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  a.toshi:hover {
+    border-color: var(--toshi);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px #0007, 0 0 22px #8fd9ff33;
+  }
+  a.toshi .kanji {
+    position: absolute;
+    top: -24px;
+    right: 8px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 128px;
+    color: var(--toshi);
+    opacity: 0.09;
+    pointer-events: none;
+    line-height: 1;
+  }
+  a.toshi .eye {
+    width: 46px;
+    height: 46px;
+    flex: none;
+    filter: drop-shadow(0 0 10px #8fd9ffaa);
+  }
+  a.toshi .body { flex: 1; min-width: 0; position: relative; }
+  a.toshi .eyebrow {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--toshi);
+    text-transform: uppercase;
+  }
+  a.toshi h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #e8f5f2;
+    margin: 9px 0 7px;
+  }
+  a.toshi h2 b {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--toshi);
+    font-weight: 700;
+    margin-right: 9px;
+  }
+  a.toshi p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  a.toshi .go {
+    margin-top: 14px;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--toshi);
+    letter-spacing: 0.05em;
+  }
+  a.toshi .go::after { content: " →"; }
+  @media (max-width: 720px) {
+    a.toshi { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+
   footer {
     margin-top: 64px;
     text-align: center;
@@ -180,6 +261,17 @@
       <div class="go">Open keynote</div>
     </a>
   </main>
+
+  <a class="toshi" href="/kage-gumi-presentation/toshi.html">
+    <span class="kanji">透</span>
+    <svg class="eye" viewBox="0 0 24 24" fill="none" stroke="#8fd9ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+    <div class="body">
+      <div class="eyebrow">The tool · Chrome extension</div>
+      <h2><b>透</b>Tōshi - The Seer</h2>
+      <p>Lift the veil - an in-browser inspector that shows what any Esko WebCenter page is built from. Hover to highlight, pick to locate, X-ray the whole page, jump straight to any editor.</p>
+      <div class="go">Meet Tōshi</div>
+    </div>
+  </a>
 
   <footer>
     <div class="punchline">The crew presents itself.</div>
