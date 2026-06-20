@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-06-19<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-06-20<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -271,85 +271,85 @@
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
       <div class="tags"><span class="tag claude">Claude</span><span class="tag">Policy</span></div>
-      <h2>US Export-Control Order Shuts Down Fable 5 and Mythos 5 Worldwide</h2>
-      <p class="why">On June 12, Anthropic received a US government export-control directive and disabled global access to Claude Fable 5 and Mythos 5 within hours - the most drastic government action ever taken against a deployed commercial AI model. Fable 5 had launched just 3 days earlier with the most advanced cybersecurity-analysis capabilities ever released publicly. The order stems from national security concerns about the model's vulnerability-finding power and from a deeper conflict over Anthropic's refusal to strip safety constraints for mass surveillance and autonomous weapons.</p>
+      <h2>Fable 5 Stays Dark: Enterprise Teams Rethink AI Sovereignty a Week After US Shutdown</h2>
+      <p class="why">Eight days after the US export-control directive pulled Claude Fable 5 and Mythos 5 offline on June 12, Anthropic has not restored access and has offered no public timeline. The forced shutdown - triggered by the model's advanced vulnerability-detection capabilities and a reported jailbreak - is now reverberating through enterprise security teams who had bet their roadmaps on a single provider. Hardware sovereignty has moved from a theoretical concern to an active incident playbook.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Fable 5 launched June 9 with 95% on SWE-bench Verified and native vulnerability-detection capability; the US government directive arrived June 12 at 5:21 PM ET and disabled the model globally within hours</li>
-        <li>The DoD classified Anthropic as a "supply chain risk" in March 2026; the export order is the first enforcement action to pull a live frontier model from production worldwide</li>
-        <li>Anthropic says the core conflict is its refusal to unlock Fable/Mythos for mass domestic surveillance and fully autonomous weapons - a direct standoff between AI safety principles and government security demands</li>
+        <li>The directive suspended access by all foreign nationals regardless of location; because Anthropic cannot filter by nationality in real time, both models remain dark for all users worldwide eight days on</li>
+        <li>Security firms including Snyk are publishing multi-provider routing recommendations and post-mortems triggered directly by the shutdown event</li>
+        <li>Anthropic says the standoff stems from its refusal to strip safety constraints for domestic surveillance and autonomous-weapons use - a live test of whether commercial AI safety principles can survive government pressure</li>
       </ul>
       <div class="sources">
-        <a href="https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/">Fortune</a>
+        <a href="https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/">TechCrunch</a>
         <a href="https://time.com/article/2026/06/13/anthropic-fable-mythos-ban-US-security/">TIME</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Agents</span></div>
-      <h2>NVIDIA Open-Sources Its Agent Toolkit to Close the Gap Between Demo and Production</h2>
-      <p class="why">At GTC Taipei (June 1-4), NVIDIA open-sourced a comprehensive Agent Toolkit - anchored by the NemoClaw enterprise reference design - directly targeting the three barriers that have kept AI agents stuck in prototypes: security isolation, orchestration complexity, and observability at scale. With $201.9 billion in enterprise agentic AI spend projected for 2026, the race to own production-grade agent infrastructure just gained a major new entrant.</p>
+      <div class="tags"><span class="tag">Open Source</span><span class="tag">Models</span></div>
+      <h2>MiniMax M3 Breaks the Open-Weight Ceiling with 1M-Token Context and Frontier Coding</h2>
+      <p class="why">Launched June 1 by Shanghai-based MiniMax, M3 is the first open-weight model to combine frontier-level software engineering performance, a native one-million-token context window, and multimodal computer-use in a single package. Weights arrived on Hugging Face June 7 and the technical paper on MiniMax Sparse Attention posted to arXiv June 11, triggering developer evaluations still actively underway. M3 challenges the assumption that frontier capability requires proprietary access.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>NemoClaw layers runtime sandboxing, privacy routing, and network guardrails onto OpenClaw, enabling controlled production rollout in under an hour without vendor lock-in</li>
-        <li>Nemotron 3 Ultra, an open model built for long-running multi-step agents, shipped alongside the toolkit to give teams a compute-efficient backbone for complex agent loops</li>
-        <li>Gartner projects 40% of enterprise apps will embed task-specific agents by year-end 2026 - up from under 5% in 2025 - with total spend reaching $201.9 billion, up 141% year-over-year</li>
+        <li>MiniMax Sparse Attention reduces per-token compute to 1/20th of prior models at 1M context, delivering 9x faster prefill and 15x faster decoding - making long-document and long-code tasks practical at low cost</li>
+        <li>SWE-Bench Pro score of 59.0% surpasses GPT-5.5 and Gemini 3.1 Pro on software engineering at API prices of roughly $0.30 per million input tokens</li>
+        <li>Developer evaluations on Hugging Face and community forums are testing long-context retrieval, coding, and computer-use tasks with results largely holding up to initial benchmark claims</li>
       </ul>
       <div class="sources">
-        <a href="https://nvidianews.nvidia.com/news/enterprise-software-leaders-build-ai-agents-with-nvidia">NVIDIA Newsroom</a>
-        <a href="https://beam.ai/agentic-insights/jensen-huangs-nvidia-gtc-2026-keynote-5-announcements-that-change-enterprise-ai-strategy">Beam AI</a>
+        <a href="https://the-decoder.com/minimax-m3-open-weight-model-with-a-million-token-context-challenges-proprietary-leaders/">The Decoder</a>
+        <a href="https://datanorth.ai/news/minimax-launches-m3">DataNorth</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Policy</span><span class="tag">Regulation</span></div>
-      <h2>Colorado Rewrites Its Landmark AI Law Just Weeks Before Enforcement Was Set to Begin</h2>
-      <p class="why">Colorado's original AI Act - the most ambitious US state AI law ever enacted - was repealed and replaced by SB 26-189, signed May 14, 2026, just weeks before its scheduled enforcement date. The revised law pushes enforcement to January 1, 2027, significantly scales back employer obligations, and reserves enforcement exclusively to the attorney general with no private right of action. The rapid retreat illustrates how quickly aggressive AI regulation bends under industry and legal pressure.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Safety</span></div>
+      <h2>Congress Proposes First Federal AI Framework to Freeze State Laws and Fill the Vacuum</h2>
+      <p class="why">The Great American Artificial Intelligence Act, introduced June 4 as a bipartisan 269-page discussion draft, would establish the first comprehensive US federal AI framework and preempt state AI laws for three years. It arrives as Colorado delayed its own landmark AI Act to January 2027 and 25+ other states push conflicting frameworks - creating exactly the patchwork the federal bill aims to prevent.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>X.AI filed for a preliminary injunction against the original law; the Colorado AG agreed to suspend enforcement pending resolution, then the legislature preemptively rewrote the act</li>
-        <li>SB 26-189 eliminates many employer obligations, delays the effective date to January 1, 2027, and adds a 60-day right-to-cure provision that itself expires in 2030</li>
-        <li>With 25+ US states having passed AI laws, Colorado's rewrite signals a trend toward industry-friendly regulatory resets ahead of 2027 enforcement cycles nationwide</li>
+        <li>The bill directs the Attorney General to challenge existing state AI laws on commerce clause and First Amendment grounds, with the preemption window expiring in December 2029</li>
+        <li>Colorado's revised SB 26-189, signed May 14, replaced its original Act with a narrower automated-decision-making law effective January 2027 - a rapid rewrite signaling how quickly ambitious AI regulation retreats under legal pressure</li>
+        <li>Industry groups and civil liberties advocates are submitting comment letters this month, making June the critical shaping window for the final federal text</li>
       </ul>
       <div class="sources">
-        <a href="https://iapp.org/news/a/the-colorado-ai-act-what-you-need-to-know">IAPP</a>
-        <a href="https://www.nortonrosefulbright.com/en-us/knowledge/publications/18733d31/colorado-enacts-revised-ai-law">Norton Rose Fulbright</a>
+        <a href="https://www.techpolicy.press/unpacking-the-great-american-artificial-intelligence-act-of-2026/">TechPolicy.Press</a>
+        <a href="https://www.goodwinlaw.com/en/insights/publications/2026/06/insights-technology-aiml-congress-state-lawmakers-racing-to-keep-up-with-ai">Goodwin Law</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Benchmarks</span></div>
-      <h2>Claude Opus 4.8 Becomes the First AI Model to Break 60 on the Intelligence Index</h2>
-      <p class="why">Released May 27, Claude Opus 4.8 scored 61.4 on the Artificial Analysis Intelligence Index - the first model ever to clear 60 by a clean margin, taking the top spot from GPT-5.5 and holding it into June. The result matters because the Index correlates closely with real enterprise evaluation performance, making Opus 4.8 arguably the first case where leaderboard supremacy and production-grade utility converge cleanly at the frontier.</p>
+      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Agents</span></div>
+      <h2>Multi-Agent Systems Surge 327% as 40% of Enterprise Apps Target AI Agents by Year-End</h2>
+      <p class="why">The enterprise AI agent market is in its fastest-ever adoption sprint: Gartner projects 40% of enterprise applications will embed task-specific agents by end of 2026, up from under 5% in 2025, while Databricks counts multi-agent system deployments growing 327% in under four months. The shift marks the transition from AI-as-feature to AI-as-infrastructure across the enterprise stack.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>61.4 on the Artificial Analysis Intelligence Index - first model above 60 and a clear break from the prior cluster at 55-58 led by GPT-5.5 and Gemini 3.1 Pro</li>
-        <li>Priced at $15/$75 per million tokens (input/output), positioning Opus 4.8 as the premium flagship directly competing with OpenAI's top tier on cost per capability</li>
-        <li>June roundups place Opus 4.8, MiniMax M3 (59.0% SWE-bench Pro), and Qwen 3.7 Max ($3.75/1M tokens) as the three models setting the new frontier ceiling</li>
+        <li>Databricks reports 80% of enterprise applications shipped or updated in Q1 2026 embed at least one AI agent, versus 33% in 2024; banking and insurance lead production deployments at 47%</li>
+        <li>Three patterns dominate real production use: triage agents that route exceptions, planner agents that propose action sequences for human sign-off, and narrator agents that summarize state across disconnected systems</li>
+        <li>Gartner projects $201.9 billion in enterprise agentic AI spend for 2026 - a 141% jump year-over-year - with median time-to-value on agent deployments at 5.1 months</li>
       </ul>
       <div class="sources">
-        <a href="https://dev.to/vjswamy/latest-ai-model-releases-june-2026-roundup-49j5">DEV.to</a>
-        <a href="https://llm-stats.com/ai-news">LLM Stats</a>
+        <a href="https://www.databricks.com/resources/ebook/state-of-ai-agents">Databricks</a>
+        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag">Research</span><span class="tag">Science</span></div>
-      <h2>Generative AI Runs Climate Simulations 25x Faster by Fusing Neural Networks with Physics</h2>
-      <p class="why">Researchers have demonstrated climate models that run approximately 25 times faster than traditional simulations by combining generative neural networks with physics-based data constraints. The breakthrough addresses one of the core bottlenecks in climate science: the compute cost of running enough high-resolution simulations to model regional extremes and tipping points. If the approach generalizes, it could fundamentally change how governments and insurers plan for climate risk.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag claude">Claude</span></div>
+      <h2>Claude Opus 4.8 Leads Every Major Benchmark - and Still Isn't the Model Making Headlines</h2>
+      <p class="why">Released May 28, Claude Opus 4.8 holds the No.1 position on the Artificial Analysis Intelligence Index at 61.4 - the first model ever to clear 60 by a clean margin - and leads SWE-Bench Pro at 69.2%. The irony: with Fable 5 and Mythos 5 suspended by government order, Opus 4.8 is now Anthropic's de facto flagship by force, not by plan.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Hybrid physics-generative architecture enforces conservation laws inside the neural model, preventing the unphysical drift that made earlier purely data-driven climate emulators unreliable</li>
-        <li>25x speedup at equivalent accuracy opens ensemble runs at resolutions previously limited to supercomputer allocations, democratizing access to high-quality climate projections</li>
-        <li>Same methodology is being applied to weather forecasting, drug molecule dynamics, and any domain where a physical prior can constrain a learned generative model</li>
+        <li>61.4 on the Artificial Analysis Intelligence Index, 1.2 points ahead of GPT-5.5 - the first decisive break above the prior cluster at 55-58, independently verified by Artificial Analysis</li>
+        <li>69.2% on SWE-Bench Pro versus GPT-5.5 at 58.6%, making Opus 4.8 the unambiguous leader for agentic coding workflows at the frontier</li>
+        <li>Priced at $15/$75 per million tokens (input/output), Opus 4.8 is now Anthropic's ceiling by default while Fable 5 remains suspended under export control</li>
       </ul>
       <div class="sources">
-        <a href="https://www.buildthisnow.com/blog/guide/mechanics/ai-research-june-2026">Build This Now</a>
-        <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Crescendo AI</a>
+        <a href="https://artificialanalysis.ai/articles/claude-opus-4-8-analysis-and-benchmarks">Artificial Analysis</a>
+        <a href="https://officechai.com/ai/claude-opus-4-8-tops-artificial-analysis-intelligence-index-edges-out-gpt-5-5-with-score-of-61-4/">OfficeChai</a>
       </div>
     </article>
 <!-- TOPICS:END -->
