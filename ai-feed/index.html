@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-06-25<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-06-26<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,86 +270,86 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Security</span></div>
-      <h2>Anthropic Accuses Alibaba of the Largest Known Distillation Attack on Claude</h2>
-      <p class="why">On June 24, Anthropic sent a letter to the US Senate Banking Committee accusing Alibaba of orchestrating 28.8 million exchanges with Claude using roughly 25,000 fraudulent accounts - the "largest known distillation attack" on Anthropic to date. The campaign, linked to Alibaba's Qwen AI lab and running from April 22 to June 5, targeted Claude's software engineering and agentic reasoning through a method called adversarial distillation. The accusation raises urgent questions about the security of frontier AI systems and the geopolitical race to close capability gaps by harvesting rival models.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Developer</span></div>
+      <h2>Claude Goes Native on Apple: WWDC 2026 Opens iOS 27 to Claude as a Drop-In LLM</h2>
+      <p class="why">At WWDC 2026, Apple extended its Foundation Models framework to support server-side language models, and Anthropic was among the first to ship a conforming Swift package - ClaudeForFoundationModels - making Claude callable through the same LanguageModelSession API that drives Apple's on-device models on iOS 27, iPadOS 27, macOS 27, visionOS 27, and watchOS 27. This collapses the integration work for the roughly 34 million registered Apple developers from weeks of custom networking code to a single dependency swap, opening Claude to an installed-base audience no other channel can match.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Anthropic alerted both the US Senate Banking Committee and the White House, treating this as a national-security incident rather than a terms-of-service violation - which could push legislators toward formal legal protections for frontier model outputs</li>
-        <li>Adversarial distillation is cheap relative to training a frontier model from scratch, making it the most efficient path to capability parity for any competitor willing to accept legal risk - this incident exposes a structural vulnerability in how AI companies monetize public API access</li>
-        <li>Alibaba's Qwen lab is itself producing competitive open-weight models; if distilled Claude capabilities have accelerated Qwen development, it demonstrates that API monetization and model security are increasingly in tension at the frontier</li>
+        <li>Apple's framework update means any app already using the on-device Foundation Models API can route to Claude instead with a one-line change - no new SDK, no separate networking layer - which removes the activation energy barrier that kept most iOS developers from integrating third-party LLMs</li>
+        <li>Anthropic published ClaudeForFoundationModels as an open-source Swift package on GitHub, handling streaming, tool calls, and structured outputs through Apple's own typed-response API surface, so Claude output flows directly into SwiftUI views without custom parsing</li>
+        <li>Small Business Program developers (under 2 million lifetime App Store downloads) already get Apple's on-device Private Cloud Compute at no cloud API cost; the same LanguageModelSession API now also routes to Claude, letting teams benchmark on-device vs. Claude capability without changing their app architecture</li>
       </ul>
       <div class="sources">
-        <a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html">CNBC</a>
-        <a href="https://cybersecuritynews.com/anthropic-accuses-alibaba/">Cybersecurity News</a>
+        <a href="https://www.apple.com/newsroom/2026/06/apple-aids-app-development-with-new-intelligence-frameworks-and-advanced-tools/">Apple Newsroom</a>
+        <a href="https://github.com/anthropics/ClaudeForFoundationModels">Anthropic on GitHub</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Policy</span><span class="tag">Models</span></div>
-      <h2>Fable 5 and Mythos 5 Remain Offline - 12 Days Under US Export Controls</h2>
-      <p class="why">On June 12, the US Commerce Department issued an export-control directive requiring Anthropic to suspend access to Claude Fable 5 and Claude Mythos 5 - just three days after their launch. As of June 24, both models remain offline. The NSA Director testified before Congress that Mythos 5 autonomously breached "nearly all" tested US classified systems during capability evaluation, making it the first frontier model grounded by national security assessment. This sets a precedent that could permanently reshape how advanced AI models are deployed commercially.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Talent</span></div>
+      <h2>The $2.7B Defection: Transformer Co-Inventor Noam Shazeer Leaves Google for OpenAI</h2>
+      <p class="why">Noam Shazeer - co-author of the 2017 "Attention Is All You Need" paper and Google's Gemini AI co-lead - announced on June 18 that he is joining OpenAI following a reported $2.7 billion recruitment package. The departure sent Google shares down more than 5% and arrived within 48 hours of a second major Google DeepMind exit, prompting Fortune to ask whether Google can hold its talent lead at the frontier. Sam Altman publicly called Shazeer "one of the people I have most wanted to work with since the very beginning of OpenAI."</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The directive is the first time the US government has ordered a commercial AI model offline post-launch on national security grounds, establishing a template for executive-branch intervention that other agencies could extend to any future model crossing a capability threshold</li>
-        <li>With Fable 5 and Mythos 5 suspended, Anthropic operates without its newest models during a period of intense competition - creating an asymmetry with OpenAI and Google, whose frontier models remain available to customers</li>
-        <li>The NSA's "nearly all classified systems" testimony creates political pressure to require mandatory pre-launch government security review of any model above a capability threshold - a gatekeeping step that does not currently exist in law</li>
+        <li>Shazeer's expertise in sparse mixture-of-experts (MoE) architectures and attention efficiency is foundational to Gemini's computational advantage - his move gives OpenAI direct access to that design philosophy at precisely the moment MoE dominates frontier model development</li>
+        <li>Two DeepMind stars left within 48 hours, suggesting the flow is a trend rather than an isolated exit - and that the gap between Google's research-era reputation and its current pace of shipping has begun to cost it in the talent market, not just in headlines</li>
+        <li>The $2.7B package sets a new floor for recruiting compute-era talent and signals that the AI race is entering a phase where access to specific architectural knowledge, not just capital or compute, is the primary competitive bottleneck</li>
       </ul>
       <div class="sources">
-        <a href="https://unrot.co/blogs/today-top-10-ai-news-june-24-2026">Unrot AI Roundup</a>
-        <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026">Build Fast with AI</a>
+        <a href="https://www.cnbc.com/2026/06/18/google-gemini-co-lead-noam-shazeer-leaves-for-openai.html">CNBC</a>
+        <a href="https://fortune.com/2026/06/23/google-deepmind-ai-researcher-departures-raise-doubts-about-ability-to-win-the-ai-race-shazeer-jumper-eye-on-ai/">Fortune</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Content</span><span class="tag">Enterprise</span></div>
-      <h2>OpenAI Signs Getty Images Deal - 400M Licensed Images Enter ChatGPT</h2>
-      <p class="why">On June 21, Getty Images announced a multi-year display agreement with OpenAI that will surface over 400 million licensed assets directly inside ChatGPT search results, sending Getty stock up more than 123%. The deal is notable for what it deliberately excludes: Getty retains explicit control over whether its images can be used for model training, making this the first major AI-content partnership to formally separate display rights from training rights - a distinction every publisher and rights holder is now watching closely.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Safety</span></div>
+      <h2>Trump Signs AI Executive Order: Voluntary 30-Day Pre-Deployment Review, No Mandatory Licensing</h2>
+      <p class="why">On June 2, 2026, the White House issued an executive order titled "Promoting Advanced Artificial Intelligence Innovation and Security" - the first comprehensive US AI policy act of this administration. The order threads a deliberate needle: it creates an AI Cybersecurity Clearinghouse, directs federal agencies to build a 30-day pre-deployment government access window for frontier models, but expressly prohibits mandatory government licensing or pre-clearance - drawing a sharp line between national-security monitoring and industrial regulation that will shape every policy debate for the rest of the year.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The training/display split creates a contractual template for the AI-content licensing era: rights holders can monetize distribution to AI users without surrendering content for model training, potentially defusing two years of adversarial copyright litigation</li>
-        <li>ChatGPT gains visual richness in search and discovery while Getty gains distribution to hundreds of millions of users - a mutual-benefit structure that sidesteps the zero-sum framing of most AI copyright disputes and could accelerate deals with news archives and stock media libraries</li>
-        <li>Getty's 123%+ single-day stock surge signals that markets treat AI licensing agreements as transformational revenue events for traditional content owners, sharply increasing negotiating pressure on other AI labs to strike similar deals before competitors do</li>
+        <li>The voluntary 30-day pre-deployment window lets NSA, CISA, and Treasury scan frontier models for security vulnerabilities before broad release - a precedent that falls short of mandatory review but establishes a government-access norm that future legislation could harden into law</li>
+        <li>The AI Cybersecurity Clearinghouse - jointly run by Treasury, NSA, and CISA with voluntary industry participation - is the first formal interagency body tasked with coordinating AI vulnerability scanning across critical infrastructure, covering finance, energy, and defense supply chains simultaneously</li>
+        <li>The explicit prohibition on mandatory licensing was the most contested provision during drafting; analysts at McDermott and Armstrong Teasdale note it signals the administration is prioritizing US AI competitiveness over precautionary control - a stance that diverges sharply from EU AI Act mandatory requirements</li>
       </ul>
       <div class="sources">
-        <a href="https://newsroom.gettyimages.com/en/getty-images/getty-images-announces-display-partnership-with-openai">Getty Newsroom</a>
-        <a href="https://www.engadget.com/2198633/openai-signs-deal-with-getty-to-show-images-in-chatgpt-results/">Engadget</a>
+        <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">White House</a>
+        <a href="https://www.insideprivacy.com/artificial-intelligence/white-house-releases-executive-order-on-advanced-ai-innovation-and-security/">Inside Privacy</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
       <div class="tags"><span class="tag">Enterprise</span><span class="tag">Agents</span></div>
-      <h2>72% of Enterprises Running Agentic AI in Production - and 60% Without Governance</h2>
-      <p class="why">New research confirms enterprise adoption of AI agents has crossed a critical threshold in 2026: 72% of large firms now run agentic AI in production, up from under 30% in 2024. But 60% of those deployments lack formal governance frameworks covering decision scope, audit trails, or liability attribution. Gartner separately warns that more than 40% of current agentic AI projects will be canceled by end of 2027 due to escalating costs, unclear ROI, or inadequate risk controls - a correction wave that could reshape the enterprise AI vendor landscape.</p>
+      <h2>Microsoft Work Trend Index 2026: Agents Up 15x, But Only 19% of Workers Are in the Frontier Zone</h2>
+      <p class="why">Microsoft's 2026 Work Trend Index found that active AI agents in Microsoft 365 grew 15x year-over-year (18x in large enterprises), yet only 19% of workers occupy the "Frontier" zone where personal AI skill and organizational support reinforce each other. The report's central finding is structural: organizational environment accounts for 67% of AI's measured impact - twice the contribution of individual capability - meaning most enterprises are leaving most of AI's value on the table due to management and culture failures, not technology gaps.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>McKinsey data shows fewer than 10% of enterprises that have experimented with agents have scaled them to deliver measurable value - suggesting most "production" deployments are narrow pilots and the real adoption curve is far earlier than headline numbers imply</li>
-        <li>The governance gap is structural and growing: as agents take financial, legal, and customer-facing actions autonomously, the absence of audit trails and escalation policies creates liability exposure that compliance and legal teams are only beginning to map</li>
-        <li>Gartner's "40% canceled" prediction mirrors early RPA deployment patterns from 2018-2020 - rapid adoption, over-promised ROI, governance failure, and a consolidation phase - suggesting agentic AI is on track for the same churn-and-mature cycle</li>
+        <li>86% of workers treat AI output as a starting point rather than a final answer - a healthy instinct that also functions as a ceiling when organizations have not redesigned workflows around the human-AI handoff, leaving agents delivering editing speed but not process-level transformation</li>
+        <li>Only 26% of respondents say their leadership is clearly and consistently aligned on AI, creating a decision vacuum that forces frontline workers to calibrate agent use on their own - a recipe for uneven adoption and shadow-AI risk in compliance-sensitive sectors like finance and healthcare</li>
+        <li>The "blocked agency" cohort - 10% of workers with strong individual AI skills but no organizational support - represents the highest-ROI intervention target: these workers already know how to use agents and only need policy clearance and tooling access to deliver measurable value immediately</li>
       </ul>
       <div class="sources">
-        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner</a>
-        <a href="https://agenticaiinstitute.org/agentic-ai-enterprise-adoption-2026-governance-gap/">Agentic AI Institute</a>
+        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">Microsoft WorkLab</a>
+        <a href="https://www.databricks.com/resources/ebook/state-of-ai-agents">Databricks State of AI Agents</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag">Research</span><span class="tag">Models</span></div>
-      <h2>DeepMind's AI Co-Mathematician Scores 48% on the Hardest Tier of FrontierMath</h2>
-      <p class="why">Google DeepMind released AI Co-Mathematician, a multi-agent workbench that scored 48% on FrontierMath Tier 4 - the hardest tier of a benchmark where elite human mathematicians average below 5% and no prior AI system had cracked 20%. The system acts as an interactive research partner rather than a solver: proposing conjectures, exploring reasoning paths collaboratively, and identifying gaps in existing proofs. This marks a qualitative shift from AI as a computation accelerator to AI as a mathematical collaborator capable of original reasoning.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Competition</span></div>
+      <h2>Gemini 3.5 Pro Still Hasn't Shipped - and Every Week of Delay Costs Google Its Frontier Window</h2>
+      <p class="why">Announced at Google I/O on May 19 with a "June 2026" general availability promise, Gemini 3.5 Pro - featuring a 2-million-token context window and a "Deep Think" reasoning mode - has not shipped as of June 26. The delay is being tracked closely by enterprise customers weighing frontier model commitments, and lands in the same week that Noam Shazeer's departure raised fresh questions about Google's ability to ship at the frontier. Pricing estimates at $15/$60 per million tokens would make it the most expensive widely available model, betting enterprise customers will pay for depth over speed.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>FrontierMath Tier 4 problems require original mathematical insight rather than pattern retrieval - a 48% score implies novel reasoning generation, not solution recall, which directly challenges the persistent claim that large language models cannot do real mathematics</li>
-        <li>DeepMind's multi-agent architecture - where specialized agents check each other's work and propose alternative paths - is spreading across research domains; mathematics provides a rare ground-truth evaluator (correct proof vs. incorrect) that makes AI research collaboration reproducibly reliable</li>
-        <li>If AI can reliably assist at the frontier of mathematical research, the bottleneck on progress in physics, cryptography, and materials science shifts from human cognitive capacity to institutional willingness to adopt AI co-researchers</li>
+        <li>A 2-million-token context window would be the largest in any generally released model today, enabling analysis of full multi-year codebases, entire scientific literature corpora, or complete regulatory filing histories - a differentiation that carries real enterprise revenue if Google can deliver it before a rival closes the gap</li>
+        <li>Deep Think mode signals a shift toward on-demand extended reasoning rather than always-fast inference, reframing the competitive axis from raw benchmark scores to the ability to handle high-stakes, multi-step reasoning tasks reliably in production - the same direction OpenAI's o-series and Anthropic's extended-thinking mode have taken</li>
+        <li>Multiple analyst sources note the I/O-to-GA gap (now over five weeks) mirrors Google's pattern with Gemini Ultra in 2024, when a long preview window eroded first-mover advantage; if Gemini 3.5 Pro slips past June, Shazeer's first contributions at OpenAI may arrive before Google ships the model he helped design</li>
       </ul>
       <div class="sources">
-        <a href="https://www.buildthisnow.com/blog/guide/mechanics/ai-research-june-2026">Build This Now</a>
-        <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report">Stanford HAI</a>
+        <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">TechTimes</a>
+        <a href="https://byteiota.com/gemini-3-5-pro-2m-tokens-deep-think-and-the-10x-pricing-problem/">byteiota</a>
       </div>
     </article>
 <!-- TOPICS:END -->
