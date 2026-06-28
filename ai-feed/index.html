@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-06-26<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-06-28<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,86 +270,84 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Developer</span></div>
-      <h2>Claude Goes Native on Apple: WWDC 2026 Opens iOS 27 to Claude as a Drop-In LLM</h2>
-      <p class="why">At WWDC 2026, Apple extended its Foundation Models framework to support server-side language models, and Anthropic was among the first to ship a conforming Swift package - ClaudeForFoundationModels - making Claude callable through the same LanguageModelSession API that drives Apple's on-device models on iOS 27, iPadOS 27, macOS 27, visionOS 27, and watchOS 27. This collapses the integration work for the roughly 34 million registered Apple developers from weeks of custom networking code to a single dependency swap, opening Claude to an installed-base audience no other channel can match.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Policy</span></div>
+      <h2>US Government Clears Claude Mythos 5 for ~100 Companies and Agencies After Six-Week Blackout</h2>
+      <p class="why">Less than two weeks after forcing Anthropic to suspend Claude Fable 5 and Mythos 5 over concerns about Mythos 5's autonomous offensive cybersecurity capability, the US government granted conditional access on June 26 to roughly 100 vetted companies and federal agencies through a restricted framework called Project Glasswing. It is the first time government export controls have directly shaped which users may access a commercial AI model mid-launch - a regulatory precedent that legal analysts say could define frontier model governance for years.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Apple's framework update means any app already using the on-device Foundation Models API can route to Claude instead with a one-line change - no new SDK, no separate networking layer - which removes the activation energy barrier that kept most iOS developers from integrating third-party LLMs</li>
-        <li>Anthropic published ClaudeForFoundationModels as an open-source Swift package on GitHub, handling streaming, tool calls, and structured outputs through Apple's own typed-response API surface, so Claude output flows directly into SwiftUI views without custom parsing</li>
-        <li>Small Business Program developers (under 2 million lifetime App Store downloads) already get Apple's on-device Private Cloud Compute at no cloud API cost; the same LanguageModelSession API now also routes to Claude, letting teams benchmark on-device vs. Claude capability without changing their app architecture</li>
+        <li>Both models launched June 9; the suspension came just three days later on June 12 as the government flagged Mythos 5's autonomous cybersecurity attack capability as a national security concern - an extraordinary intervention into a live commercial product launch</li>
+        <li>Project Glasswing creates a tiered access model: Claude Fable 5 remains publicly available at $10/$50 per million tokens, while Mythos 5 is accessible only to pre-vetted enterprise and government signatories with signed agreements</li>
+        <li>Legal analysts note the directive is the first export-control mechanism applied to a commercial frontier model mid-launch and expect it to influence how other frontier labs structure their most capable model releases going forward</li>
       </ul>
       <div class="sources">
-        <a href="https://www.apple.com/newsroom/2026/06/apple-aids-app-development-with-new-intelligence-frameworks-and-advanced-tools/">Apple Newsroom</a>
-        <a href="https://github.com/anthropics/ClaudeForFoundationModels">Anthropic on GitHub</a>
+        <a href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html">CNBC</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Talent</span></div>
-      <h2>The $2.7B Defection: Transformer Co-Inventor Noam Shazeer Leaves Google for OpenAI</h2>
-      <p class="why">Noam Shazeer - co-author of the 2017 "Attention Is All You Need" paper and Google's Gemini AI co-lead - announced on June 18 that he is joining OpenAI following a reported $2.7 billion recruitment package. The departure sent Google shares down more than 5% and arrived within 48 hours of a second major Google DeepMind exit, prompting Fortune to ask whether Google can hold its talent lead at the frontier. Sam Altman publicly called Shazeer "one of the people I have most wanted to work with since the very beginning of OpenAI."</p>
+      <div class="tags"><span class="tag">Hardware</span><span class="tag">Models</span></div>
+      <h2>OpenAI and Broadcom Reveal Jalapeño: A Custom Inference Chip Built in Nine Months</h2>
+      <p class="why">Unveiled June 24, Jalapeño is OpenAI's first custom ASIC chip, co-designed with Broadcom, targeting a 50% inference cost reduction versus third-party Nvidia GPUs - a critical move for a company that reportedly spent $14 billion serving ChatGPT on rented compute in 2025. The chip was developed in an unprecedented nine-month cycle, partly using OpenAI's own models to accelerate design - the first major public example of AI-accelerated chip engineering at frontier scale.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Shazeer's expertise in sparse mixture-of-experts (MoE) architectures and attention efficiency is foundational to Gemini's computational advantage - his move gives OpenAI direct access to that design philosophy at precisely the moment MoE dominates frontier model development</li>
-        <li>Two DeepMind stars left within 48 hours, suggesting the flow is a trend rather than an isolated exit - and that the gap between Google's research-era reputation and its current pace of shipping has begun to cost it in the talent market, not just in headlines</li>
-        <li>The $2.7B package sets a new floor for recruiting compute-era talent and signals that the AI race is entering a phase where access to specific architectural knowledge, not just capital or compute, is the primary competitive bottleneck</li>
+        <li>Jalapeño is a reticle-sized ASIC optimized purely for LLM inference; initial deployment is targeted by end of 2026 as part of gigawatt-scale data centers co-developed with Microsoft, with further capacity expansion planned in subsequent years</li>
+        <li>OpenAI used its own AI models to compress a chip design cycle that typically takes 18-24 months into just 9 months - demonstrating the AI-accelerates-AI feedback loop at commercial hardware scale for the first time</li>
+        <li>Owning silicon lets OpenAI co-optimize model architecture and hardware together, a capability GPU renters cannot match; if the 50% cost reduction materializes, OpenAI could reinvest the savings into pricing pressure on rivals or into higher-capability inference modes</li>
       </ul>
       <div class="sources">
-        <a href="https://www.cnbc.com/2026/06/18/google-gemini-co-lead-noam-shazeer-leaves-for-openai.html">CNBC</a>
-        <a href="https://fortune.com/2026/06/23/google-deepmind-ai-researcher-departures-raise-doubts-about-ability-to-win-the-ai-race-shazeer-jumper-eye-on-ai/">Fortune</a>
+        <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI</a>
+        <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/">TechCrunch</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Policy</span><span class="tag">Safety</span></div>
-      <h2>Trump Signs AI Executive Order: Voluntary 30-Day Pre-Deployment Review, No Mandatory Licensing</h2>
-      <p class="why">On June 2, 2026, the White House issued an executive order titled "Promoting Advanced Artificial Intelligence Innovation and Security" - the first comprehensive US AI policy act of this administration. The order threads a deliberate needle: it creates an AI Cybersecurity Clearinghouse, directs federal agencies to build a 30-day pre-deployment government access window for frontier models, but expressly prohibits mandatory government licensing or pre-clearance - drawing a sharp line between national-security monitoring and industrial regulation that will shape every policy debate for the rest of the year.</p>
+      <div class="tags"><span class="tag">Security</span><span class="tag">Policy</span></div>
+      <h2>Anthropic Accuses Alibaba of a Record 28.8 Million-Query Distillation Attack on Claude</h2>
+      <p class="why">In a letter to US Senators dated June 10, Anthropic alleged that operators affiliated with Alibaba's Qwen lab created nearly 25,000 fraudulent accounts and queried Claude 28.8 million times over six weeks - surpassing all previous known distillation campaigns combined - to train Qwen on Claude's advanced coding and reasoning capabilities. Anthropic called it a subsidy for geopolitical competitors and has separately written to the White House, alleging Chinese government complicity in the campaign.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The voluntary 30-day pre-deployment window lets NSA, CISA, and Treasury scan frontier models for security vulnerabilities before broad release - a precedent that falls short of mandatory review but establishes a government-access norm that future legislation could harden into law</li>
-        <li>The AI Cybersecurity Clearinghouse - jointly run by Treasury, NSA, and CISA with voluntary industry participation - is the first formal interagency body tasked with coordinating AI vulnerability scanning across critical infrastructure, covering finance, energy, and defense supply chains simultaneously</li>
-        <li>The explicit prohibition on mandatory licensing was the most contested provision during drafting; analysts at McDermott and Armstrong Teasdale note it signals the administration is prioritizing US AI competitiveness over precautionary control - a stance that diverges sharply from EU AI Act mandatory requirements</li>
+        <li>The campaign ran April 22 to June 5, 2026, targeting Claude's Mythos Preview capabilities in advanced coding, multi-step reasoning, and cybersecurity tasks; the 28.8 million interactions exceed the previous collective record of 16 million set by DeepSeek, MiniMax, and Moonshot AI in February</li>
+        <li>Anthropic's allegation of Chinese government complicity escalates this beyond IP theft into a geopolitical dispute, with the company urging Senators to require API-level identity verification and to treat industrial-scale distillation as trade secret theft under US law</li>
+        <li>Alibaba has not publicly responded; the incident is accelerating policy discussions around API access controls and is expected to directly influence how the US government approaches frontier model export restrictions going forward</li>
       </ul>
       <div class="sources">
-        <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">White House</a>
-        <a href="https://www.insideprivacy.com/artificial-intelligence/white-house-releases-executive-order-on-advanced-ai-innovation-and-security/">Inside Privacy</a>
+        <a href="https://thenextweb.com/news/anthropic-accuses-alibaba-distillation-claude-qwen">The Next Web</a>
+        <a href="https://www.tweaktown.com/news/112361/anthropic-says-alibaba-used-25000-fake-accounts-to-query-claude-28-8-million-times-and-train-qwen-off-the-results/index.html">Tweaktown</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Agents</span></div>
-      <h2>Microsoft Work Trend Index 2026: Agents Up 15x, But Only 19% of Workers Are in the Frontier Zone</h2>
-      <p class="why">Microsoft's 2026 Work Trend Index found that active AI agents in Microsoft 365 grew 15x year-over-year (18x in large enterprises), yet only 19% of workers occupy the "Frontier" zone where personal AI skill and organizational support reinforce each other. The report's central finding is structural: organizational environment accounts for 67% of AI's measured impact - twice the contribution of individual capability - meaning most enterprises are leaving most of AI's value on the table due to management and culture failures, not technology gaps.</p>
+      <div class="tags"><span class="tag">Talent</span><span class="tag">Research</span></div>
+      <h2>DeepMind Loses Four Top Researchers in One Week: The Scale of the Brain Drain Comes Into Focus</h2>
+      <p class="why">In a single week in June 2026, Google DeepMind lost four of its most prominent researchers: Noam Shazeer (Transformer co-author) and Gemini researchers Jonas Adler and Alexander Pritzel moved to OpenAI, while 2024 Nobel Prize laureate John Jumper (AlphaFold) joined Anthropic. Alphabet shares fell 5-6% as analysts asked whether the lab that produced AlphaFold and Gemini can hold its frontier position when its most decorated researchers are choosing funded challengers over Big Tech.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>86% of workers treat AI output as a starting point rather than a final answer - a healthy instinct that also functions as a ceiling when organizations have not redesigned workflows around the human-AI handoff, leaving agents delivering editing speed but not process-level transformation</li>
-        <li>Only 26% of respondents say their leadership is clearly and consistently aligned on AI, creating a decision vacuum that forces frontline workers to calibrate agent use on their own - a recipe for uneven adoption and shadow-AI risk in compliance-sensitive sectors like finance and healthcare</li>
-        <li>The "blocked agency" cohort - 10% of workers with strong individual AI skills but no organizational support - represents the highest-ROI intervention target: these workers already know how to use agents and only need policy clearance and tooling access to deliver measurable value immediately</li>
+        <li>John Jumper's move to Anthropic is strategically significant: his expertise in applying AI to scientific discovery is exactly what Anthropic has signaled it wants to expand into, adding Nobel-level credibility to a safety-first lab pivoting toward frontier science applications</li>
+        <li>Shazeer's expertise in sparse mixture-of-experts architectures is embedded in Gemini's design; his move to OpenAI at the moment MoE dominates frontier model development transfers that architectural knowledge directly to Google's primary rival</li>
+        <li>Four researchers in one week signals a structural trend, not an isolated event: funded challengers are offering compensation Alphabet cannot match and the autonomy of a lab without a parent company's competing product priorities</li>
       </ul>
       <div class="sources">
-        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">Microsoft WorkLab</a>
-        <a href="https://www.databricks.com/resources/ebook/state-of-ai-agents">Databricks State of AI Agents</a>
+        <a href="https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/">TechCrunch</a>
+        <a href="https://fortune.com/2026/06/23/google-deepmind-ai-researcher-departures-raise-doubts-about-ability-to-win-the-ai-race-shazeer-jumper-eye-on-ai/">Fortune</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
       <div class="tags"><span class="tag">Models</span><span class="tag">Competition</span></div>
-      <h2>Gemini 3.5 Pro Still Hasn't Shipped - and Every Week of Delay Costs Google Its Frontier Window</h2>
-      <p class="why">Announced at Google I/O on May 19 with a "June 2026" general availability promise, Gemini 3.5 Pro - featuring a 2-million-token context window and a "Deep Think" reasoning mode - has not shipped as of June 26. The delay is being tracked closely by enterprise customers weighing frontier model commitments, and lands in the same week that Noam Shazeer's departure raised fresh questions about Google's ability to ship at the frontier. Pricing estimates at $15/$60 per million tokens would make it the most expensive widely available model, betting enterprise customers will pay for depth over speed.</p>
+      <h2>ChatGPT Falls Below 50% Market Share for the First Time as Gemini and Claude Surge</h2>
+      <p class="why">By late May 2026, ChatGPT's share of the AI assistant market fell to 46.4% - the first time since its November 2022 launch it has held less than half the market. Gemini climbed to 27.7% and Claude reached 10.3%, reflecting a structural shift from a one-player AI market to an accelerating three-way race. The milestone arrives precisely as OpenAI is scrambling to cut inference costs with Jalapeño and recruit frontier talent, signaling that the era of ChatGPT's unchallenged dominance is definitively over.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>A 2-million-token context window would be the largest in any generally released model today, enabling analysis of full multi-year codebases, entire scientific literature corpora, or complete regulatory filing histories - a differentiation that carries real enterprise revenue if Google can deliver it before a rival closes the gap</li>
-        <li>Deep Think mode signals a shift toward on-demand extended reasoning rather than always-fast inference, reframing the competitive axis from raw benchmark scores to the ability to handle high-stakes, multi-step reasoning tasks reliably in production - the same direction OpenAI's o-series and Anthropic's extended-thinking mode have taken</li>
-        <li>Multiple analyst sources note the I/O-to-GA gap (now over five weeks) mirrors Google's pattern with Gemini Ultra in 2024, when a long preview window eroded first-mover advantage; if Gemini 3.5 Pro slips past June, Shazeer's first contributions at OpenAI may arrive before Google ships the model he helped design</li>
+        <li>Gemini's rise to 27.7% reflects deep integration across Google's 3-billion-user product surface - Search, Workspace, Android, Maps - a distribution flywheel that OpenAI cannot replicate through product launches alone and that is compounding with each new surface integration</li>
+        <li>Claude's 10.3% share is growing faster than either rival in the same window, driven by enterprise and developer adoption that tends to be stickier than consumer usage - suggesting Claude's share trajectory points upward even without a broad consumer marketing push</li>
+        <li>The sub-50% reading reframes OpenAI's recent moves: Jalapeño's 50% cost reduction target and Shazeer's $2.7B recruitment read as much as defensive plays to hold the frontier lead as they do offensive bets on expansion</li>
       </ul>
       <div class="sources">
-        <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">TechTimes</a>
-        <a href="https://byteiota.com/gemini-3-5-pro-2m-tokens-deep-think-and-the-10x-pricing-problem/">byteiota</a>
+        <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-26-2026">Build Fast With AI</a>
       </div>
     </article>
 <!-- TOPICS:END -->
