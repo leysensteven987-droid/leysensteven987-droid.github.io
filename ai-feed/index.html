@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-02<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-03<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,86 +270,85 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Policy</span></div>
-      <h2>Fable 5 Is Back: US Lifts Export Controls After Anthropic Patches the Exploit</h2>
-      <p class="why">On June 12, the US Department of Commerce ordered Anthropic to suspend global access to Claude Fable 5 and Mythos 5 after a report that the models could be tricked into mapping critical infrastructure vulnerabilities - the first time a government used export-control powers to pull a commercial AI model offline for every user worldwide. Anthropic retrained its safety classifier, reporting the exploit technique is now blocked in more than 99% of cases, and on July 1 Fable 5 began restoring access globally for the first time in three weeks. The episode established a live precedent: governments can - and will - intervene at the model level in real time.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Models</span></div>
+      <h2>Claude Sonnet 5 Goes Default - Near-Flagship Performance at Scale</h2>
+      <p class="why">Anthropic launched Claude Sonnet 5 on June 30 and immediately made it the default model for every Free and Pro user on July 1, putting its most capable mid-tier model ever in front of millions of users overnight. It leads Artificial Analysis's professional-writing benchmark ahead of both Opus 4.8 and GPT-5.5, ships with a 1M-token context window, and opens at an introductory API price of $2 per million input tokens - a signal that the frontier of capable AI is moving down-market fast.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Fable 5 is available starting July 1 on Claude.ai, Claude Platform, Claude Code, and Claude Cowork - initially capped at 50% of weekly usage limits through July 7 for Pro, Max, Team, and select Enterprise plans while Anthropic monitors the retrained classifier in production</li>
-        <li>In exchange for the lift, Anthropic agreed to give the US government 30 days of pre-release access to future covered frontier models, to proactively detect and report security incidents, and to help develop national standards for cybersecurity classifiers - a voluntary framework that may become industry-wide</li>
-        <li>The export control directive required restricting foreign nationals only, but Anthropic had no reliable way to verify nationality in real time - so it cut off every user globally for nearly three weeks; the lack of a statutory framework for AI model controls emerged as a critical legal gap that Commerce, NSA, and CISA are now tasked with filling</li>
+        <li>Sonnet 5 outperforms Sonnet 4.6 across coding, agentic search, multimodal reasoning, and professional tasks, leading Artificial Analysis's professional-writing benchmark ahead of Opus 4.8 and GPT-5.5; it ships with a 1M-token context window and is available via the API as claude-sonnet-5</li>
+        <li>Introductory pricing of $2 input / $10 output per million tokens runs through August 31, 2026, after which standard pricing of $3 / $15 applies - the same per-token rate as Sonnet 4.6, but with substantially greater capability and agentic range</li>
+        <li>Anthropic calls it "the most agentic Sonnet ever built," with targeted gains in tool use and long-horizon task completion; a system card documenting full safety evaluations was published simultaneously on June 30</li>
       </ul>
       <div class="sources">
-        <a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html">CNBC</a>
-        <a href="https://www.axios.com/2026/07/01/anthropic-fable-5-back-online-trump-export-controls-lifted">Axios</a>
+        <a href="https://www.anthropic.com/news/claude-sonnet-5">Anthropic</a>
+        <a href="https://www.anthropic.com/claude-sonnet-5-system-card">System Card</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Policy</span><span class="tag">Safety</span></div>
-      <h2>Five Eyes and the White House Declare Frontier AI Both Asset and Threat to National Security</h2>
-      <p class="why">A June 2 White House executive order created the first formal mechanism to classify commercial AI models as "covered frontier models" requiring government oversight, then a June 23 Five Eyes joint advisory warned that AI systems capable of launching adaptive, large-scale cyberattacks on critical infrastructure are months away - not years. Taken together, the two statements mark a turning point: the US and its closest intelligence partners are now treating the most capable AI models as items requiring the same scrutiny as strategic weapons.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Policy</span></div>
+      <h2>OpenAI's GPT-5.6 Previews Under a US Government Gate</h2>
+      <p class="why">OpenAI unveiled the GPT-5.6 family on June 26 - three tiers spanning flagship Sol, balanced Terra, and fast-and-affordable Luna - but released them to roughly 20 trusted partners only, at the direct request of the US government. A June 2 executive order requires federal agencies to benchmark new frontier models before public rollout; GPT-5.6 is the first family navigating that process live, and its path to general availability - expected within weeks - will set the template for every future frontier launch.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The White House EO directs NSA and CISA to build a classified benchmarking process for advanced cyber capability; developers whose models meet the threshold are invited to provide 30 days of pre-release access - and the Fable 5 suspension on June 12 was the first enforcement action under this framework, showing it has teeth</li>
-        <li>The Five Eyes advisory - signed by intelligence chiefs from the US, UK, Australia, Canada, and New Zealand - explicitly names generative AI as capable of dramatically lowering the barrier for state and non-state actors to execute sophisticated intrusions across financial, energy, and defense sectors, and calls for immediate patch and access-restriction action from defenders</li>
-        <li>Lawfare analysts flagged that no clear statutory authority exists for the government to restrict commercial AI model access; the Anthropic case has opened a live debate over whether existing export-control law can govern software models at all - and whether a permanent "kill switch" authority for frontier AI should be codified</li>
+        <li>Sol (flagship), Terra (balanced, 2x cheaper than GPT-5.5), and Luna (fast, lowest-cost) give OpenAI a three-tier lineup targeting enterprise, prosumer, and developer price points; access is currently limited to approximately 20 trusted organizations in Codex and the API, per US government coordination</li>
+        <li>A June 2 executive order mandating federal benchmarking of frontier models before broad release underpins the gated rollout - making GPT-5.6 the first family to go through this government-supervised process and establishing a precedent all frontier labs may need to follow</li>
+        <li>Sol launches on Cerebras hardware this July at up to 750 tokens per second, targeting real-time enterprise reasoning; general consumer availability is described as "coming weeks" with no firm date announced</li>
       </ul>
       <div class="sources">
-        <a href="https://www.cnn.com/2026/06/23/world/ai-five-eyes-warning-cyber-threat-intl-hnk">CNN</a>
-        <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">White House</a>
+        <a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI</a>
+        <a href="https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov">VentureBeat</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Government</span></div>
-      <h2>California Deploys Claude Across Every State Agency - the Largest Government AI Rollout in US History</h2>
-      <p class="why">Governor Gavin Newsom announced on June 29 that California signed a first-of-its-kind partnership with Anthropic, making Claude the first AI productivity tool available to all state agencies and every California city and county through a centralized procurement framework at a 50% discount. The deal covers roughly 240,000 state workers and includes free workforce training and technical assistance - moving the world's fifth-largest economy off the slow-procurement track and into operational AI deployment at a scale no US government has attempted before.</p>
+      <div class="tags"><span class="tag">Agents</span><span class="tag">Enterprise</span></div>
+      <h2>Enterprise AI Agents Grew 15x in a Year - and Most Companies Can't Capture the Gain</h2>
+      <p class="why">Microsoft's 2026 Work Trend Index confirms that active agents in Microsoft 365 grew 15x year-over-year - 18x in large enterprises - and that agents now handle nearly half of all in-tool AI conversations for cognitive work rather than simple task execution. The same data reveals a widening readiness gap: only 32% of organizations achieve sustained enterprise-wide AI impact, because the primary differentiator is not the models or tools but management practices and culture.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>California's "Poppy" assistant - built by state workers using Claude with pre-loaded query templates for common state tasks - was piloted by more than 2,800 employees across 67 departments and is on track for full statewide rollout in July 2026; early use cases include the DMV for customer service and the Department of Health Care Services for internal workflows</li>
-        <li>The centralized procurement mechanism extends to California municipalities, meaning cities like Los Angeles and San Francisco can access Claude at state-negotiated rates without running their own procurement processes - a model that procurement officers in Texas, New York, and Illinois are already watching</li>
-        <li>Newsom framed the deal as workforce productivity, not a pilot: the stated goal is letting government workers "move faster, solve problems more effectively, and deliver better results" - signaling that public-sector AI narratives have fully shifted from experimental to operational, and that Claude is the first AI to be granted that operational status at state scale</li>
+        <li>Active agents in Microsoft 365 grew 15x year-over-year (18x in large enterprises); 49% of all AI conversations now support cognitive work - analysis, problem-solving, and creative evaluation - rather than routine task execution</li>
+        <li>Only 19% of AI users are "frontier" workers where individual skill and organizational support reinforce each other; management practices account for 2x the reported AI impact of individual effort, with active manager modeling driving 17-point jumps in perceived AI value</li>
+        <li>Gartner forecasts 40% of enterprise applications will feature task-specific agents by year-end 2026, but warns that over 40% of agentic AI projects will be abandoned by 2027 - not because models fail, but because organizations cannot operationalize them</li>
       </ul>
       <div class="sources">
-        <a href="https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/">California Governor</a>
-        <a href="https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/">TechCrunch</a>
+        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">Microsoft Work Trend Index</a>
+        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag">Research</span><span class="tag">Science</span></div>
-      <h2>Claude Science Launches in Beta: A Full Lab Environment Built Into the AI</h2>
-      <p class="why">Anthropic launched Claude Science in beta on June 30, positioning it not as a smarter model but as a complete research environment - one that ships with more than 60 scientific databases and toolkits covering genomics, single-cell sequencing, proteomics, structural biology, and cheminformatics, with specialist agents that query and synthesize across all of them simultaneously. Rather than dropping AI into existing workflows, Anthropic is rebuilding the research workflow itself - from literature review through data analysis, figure iteration, and manuscript drafting - inside a single auditable artifact system available to all paid subscribers.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">International</span></div>
+      <h2>UN Convenes First Global AI Governance Dialogue in Geneva - Opening Monday</h2>
+      <p class="why">The United Nations opens its first dedicated Global Dialogue on AI Governance in Geneva on July 6, bringing Member States together to negotiate international frameworks for managing frontier AI - the highest-level multilateral AI session to date. The talks arrive three weeks after the US used unilateral export control powers to pull Fable 5 offline for every global user, exposing the absence of any international coordination mechanism for AI model-level interventions.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The beta is live on macOS and Linux for Pro, Max, Team, and Enterprise plans; Anthropic is backing up to 50 external research projects with grants of up to $30,000 in API credits - applications are open through July 15, 2026, meaning the window to apply closes in under two weeks</li>
-        <li>TechCrunch noted that Claude Science bets on workflow integration rather than a new model to win scientists: the specialist agent layer can coordinate across genomics pipelines, structural biology databases, and cheminformatics toolkits without the researcher having to hand-craft queries or context for each tool - reducing the prep overhead that has slowed AI adoption in wet labs</li>
-        <li>The launch coincides with Nobel laureate John Jumper (AlphaFold) joining Anthropic from DeepMind to lead the AI-for-science program; Claude Science is the product platform his team will build on, and his arrival signals that Anthropic intends to compete directly with DeepMind's scientific AI portfolio rather than cede that ground</li>
+        <li>Member States are expected to discuss liability frameworks, export control coordination, and safety benchmarking standards; the Fable 5 incident - where a US directive required cutting global access because no real-time nationality-verification mechanism existed - is the clearest exhibit of the coordination gap the talks are designed to address</li>
+        <li>The session occurs as three major AI governance regimes run in parallel without harmonization: the US executive order on frontier model benchmarking (June 2), the EU AI Act moving into its second enforcement phase, and China's updated AI model filing requirements - creating fragmented compliance risk for global providers</li>
+        <li>Industry and civil society observers are split on outcome: companies favor voluntary frameworks while several member states are pushing for binding treaty language - the same divide that stalled prior multilateral processes, but with significantly more political pressure after the Fable 5 episode</li>
       </ul>
       <div class="sources">
-        <a href="https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/">TechCrunch</a>
-        <a href="https://www.anthropic.com/news/claude-science-ai-workbench">Anthropic</a>
+        <a href="https://news.un.org/en/story/2026/07/1167848">UN News</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Infrastructure</span></div>
-      <h2>Google Retires Every Imagen Model and Bets the Image Stack on Gemini</h2>
-      <p class="why">As of June 30, 2026, Google deprecated its entire Imagen model family and consolidated all image generation onto two Gemini-native models - Gemini 3.1 Flash Image and Gemini 3 Pro Image - ending Imagen as a standalone product after years of positioning it as the industry benchmark for photorealistic generation. The transition closes the era of separate specialized models for each modality and signals Google's conviction that a single, unified multimodal family is the right long-term architecture for enterprises building with AI at scale.</p>
+      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Infrastructure</span></div>
+      <h2>Claude Apps Gateway Adds SSO and Spend Controls to Enterprise Claude Code</h2>
+      <p class="why">Anthropic shipped the Claude apps gateway for Amazon Bedrock and Google Cloud - a self-hosted control plane for Claude Code that adds corporate SSO, centrally enforced policy, role-based access controls, per-user cost tracking, and spend caps. It is the enterprise plumbing that large organizations have needed before they can deploy Claude Code to developer teams at scale, turning a powerful individual tool into a manageable, auditable, budget-bounded asset that IT and finance departments can approve.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Gemini 3 Pro Image now supports up to 14 reference inputs for character consistency and high-fidelity multi-turn editing, while Gemini 3.1 Flash Image adds video-to-image generation - pass a video file or public YouTube URL and receive a cinematic thumbnail, movie poster, or summary infographic in a single API call, with no separate pipeline required</li>
-        <li>All Imagen preview models were shut down June 25 and all remaining Imagen 4 models reached end-of-life June 30 with no extension path, forcing every production workload to migrate or break; Google offered Gemini image models as the only supported replacement, accelerating the consolidation timeline faster than many enterprise teams anticipated</li>
-        <li>With text, image, and now video-to-image all running through the same Gemini model family, Google Cloud's agent platform can wire generation modalities together without a multi-model orchestration layer - reducing latency and API complexity for multimodal agent pipelines, and narrowing the practical distance between Google's cloud agent offering and OpenAI's comparable stack</li>
+        <li>The gateway is available on Amazon Bedrock and Google Cloud; it gives enterprise IT a control plane for Claude Code with corporate SSO, centrally enforced policy, role-based access, per-user cost tracking, and spend caps - without requiring teams to build their own proxy or access-management layer</li>
+        <li>Team and Enterprise plan users can now tag Claude directly in Slack conversations to delegate tasks asynchronously, extending Claude Code's reach into existing communication workflows and enabling async AI collaboration without context-switching</li>
+        <li>The gateway release lands in the same week as Claude Sonnet 5 and Claude Science, signaling a coordinated enterprise push to make Claude the AI layer of record for engineering, research, and knowledge-work teams simultaneously</li>
       </ul>
       <div class="sources">
-        <a href="https://ai.google.dev/gemini-api/docs/changelog">Google AI changelog</a>
-        <a href="https://blog.laozhang.ai/en/posts/gemini-image-generation-complete-guide">LaoZhang AI Blog</a>
+        <a href="https://www.anthropic.com/news">Anthropic News</a>
+        <a href="https://releasebot.io/updates/anthropic/claude">Releasebot</a>
       </div>
     </article>
 <!-- TOPICS:END -->
