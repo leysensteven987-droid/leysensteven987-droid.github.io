@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-03<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-04<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,31 +270,65 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Models</span></div>
-      <h2>Claude Sonnet 5 Goes Default - Near-Flagship Performance at Scale</h2>
-      <p class="why">Anthropic launched Claude Sonnet 5 on June 30 and immediately made it the default model for every Free and Pro user on July 1, putting its most capable mid-tier model ever in front of millions of users overnight. It leads Artificial Analysis's professional-writing benchmark ahead of both Opus 4.8 and GPT-5.5, ships with a 1M-token context window, and opens at an introductory API price of $2 per million input tokens - a signal that the frontier of capable AI is moving down-market fast.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Research</span></div>
+      <h2>Claude Science Opens the AI Lab - Accuracy Jumps from 16.9% to 92.8%</h2>
+      <p class="why">Anthropic launched Claude Science on June 30 - an AI workbench for scientists and pharma researchers that integrates 60+ scientific databases and runs a reviewer agent to catch citation errors and calculation mistakes. The headline result from Anthropic's AI for Science event: swapping free-form generation for deterministic tool-calling pushed AI biology task accuracy from 16.9% to 92.8%, a finding that reframes how AI should be deployed wherever reproducibility is non-negotiable.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Sonnet 5 outperforms Sonnet 4.6 across coding, agentic search, multimodal reasoning, and professional tasks, leading Artificial Analysis's professional-writing benchmark ahead of Opus 4.8 and GPT-5.5; it ships with a 1M-token context window and is available via the API as claude-sonnet-5</li>
-        <li>Introductory pricing of $2 input / $10 output per million tokens runs through August 31, 2026, after which standard pricing of $3 / $15 applies - the same per-token rate as Sonnet 4.6, but with substantially greater capability and agentic range</li>
-        <li>Anthropic calls it "the most agentic Sonnet ever built," with targeted gains in tool use and long-horizon task completion; a system card documenting full safety evaluations was published simultaneously on June 30</li>
+        <li>Claude Science is pre-configured for genomics, single-cell analysis, proteomics, and cheminformatics, and integrates 60+ scientific databases in a single workplace; a built-in reviewer agent flags and corrects citation errors and calculation mistakes, directly attacking the reproducibility problems that have made LLMs untrustworthy in research settings</li>
+        <li>It is not a new model - it runs existing Claude models (including Opus 4.8) configured specifically for scientific workflows, with no gating or special access; the accuracy gain to 92.8% in biology came entirely from deterministic tool-calling rather than from a more capable underlying model</li>
+        <li>Anthropic CEO Dario Amodei said the company intends to eventually run its own drug discovery programs using the technology, positioning Anthropic not just as a tool vendor but as a potential pharmaceutical research entity - a significant expansion of stated ambition beyond software</li>
       </ul>
       <div class="sources">
-        <a href="https://www.anthropic.com/news/claude-sonnet-5">Anthropic</a>
-        <a href="https://www.anthropic.com/claude-sonnet-5-system-card">System Card</a>
+        <a href="https://www.anthropic.com/news/claude-science-ai-workbench">Anthropic</a>
+        <a href="https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/">MIT Technology Review</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Policy</span></div>
-      <h2>OpenAI's GPT-5.6 Previews Under a US Government Gate</h2>
-      <p class="why">OpenAI unveiled the GPT-5.6 family on June 26 - three tiers spanning flagship Sol, balanced Terra, and fast-and-affordable Luna - but released them to roughly 20 trusted partners only, at the direct request of the US government. A June 2 executive order requires federal agencies to benchmark new frontier models before public rollout; GPT-5.6 is the first family navigating that process live, and its path to general availability - expected within weeks - will set the template for every future frontier launch.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Safety</span></div>
+      <h2>19 Days Dark: Fable 5's Jailbreak Triggered the First AI Model Export Control</h2>
+      <p class="why">On June 12, the US Department of Commerce imposed export controls on Anthropic's Fable 5 and Mythos 5 - the first time frontier AI models were subject to formal US export restrictions. The trigger was a jailbreak discovered by Amazon researchers that bypassed Fable 5's cybersecurity safeguards, flagged to federal authorities by Amazon CEO Andy Jassy. After 19 days of global downtime, access was restored July 1 after Anthropic agreed to proactively detect security risks and collaborate with the government on standards for future models.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Sol (flagship), Terra (balanced, 2x cheaper than GPT-5.5), and Luna (fast, lowest-cost) give OpenAI a three-tier lineup targeting enterprise, prosumer, and developer price points; access is currently limited to approximately 20 trusted organizations in Codex and the API, per US government coordination</li>
-        <li>A June 2 executive order mandating federal benchmarking of frontier models before broad release underpins the gated rollout - making GPT-5.6 the first family to go through this government-supervised process and establishing a precedent all frontier labs may need to follow</li>
-        <li>Sol launches on Cerebras hardware this July at up to 750 tokens per second, targeting real-time enterprise reasoning; general consumer availability is described as "coming weeks" with no firm date announced</li>
+        <li>The 19-day shutdown cut off access worldwide across Claude.ai, Claude Platform, Claude Code, and Claude Cowork - enterprise customers discovered mid-project that no AI infrastructure guarantee exists when frontier models are treated as national-security assets subject to unilateral US control</li>
+        <li>Restoration required Anthropic to accept three conditions: proactively detect and address security risks in its models, work with the government on standards for upcoming models, and inform the government of malicious activity - a compliance layer that industry observers expect all frontier labs to face for future releases</li>
+        <li>The episode exposed a structural gap: US export control powers can act in hours to cut off non-US users, but no international framework exists for coordination or contestation - the exact problem the UN Geneva governance talks opening July 6 are convened to address</li>
+      </ul>
+      <div class="sources">
+        <a href="https://www.anthropic.com/news/fable-mythos-access">Anthropic Statement</a>
+        <a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html">CNBC</a>
+      </div>
+    </article>
+
+    <article class="topic" style="animation-delay:.10s">
+      <span class="rank">03</span>
+      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Government</span></div>
+      <h2>California Deploys Claude to 19 Million State Workers - Largest US Government AI Rollout</h2>
+      <p class="why">Governor Gavin Newsom signed a deal with Anthropic on June 29 making Claude the first AI productivity tool available across all California state agencies through the new SITeS procurement portal, at a 50% discount with free workforce training included. The agreement extends to cities and counties, covering an estimated 19 million state and local government employees and contractors - the largest US government AI deployment by scope, and the first to use a statewide shared IT services portal as the distribution mechanism.</p>
+      <div class="moving-label">What's moving</div>
+      <ul>
+        <li>Active deployments are already running: the CA DMV is using Claude for customer service and wait-time reduction; the CA Department of Healthcare Services (the largest Medicaid agency in the US) is using Claude for internal workflows; CalOES and CDT are deploying Claude Security and Claude Code for cyber defense - scanning, triaging, and patching state code</li>
+        <li>The SITeS portal removes per-agency procurement cycles and includes free Anthropic developer technical assistance, creating a de-facto AI capability ramp-up program for government workforces that would otherwise have no path to expert deployment support</li>
+        <li>The deal positions California - the world's 5th-largest economy - as a signal to other US states and foreign governments weighing large-scale public-sector AI adoption; the 50% pricing structure and shared-portal model may become a template for government AI procurement nationwide</li>
+      </ul>
+      <div class="sources">
+        <a href="https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/">Governor's Office</a>
+        <a href="https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/">TechCrunch</a>
+      </div>
+    </article>
+
+    <article class="topic" style="animation-delay:.14s">
+      <span class="rank">04</span>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Government</span></div>
+      <h2>GPT-5.6 Stays Locked: OpenAI's Frontier Models Sit Behind a Government Gate</h2>
+      <p class="why">OpenAI unveiled GPT-5.6 on June 26 - Sol (flagship), Terra (balanced), and Luna (fast and affordable) - but released the family to roughly 20 trusted partners only, at the direct request of the US government. A June 2 executive order requires federal agencies to benchmark new frontier models before public rollout; GPT-5.6 is the first family to navigate that live gate, and its path to general availability will set the template for every future frontier launch. Sol on Cerebras is imminent, promising 750 tokens per second.</p>
+      <div class="moving-label">What's moving</div>
+      <ul>
+        <li>Sol is priced at $5 input / $30 output per million tokens, Terra at $2.50 / $15, and Luna at $1 / $6 - a three-tier structure competing directly with Anthropic's Sonnet / Opus lineup and Google's Flash / Pro split; access remains restricted to approximately 20 trusted organizations in Codex and the API</li>
+        <li>Sol's Cerebras deployment - targeting 750 tokens per second this July - would make it the fastest frontier model in production by a wide margin, potentially unlocking real-time agentic workflows that slower models cannot support; consumer availability is described as "coming weeks" without a firm date</li>
+        <li>GPT-5.6 is the first model family classified as High capability in both Cybersecurity and Biological risk under OpenAI's Preparedness Framework - the dual classification that triggered the mandatory government benchmarking process and may preview the oversight path all future frontier models must travel</li>
       </ul>
       <div class="sources">
         <a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI</a>
@@ -302,53 +336,19 @@
       </div>
     </article>
 
-    <article class="topic" style="animation-delay:.10s">
-      <span class="rank">03</span>
-      <div class="tags"><span class="tag">Agents</span><span class="tag">Enterprise</span></div>
-      <h2>Enterprise AI Agents Grew 15x in a Year - and Most Companies Can't Capture the Gain</h2>
-      <p class="why">Microsoft's 2026 Work Trend Index confirms that active agents in Microsoft 365 grew 15x year-over-year - 18x in large enterprises - and that agents now handle nearly half of all in-tool AI conversations for cognitive work rather than simple task execution. The same data reveals a widening readiness gap: only 32% of organizations achieve sustained enterprise-wide AI impact, because the primary differentiator is not the models or tools but management practices and culture.</p>
-      <div class="moving-label">What's moving</div>
-      <ul>
-        <li>Active agents in Microsoft 365 grew 15x year-over-year (18x in large enterprises); 49% of all AI conversations now support cognitive work - analysis, problem-solving, and creative evaluation - rather than routine task execution</li>
-        <li>Only 19% of AI users are "frontier" workers where individual skill and organizational support reinforce each other; management practices account for 2x the reported AI impact of individual effort, with active manager modeling driving 17-point jumps in perceived AI value</li>
-        <li>Gartner forecasts 40% of enterprise applications will feature task-specific agents by year-end 2026, but warns that over 40% of agentic AI projects will be abandoned by 2027 - not because models fail, but because organizations cannot operationalize them</li>
-      </ul>
-      <div class="sources">
-        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">Microsoft Work Trend Index</a>
-        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner</a>
-      </div>
-    </article>
-
-    <article class="topic" style="animation-delay:.14s">
-      <span class="rank">04</span>
+    <article class="topic" style="animation-delay:.18s">
+      <span class="rank">05</span>
       <div class="tags"><span class="tag">Policy</span><span class="tag">International</span></div>
-      <h2>UN Convenes First Global AI Governance Dialogue in Geneva - Opening Monday</h2>
-      <p class="why">The United Nations opens its first dedicated Global Dialogue on AI Governance in Geneva on July 6, bringing Member States together to negotiate international frameworks for managing frontier AI - the highest-level multilateral AI session to date. The talks arrive three weeks after the US used unilateral export control powers to pull Fable 5 offline for every global user, exposing the absence of any international coordination mechanism for AI model-level interventions.</p>
+      <h2>UN AI Governance Talks Open Monday - Three Regimes, No Coordination Yet</h2>
+      <p class="why">The UN Global Dialogue on AI Governance opens in Geneva on July 6 - two days from now - bringing Member States together for the highest-level multilateral AI governance session to date. It arrives with maximum urgency: the Fable 5 export control episode showed that a single US directive can cut off frontier AI access for every country simultaneously, with no international mechanism to coordinate, contest, or anticipate such an action.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Member States are expected to discuss liability frameworks, export control coordination, and safety benchmarking standards; the Fable 5 incident - where a US directive required cutting global access because no real-time nationality-verification mechanism existed - is the clearest exhibit of the coordination gap the talks are designed to address</li>
-        <li>The session occurs as three major AI governance regimes run in parallel without harmonization: the US executive order on frontier model benchmarking (June 2), the EU AI Act moving into its second enforcement phase, and China's updated AI model filing requirements - creating fragmented compliance risk for global providers</li>
-        <li>Industry and civil society observers are split on outcome: companies favor voluntary frameworks while several member states are pushing for binding treaty language - the same divide that stalled prior multilateral processes, but with significantly more political pressure after the Fable 5 episode</li>
+        <li>Three major governance regimes run in parallel without harmonization: the US June 2 executive order on frontier model benchmarking, the EU AI Act's second enforcement phase, and China's updated AI model filing requirements - a model can be cleared in one jurisdiction and restricted in another in the same week, as Fable 5's 19-day global shutdown illustrated</li>
+        <li>Negotiators are split between voluntary frameworks (industry preference) and binding treaty language pushed by several member states - the same divide that stalled prior multilateral AI processes, but with significantly greater political pressure now that non-US governments have experienced losing access to AI tools they depend on due to a unilateral US decision</li>
+        <li>The talks also take up whether AI model export controls should fall under existing weapons-law frameworks like ITAR and EAR, a new standalone AI export regime, or a multilateral coordination body - a question the US government has not formally resolved, leaving labs and enterprise users in regulatory limbo for future model releases</li>
       </ul>
       <div class="sources">
         <a href="https://news.un.org/en/story/2026/07/1167848">UN News</a>
-      </div>
-    </article>
-
-    <article class="topic" style="animation-delay:.18s">
-      <span class="rank">05</span>
-      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Infrastructure</span></div>
-      <h2>Claude Apps Gateway Adds SSO and Spend Controls to Enterprise Claude Code</h2>
-      <p class="why">Anthropic shipped the Claude apps gateway for Amazon Bedrock and Google Cloud - a self-hosted control plane for Claude Code that adds corporate SSO, centrally enforced policy, role-based access controls, per-user cost tracking, and spend caps. It is the enterprise plumbing that large organizations have needed before they can deploy Claude Code to developer teams at scale, turning a powerful individual tool into a manageable, auditable, budget-bounded asset that IT and finance departments can approve.</p>
-      <div class="moving-label">What's moving</div>
-      <ul>
-        <li>The gateway is available on Amazon Bedrock and Google Cloud; it gives enterprise IT a control plane for Claude Code with corporate SSO, centrally enforced policy, role-based access, per-user cost tracking, and spend caps - without requiring teams to build their own proxy or access-management layer</li>
-        <li>Team and Enterprise plan users can now tag Claude directly in Slack conversations to delegate tasks asynchronously, extending Claude Code's reach into existing communication workflows and enabling async AI collaboration without context-switching</li>
-        <li>The gateway release lands in the same week as Claude Sonnet 5 and Claude Science, signaling a coordinated enterprise push to make Claude the AI layer of record for engineering, research, and knowledge-work teams simultaneously</li>
-      </ul>
-      <div class="sources">
-        <a href="https://www.anthropic.com/news">Anthropic News</a>
-        <a href="https://releasebot.io/updates/anthropic/claude">Releasebot</a>
       </div>
     </article>
 <!-- TOPICS:END -->
