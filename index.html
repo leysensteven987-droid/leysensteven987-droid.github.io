@@ -67,7 +67,8 @@
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 320px));
+    grid-template-columns: minmax(0, 660px);   /* single wide column; keynote dropped, presentation
+                                                  spans the full 660px to align with the Tōshi block */
     gap: 20px;
     margin-top: 56px;
     flex-shrink: 0;   /* never shrink in the centered column flex (clips cards) */
@@ -237,7 +238,7 @@
     margin-top: 12px;
     letter-spacing: 0.1em;
   }
-  /* Quiet reward for scrolling all the way down: Ryū's daily AI feed. */
+  /* Quiet reward for scrolling all the way down: Ryū's sealed Night Watch cadence. */
   .feed-link {
     display: inline-block;
     margin-top: 20px;
@@ -295,13 +296,12 @@
   <footer>
     <div class="punchline">The crew presents itself.</div>
     <div class="footnote">影組 · KAGE-GUMI</div>
-    <a class="feed-link" href="/ai-feed/" title="Ryū's daily AI Dispatch">龍 Ryū's AI Dispatch · today's 5 AI signals →</a>
     <a class="feed-link" href="/ryu-schedule/" title="Ryū's Night Watch cadence — passphrase required">龍 Ryū's Night Watch cadence · sealed →</a>
   </footer>
 
 <!-- GoatCounter analytics - privacy-friendly, no cookies. View count + referrers + country.
-     Shares the "kage-gumi" site (kage-gumi.goatcounter.com) with both decks; this root page
-     logs path "/" so its views stay separable from /kage-gumi-presentation/ and /kage-gumi-keynote/. -->
+     Shares the "kage-gumi" site (kage-gumi.goatcounter.com) with the presentation deck; this root
+     page logs path "/" so its views stay separable from /kage-gumi-presentation/. -->
 <script data-goatcounter="https://kage-gumi.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
