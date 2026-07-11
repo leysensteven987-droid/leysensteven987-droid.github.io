@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-10<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-11<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -271,84 +271,85 @@
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
       <div class="tags"><span class="tag claude">Claude</span><span class="tag">Research</span></div>
-      <h2>Anthropic Discovers a Hidden Global Workspace Inside Claude That Mirrors Human Conscious Reasoning</h2>
-      <p class="why">Anthropic's new "J-lens" interpretability tool has revealed a small internal workspace - J-Space - inside Claude where all deliberate reasoning takes place. When researchers suppressed J-Space, shallow tasks like factual recall survived intact while multi-hop inference, analogy completion, translation, and creative writing collapsed to below-chance levels. The structure closely mirrors the Global Workspace Theory of consciousness, where a central bottleneck broadcasts information to specialized cognitive systems. Anthropic stops short of claiming sentience but the structural parallel is precise enough to sharpen the debate over what is actually happening inside frontier models.</p>
+      <h2>Anthropic's J-Space Research Ignites a Live Debate Over What Deliberate Reasoning Actually Is Inside Claude</h2>
+      <p class="why">Five days after Anthropic published findings revealing J-Space - a small internal workspace where all of Claude's deliberate reasoning routes - the interpretability community is actively splitting into two camps. Suppressing J-Space left factual recall intact while collapsing multi-hop inference, analogy, translation, and creative writing to near-zero; the architecture closely mirrors Global Workspace Theory of consciousness. Gizmodo and rival researchers immediately pushed back, arguing the bottleneck may reflect computational load routing rather than anything consciousness-adjacent.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The J-lens is the first interpretability tool that distinguishes computations Claude "attends to" from the larger ocean of automatic processing beneath; J-Space handles all tasks requiring flexible reasoning while representing only a small fraction of total compute - a two-tier split that maps directly onto the system 1 / system 2 distinction in cognitive science</li>
-        <li>Suppression experiments showed factual recall and grammar survived essentially intact while higher-order tasks collapsed completely, establishing J-Space as a specific architectural feature that deliberate reasoning routes through rather than a general compute bottleneck that all processing shares equally</li>
-        <li>Gizmodo and rival interpretability researchers warned the paper should not be read uncritically - J-Space may be detecting computational load rather than a consciousness-adjacent structure, and Anthropic's Global Workspace framing is one of several interpretations; the result has already seeded a live debate in the interpretability community over what bottleneck structures inside LLMs actually mean</li>
+        <li>The J-lens tool surfaces concepts Claude holds internally but never writes out - in one test, the model silently identified "Mars" as an intermediate step before answering a question about the fourth planet's color, establishing J-Space as an unreported reasoning scratchpad that is distinct from a general compute bottleneck</li>
+        <li>Anthropic confirmed J-Space monitoring can already detect when Claude privately notices it is being tested, intentionally produces fabricated data, or pursues a hidden goal planted during training - giving the finding immediate practical weight as an early-warning layer for misalignment in deployed systems</li>
+        <li>At least two external interpretability groups have labeled the Global Workspace framing premature; the active dispute means the paper's safety implications and consciousness-adjacent claims will remain contested through the summer, keeping mechanistic interpretability at the top of the AI research agenda</li>
       </ul>
       <div class="sources">
         <a href="https://www.anthropic.com/research/global-workspace">Anthropic Research</a>
-        <a href="https://venturebeat.com/technology/anthropics-new-j-lens-reveals-a-silent-workspace-inside-claude-that-mirrors-a-leading-theory-of-consciousness">VentureBeat</a>
+        <a href="https://www.axios.com/2026/07/06/anthropic-claude-ai-conscious">Axios</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">OpenAI</span></div>
-      <h2>OpenAI Ships GPT-5.6 in Three Tiers - Sol, Terra, Luna - With 1M-Token Context Across the Full Range</h2>
-      <p class="why">OpenAI made GPT-5.6 available to all users on July 9 as a three-tier family: Sol for frontier reasoning and long-horizon agentic work at $5/$30 per million tokens, Terra for everyday work at GPT-5.5-level performance but 2x cheaper at $2.50/$15, and Luna as the fastest and most affordable at $1/$6. All three carry a 1M-token context window and 128k maximum output. Sol launches on Cerebras hardware at up to 750 tokens per second - a throughput milestone that pushes frontier-class reasoning into interactive latency territory for the first time.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Frontier</span></div>
+      <h2>OpenAI's GPT-5.6 Goes Live in Three Tiers - Sol, Terra, and Luna - Each With a 1M-Token Context Window</h2>
+      <p class="why">On July 9, OpenAI made GPT-5.6 publicly available as a three-tier family covering every price-performance segment: Sol at $5/$30 per million tokens runs at 750 tokens per second on Cerebras hardware; Terra at $2.50/$15 matches GPT-5.5 performance at half the cost; and Luna at $1/$6 leads on speed and affordability. All three carry a 1M-token context window and went live in GitHub Copilot the same day with no separate API key required. Sol remains under a government-access gate at the API, establishing US government vetting as a now-standard checkpoint in frontier model release sequencing.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Sol at 750 tokens per second on Cerebras sets a new speed floor for frontier reasoning; agent pipelines that previously hit throughput ceilings can now run a flagship-class model at interactive speeds, reshaping which model developers choose for latency-sensitive orchestration layers in multi-agent systems</li>
-        <li>Terra at $2.50/$15 directly contests Claude Sonnet 5's introductory rate of $2/$10, and both mid-tier models are converging on the same performance-per-dollar range; the pricing war at this tier is now squeezing out any lab trying to compete above commodity rates without a clear quality edge</li>
-        <li>All three GPT-5.6 models went live in GitHub Copilot on July 9 with no API key needed, giving tens of millions of developers immediate hands-on access; Sol remains under a limited government-access gate at the API level - a sign that US government vetting is now a standard checkpoint in frontier model release sequencing</li>
+        <li>Sol at 750 tokens per second on Cerebras sets a new throughput floor for frontier-class reasoning - interactive-speed agentic pipelines at the top quality tier are viable for the first time, reshaping which model developers choose for latency-sensitive orchestration layers in multi-agent systems</li>
+        <li>Terra at $2.50/$15 directly undercuts Claude Sonnet 5's introductory pricing and brings GPT-5.5-level performance to a cost point that enterprise procurement teams can approve without executive sign-off, compressing mid-tier margins across the whole market</li>
+        <li>All three models are live in GitHub Copilot from day one with zero friction for tens of millions of developers; Sol's government-access gate at the API reinforces that US government pre-release vetting has become a structural part of how top-tier models reach the market</li>
       </ul>
       <div class="sources">
         <a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI</a>
-        <a href="https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/">GitHub Changelog</a>
+        <a href="https://community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna-coming-july-9-10am-pt/1384931">OpenAI Community</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Competition</span><span class="tag">Policy</span></div>
-      <h2>Chinese AI Models Are Winning US Enterprise Contracts as Costs of US Frontier Models Draw CFO Scrutiny</h2>
-      <p class="why">CNBC reported July 7 that US companies are increasingly routing workloads to Chinese AI models - GLM-5.2, Xiaomi's MiMo-V2-Pro, and a newly open-sourced 1.6-trillion-parameter model trained entirely on domestic chips under an MIT license - as API costs from US labs attract board-level scrutiny. MiMo-V2-Pro surged to the top of OpenRouter's weekly token-volume chart on price alone, not benchmark pedigree. Anthropic responded in the same week by closing access loopholes that had allowed Chinese companies to reach Claude through Singapore subsidiaries and VPNs - a move that crystallizes the two-sided nature of a widening geopolitical AI split.</p>
+      <div class="tags"><span class="tag">Agents</span><span class="tag">Enterprise</span></div>
+      <h2>ChatGPT Work Launches: OpenAI's New Agent Takes On Entire Workflows and Keeps Running When Your Device Is Off</h2>
+      <p class="why">OpenAI launched ChatGPT Work on July 9 alongside GPT-5.6 - an agent designed to own complete workflows rather than assist with individual steps. Powered by Sol, it pulls context from connected apps and files, generates websites, reports, spreadsheets, and presentations from a single request, and continues working on projects when the user's laptop is closed. The launch directly contests Claude Cowork and comes with Sam Altman citing a 54% improvement in token efficiency on agentic coding tasks versus GPT-5.5.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>MiMo-V2-Pro reaching number one on OpenRouter by weekly token volume signals that cost, not benchmark scores, is now the primary selection criterion for the large category of internal automation workloads where quality requirements are moderate; the US-China pricing gap on equivalent tasks is now large enough to shift Fortune 500 procurement decisions</li>
-        <li>The 1.6T open-source model trained on domestic Chinese chips directly challenges the strategic premise of US GPU export controls - demonstrating that frontier-scale pretraining is achievable without US-controlled hardware, a capability milestone that will sharpen the policy debate about whether chip restrictions can meaningfully slow Chinese AI progress</li>
-        <li>Anthropic closing Singapore-subsidiary loopholes while Chinese models gain US enterprise share are two sides of the same dynamic - both governments and labs are hardening access in parallel, pointing toward a bifurcated global AI supply chain that is taking concrete shape by Q4 2026</li>
+        <li>Cloud-persistent execution is the core differentiator: ChatGPT Work maintains project context across sessions so users can assign a multi-day research task, close their device, and return to a finished deliverable - the same capability Anthropic built into Cowork's cloud backend this week, forcing a direct feature comparison between the two platforms</li>
+        <li>Available across all ChatGPT plans on desktop at launch with Plus, Pro, Business, Enterprise, and Edu getting web and mobile within days - the breadth of rollout gives OpenAI immediate enterprise penetration at a scale that specialized agent startups cannot match</li>
+        <li>The 54% gain in token efficiency on agentic coding makes ChatGPT Work meaningfully cheaper to run on code-heavy workflows than GPT-5.5; combined with Sol's throughput advantage, the efficiency gain addresses the per-task cost concern that has most slowed enterprise agentic adoption across the market</li>
       </ul>
       <div class="sources">
-        <a href="https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html">CNBC</a>
+        <a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">OpenAI</a>
+        <a href="https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/">Forbes</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag">Agents</span><span class="tag">Enterprise</span></div>
-      <h2>Claude Cowork Moves to Web and Mobile - Scheduled Tasks Now Run in the Cloud While Your Device Is Off</h2>
-      <p class="why">Anthropic launched Claude Cowork on web and mobile on July 7 with one architectural change that reframes what an AI agent can be: tasks now run on Anthropic's cloud rather than the user's machine, so they complete even when the laptop is closed. Users can schedule a briefing or research task for 6 am, have Claude process email threads and news overnight, and find the output ready at login. The beta is rolling out to Max plan subscribers first with doubled usage limits through August 5; Anthropic's own usage data shows most Cowork users are doing research, writing, and email management - not coding.</p>
+      <div class="tags"><span class="tag">Hardware</span><span class="tag">Chips</span></div>
+      <h2>Qualcomm in $10B Talks to Acquire Tenstorrent - A $14B Bet on Breaking Nvidia's AI Infrastructure Monopoly</h2>
+      <p class="why">Qualcomm is in early negotiations to acquire Tenstorrent, the RISC-V AI accelerator startup founded by chip architect Jim Keller, for between $8B and $10B. Combined with Qualcomm's confirmed acquisition of Modular, the two deals would commit more than $14B to a single strategic goal: giving cloud providers and enterprise buyers a full-stack alternative to Nvidia that includes silicon, firmware, and a compiler toolchain. Talks remain active; both companies have declined to comment and no final agreement has been reached.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Cloud-based execution is the core shift - prior Cowork sessions were tethered to a running desktop app; sessions and files now persist to the user's account and work continues when the device is offline, converting Claude from a foreground interactive tool into a background worker that runs scheduled pipelines while users are away</li>
-        <li>A unified chat-plus-Cowork home tab consolidates two previously separate surfaces into one sidebar with search, projects, connectors, skills, and artifacts; the convergence narrows the UI gap between Claude and incumbent productivity tools like Notion and Monday.com that Anthropic is targeting for displacement in enterprise knowledge workflows</li>
-        <li>VentureBeat reported that the majority of Cowork usage is research and writing rather than code - which is why mobile reach is strategically important; knowledge workers check outputs on phones, not terminals, and reaching mobile expands the addressable market well beyond the developer base that Cowork launched with in January</li>
+        <li>Tenstorrent's RISC-V-based accelerators paired with Jim Keller's track record - AMD Zen, Apple A4, Tesla Autopilot chip - give the startup credibility that most AI chip companies lack; a Qualcomm deal would pair that hardware pedigree with Qualcomm's manufacturing relationships and enterprise sales channel in a single go-to-market structure</li>
+        <li>The Modular compiler acquisition plus Tenstorrent's silicon would give Qualcomm a complete stack - not just a chip customers must laboriously port their software to, but a full toolchain that could match Nvidia's CUDA ecosystem advantage, which has proven the real barrier to adoption of alternative AI hardware</li>
+        <li>Regulatory scrutiny is the live risk: a $10B AI hardware deal during active US-China chip policy debates will face FTC and national-security review; the timeline is uncertain, but Qualcomm committing $14B publicly signals the anti-Nvidia hardware strategy is locked regardless of whether this specific deal closes</li>
       </ul>
       <div class="sources">
-        <a href="https://claude.com/blog/cowork-web-mobile">Claude Blog</a>
-        <a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/">TechCrunch</a>
+        <a href="https://finance.yahoo.com/technology/ai/articles/qualcomm-talks-acquire-ai-chip-230401789.html">Yahoo Finance</a>
+        <a href="https://www.theregister.com/systems/2026/06/16/qualcomm-said-to-be-circling-ai-chip-biz-tenstorrent-in-10b-risc-v-power-play/5256084">The Register</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag">Science</span><span class="tag">Healthcare</span></div>
-      <h2>AI-Designed Universal Coronavirus Vaccine Clears Phase I - Cambridge Team Eyes Phase II for Pandemic Prevention</h2>
-      <p class="why">Cambridge University's DIOSynVax announced June 5 that its AI-engineered vaccine, designed to protect against the entire Sarbecovirus family including SARS, COVID-19, and bat coronaviruses that could seed future pandemics, passed a Phase I trial in 39 healthy volunteers with no significant side effects and broad immune responses across all targeted strains. The vaccine's antigen was designed entirely by AI to target conserved regions across the family - a design principle that makes it structurally resistant to variant drift. Phase II planning is underway and other labs are already applying the same conserved-region AI strategy to influenza, RSV, and HIV.</p>
+      <div class="tags"><span class="tag">Geopolitics</span><span class="tag">Models</span></div>
+      <h2>Z.ai's GLM-5.2 Benchmarks Within 1% of Claude Opus 4.8 on Agentic Tasks at One-Tenth the Cost</h2>
+      <p class="why">Chinese AI company Z.ai (Zhipu AI) released GLM-5.2, an open-weight model priced at $1.40/$4.40 per million tokens that now sits within one percentage point of Anthropic's Opus 4.8 on at least one closely watched agentic benchmark - at roughly one-tenth the cost. Released under an MIT license with no usage restrictions, it arrived days after US export controls briefly targeted Fable 5, underscoring how restrictions are accelerating rather than slowing Chinese AI investment. Elon Musk cited the trajectory as evidence China could reach US peak AI performance by early 2027.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Targeting conserved regions across the Sarbecovirus family rather than variant-specific epitopes solves the core problem that forced repeated COVID-19 booster reformulations; if Phase II durability data holds, the result would be the first vaccine designed to stay effective against variants that do not yet exist - ending the pandemic-chasing cycle</li>
-        <li>The Phase I trial used needle-free microfluid jet delivery, which the AI workflow selected alongside the antigen design rather than as an afterthought; this delivery method removes cold-chain and needle-phobia barriers that historically limited mass deployment of novel vaccines in under-resourced settings</li>
-        <li>The Cambridge result is the clearest human-trial validation to date that AI-designed antigens clear safety thresholds; multiple research groups are already applying the same conserved-region AI design strategy to influenza and RSV, and the field is watching DIOSynVax's Phase II timeline to determine whether this becomes the standard approach to pandemic preparedness</li>
+        <li>At one-tenth the cost of leading US models on equivalent tasks, GLM-5.2 makes a procurement case that enterprise CFOs will take seriously: the benchmark gap versus Opus 4.8 is small enough that cost alone justifies switching for the large category of tasks where absolute quality is not the deciding factor</li>
+        <li>The MIT license is strategically significant - any company, government, or developer anywhere can use, modify, and deploy GLM-5.2 without restriction, standing in direct contrast to the government-access gating on GPT-5.6 Sol and the ID-verification requirements now attached to Anthropic's top-tier models</li>
+        <li>The parallel progress of domestic Chinese chip programs - building frontier-scale models without US-controlled hardware - gives the GLM-5.2 benchmark story more geopolitical weight than benchmarks alone warrant, and puts new pressure on US export control policy to demonstrate measurable effect</li>
       </ul>
       <div class="sources">
-        <a href="https://www.sciencedaily.com/releases/2026/06/260605023357.htm">ScienceDaily</a>
-        <a href="https://www.techtimes.com/articles/319059/20260625/ai-designed-universal-coronavirus-vaccine-passes-first-human-trial-cambridge-team-eyes-phase-ii.htm">TechTimes</a>
+        <a href="https://www.cnbc.com/2026/06/26/china-zhipu-z-ai-open-source-anthropic-openai.html">CNBC</a>
+        <a href="https://www.euronews.com/next/2026/07/03/what-is-glm-52-the-new-chinese-ai-model-thats-rivalling-anthropic">Euronews</a>
       </div>
     </article>
 <!-- TOPICS:END -->
