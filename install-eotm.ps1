@@ -33,11 +33,20 @@ Write-Host "`n== Echoes of the Monarch laptop bootstrap ==`n" -ForegroundColor M
 Ensure-Cli -Cmd git -WingetId 'Git.Git'    -Label 'Git'
 Ensure-Cli -Cmd gh  -WingetId 'GitHub.cli' -Label 'GitHub CLI'
 
+# gh auth login's interactive TUI does NOT work when this script is run via
+# `irm | iex` (no live TTY for the arrow-key menus), so we do NOT launch it
+# inline. If not authed, stop cleanly with instructions. A GH_TOKEN/GITHUB_TOKEN
+# env var is honored automatically by gh and needs no login.
 & gh auth status 2>$null
 if ($LASTEXITCODE -ne 0) {
-  Write-Host "GitHub auth required - launching 'gh auth login' (interactive)..." -ForegroundColor Cyan
-  gh auth login
-  if ($LASTEXITCODE -ne 0) { throw "gh auth login failed - re-run the one-liner once authenticated." }
+  Write-Host "`n----------------------------------------------------------" -ForegroundColor Yellow
+  Write-Host " GitHub sign-in needed (the EOTM repo is private)." -ForegroundColor Yellow
+  Write-Host " Run this ONCE in this window, then re-run the one-liner:" -ForegroundColor Yellow
+  Write-Host "`n    gh auth login" -ForegroundColor White
+  Write-Host "`n (Choose: GitHub.com  ->  HTTPS  ->  Login with a web browser.)" -ForegroundColor Yellow
+  Write-Host " Have a PAT? Set `$env:GH_TOKEN='<token>'` instead - no login prompt." -ForegroundColor Yellow
+  Write-Host "----------------------------------------------------------`n" -ForegroundColor Yellow
+  return
 }
 gh auth setup-git 2>$null | Out-Null
 
