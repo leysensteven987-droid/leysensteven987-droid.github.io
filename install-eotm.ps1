@@ -10,7 +10,10 @@
 # Optional toggle (set BEFORE the pipe; | iex cannot take parameters):
 #   $env:EOTM_NOMEMORY='1'    # skip the git-backed memory pull
 
-$ErrorActionPreference = "Stop"
+# NOT 'Stop': native tools (winget, git) write progress/warnings to stderr, which
+# PS 5.1 misreads as terminating errors under 'Stop' and aborts the bootstrap
+# mid-clone. Real failures are caught via `throw` + explicit $LASTEXITCODE checks.
+$ErrorActionPreference = "Continue"
 $repoUrl = "https://github.com/leysensteven987-droid/echoesofthemonarch.git"
 $dest    = "C:\dev\echoesofthemonarch"
 
@@ -51,13 +54,19 @@ if ($LASTEXITCODE -ne 0) {
 gh auth setup-git 2>$null | Out-Null
 
 New-Item -ItemType Directory -Force -Path (Split-Path $dest) | Out-Null
+# git writes progress to stderr; that must NOT be treated as fatal (see the
+# ErrorActionPreference note at the top). Check $LASTEXITCODE explicitly, and
+# pass --quiet to keep the progress noise down.
 if (Test-Path (Join-Path $dest ".git")) {
   Write-Host "Repo already at $dest - fetching latest (ff-only)..." -ForegroundColor Cyan
-  git -C $dest fetch origin
-  git -C $dest merge --ff-only origin/main 2>$null | Out-Null
+  git -C $dest fetch --quiet origin
+  if ($LASTEXITCODE -ne 0) { throw "git fetch failed (exit $LASTEXITCODE)." }
+  git -C $dest merge --ff-only --quiet origin/main
+  if ($LASTEXITCODE -ne 0) { throw "ff-only merge failed (exit $LASTEXITCODE) - reconcile $dest by hand, then re-run." }
 } else {
   Write-Host "Cloning $repoUrl -> $dest ..." -ForegroundColor Cyan
-  git clone $repoUrl $dest
+  git clone --quiet $repoUrl $dest
+  if ($LASTEXITCODE -ne 0) { throw "git clone failed (exit $LASTEXITCODE)." }
 }
 
 $installer = Join-Path $dest "scripts\bootstrap-eotm-laptop.ps1"
