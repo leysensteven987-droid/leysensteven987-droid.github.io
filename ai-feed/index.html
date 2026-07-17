@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-16<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-17<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,86 +270,86 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Policy</span></div>
-      <h2>Claude Fable 5 Returns After 19-Day US Export Ban - Anthropic Ships a New Safety Classifier to Seal the Jailbreak</h2>
-      <p class="why">Anthropic restored global access to Claude Fable 5 on July 1 after the US Commerce Department lifted export controls imposed June 12, when Amazon researchers disclosed a jailbreak technique bypassing the model's cybersecurity safeguards. The 19-day suspension is the first known government-mandated takedown of a deployed frontier AI model in US history. Anthropic redeployed with a new safety classifier blocking the attack in over 99% of cases, verified by the Commerce Department's own AI standards team before access was restored.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Education</span></div>
+      <h2>Anthropic Opens Classrooms: Claude for Teachers Gives US K-12 Educators Free Premium AI</h2>
+      <p class="why">Anthropic launched Claude for Teachers on July 14 - making verified US K-12 educators the first professional group anywhere to receive free premium Claude access, ahead of doctors, lawyers, and any other field. The program is FERPA-compliant, ships with curriculum skills mapped to standards in all 50 states, and integrates with eight classroom platforms at launch. Anthropic co-developed the program with the American Federation of Teachers, positioning it for institutional trust and district-wide adoption from day one.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The Commerce Department's Center for AI Standards and Innovation tested both old and new safeguards before green-lighting redeployment; blocked Fable 5 requests now route automatically to Opus 4.8 rather than returning errors, keeping workflows intact while isolating the unsafe path</li>
-        <li>Anthropic launched Claude Sonnet 5 on June 30 as the new default for all Free and Pro users - the most agentic Sonnet released, performing close to Opus 4.8 on many tasks, at introductory pricing of $2 per million input tokens through August 31</li>
-        <li>The episode opened debate in Washington over whether hardware-export instruments are the right tool for AI software vulnerabilities; multiple Congressional staffers have called for a dedicated AI safety incident framework separate from chip export controls</li>
+        <li>Verified educators can enroll through June 30, 2027 for a full year free - Anthropic is using a long enrollment window to lock in the K-12 default before competitors solidify; classroom first-mover advantage is worth more than the short-term cost of free licenses</li>
+        <li>Eight integrations at launch - ASSISTments, Brisk Teaching, Canva Education, Coteach, Diffit, Eedi, MagicSchool, and Snorkl - with student data protected by a K-12 Data Processing Addendum and explicitly excluded from model training</li>
+        <li>Teachers unions have historically been the gatekeepers for ed-tech adoption in US public schools; the AFT co-development and endorsement is the signal that opens district procurement doors at scale, not just individual signups</li>
       </ul>
       <div class="sources">
-        <a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html">CNBC</a>
-        <a href="https://www.forbes.com/sites/siladityaray/2026/07/01/trump-administration-lifts-export-controls-on-anthropics-mythos-5-and-fable-5-ai-models/">Forbes</a>
+        <a href="https://www.anthropic.com/news/claude-for-teachers">Anthropic</a>
+        <a href="https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/">Chalkbeat</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Coding</span></div>
-      <h2>Grok 4.5 Trained on Real Cursor Sessions Tops Every Major Agentic Coding Benchmark</h2>
-      <p class="why">SpaceXAI released Grok 4.5 on July 8, trained in part on authentic developer sessions from the Cursor IDE - making it the first frontier model systematically shaped by real long-horizon coding behavior rather than curated synthetic data. It ranked first on agentic tool use in the Artificial Analysis Intelligence Index and fourth overall, outperforming GPT-5.5 on dedicated coding evaluations. At $2/$6 per million tokens with a 500K context window, it slots between premium and mid-tier rivals.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Open-Source</span></div>
+      <h2>Moonshot AI Drops Kimi K3 - the World's Largest Open-Weight Model at 2.8 Trillion Parameters</h2>
+      <p class="why">Moonshot AI shipped Kimi K3 on July 16 as the largest open-weight model ever released - 2.8 trillion total parameters in a new Mixture-of-Experts architecture with Kimi Delta Attention and a 1-million-token context window. Early evaluations place it in the Opus 4.8 / GPT-5.5 performance tier on coding and agent tasks, making it the first open-weight model to credibly challenge top closed frontier systems. Open weights are promised by July 27 - meaning any developer can soon run a frontier-capable model with zero API cost.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Grok 4.5 set new highs on Terminal Bench 2.1 (83.3%), SWE-Bench Pro (64.7%), and DeepSWE 1.0 (62.0%) - benchmarks measuring agent performance over long multi-file sessions in real codebases, not isolated code-generation prompts</li>
-        <li>Training on real Cursor session data introduces a new methodology: the model learned from authentic developer workflows, and SpaceXAI attributes its multi-step, multi-file advantage to this training signal rather than benchmark optimization alone</li>
-        <li>EU availability is expected mid-July; until then, EU developers are excluded from the Grok 4.5 API - a gap that, combined with GPT-5.6 EU restrictions, is making frontier coding tools increasingly asymmetric across geographies</li>
+        <li>Two variants at launch: K3 Max for chat and agentic workloads, and K3 Swarm Max for large-scale parallel processing - Swarm explicitly targets orchestration scenarios where dozens of model calls run concurrently, a capability no prior open-weight model has directly addressed</li>
+        <li>Priced at $3/$15 per million tokens via API, but the imminent open-weight release resets the economics entirely - commercial pricing signals seriousness while the weights promise zero inference cost for self-hosters within two weeks of launch</li>
+        <li>Kimi K3 is the third frontier-grade open model from a Chinese lab this month alone - following DeepSeek V4 and Qwen 3.6 - compounding evidence that the access gap held by closed US models is narrowing faster than most Western benchmarks expected</li>
       </ul>
       <div class="sources">
-        <a href="https://x.ai/news/grok-4-5">SpaceXAI</a>
-        <a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/">TechCrunch</a>
+        <a href="https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems">VentureBeat</a>
+        <a href="https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/">MarkTechPost</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Multimodal</span></div>
-      <h2>Meta Superintelligence Labs Launches Muse Image - and Buries a Provenance Watermark in Every Pixel</h2>
-      <p class="why">Meta launched Muse Image on July 7, the first media generation model from its newly formed Superintelligence Labs, ranking second on Arena and rolling out immediately in Instagram Stories, WhatsApp, and Advantage+ ad creative. A preview of Muse Video followed, currently third in human-preference Elo for text-to-video. Every Muse Image output carries Content Seal, an invisible watermark surviving crop, compression, resize, and screenshot - making Meta the first major social platform to ship AI generation and provenance detection together at its full user scale.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Google</span></div>
+      <h2>Gemini 3.5 Pro Targets General Availability Today After a Full Rebuild and Two Delays</h2>
+      <p class="why">Google announced Gemini 3.5 Pro at I/O in May targeting June GA, then pushed to July after enterprise feedback prompted a full architecture rebuild - today, July 17, is the new reported target. The rebuilt model is expected to arrive with a 2-million-token context window, a Deep Think reasoning mode, and no government-imposed access restrictions, making it the only current major frontier model available globally without export carve-outs. A confirmed launch today would end a month-long gap in Google's competitive position against Fable 5 and GPT-5.6.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Muse Image is free inside Meta AI and already deployed in Advantage+ ad creative, putting frontier image generation in front of billions of advertisers at no additional cost - a distribution scale no standalone image model can match</li>
-        <li>Content Seal embeds an invisible watermark in every Muse Image output that survives crop, compression, resize, and screenshot; Meta is positioning this as the standard for AI image provenance at social-media scale, ahead of any regulatory mandate requiring it</li>
-        <li>Users and privacy advocates pushed back sharply over Meta's use of Instagram and Facebook photos to train Muse; TechCrunch reports the backlash is intensifying pressure on EU and UK regulators to clarify whether training on platform content constitutes legitimate interest under existing data law</li>
+        <li>Google has not confirmed the July 17 date or any specs with a pricing page, model card, or API documentation - every specific claim comes from third-party reporting and unnamed sources, making today's launch technically unconfirmed as of this dispatch</li>
+        <li>The full rebuild after enterprise feedback is a notable departure from I/O demo norms: Gemini 3.5 Pro is not the model Google showed in May but one reshaped by real deployment signal - raising both the stakes and the credibility of the benchmark numbers that will accompany any official announcement</li>
+        <li>Global availability without export restrictions is the sharpest competitive edge right now: Grok 4.5 has been blocking EU developers and GPT-5.6 Sol carries access tiers - an unrestricted 2M-context model from Google would directly close the geography gap widening across the frontier model market</li>
       </ul>
       <div class="sources">
-        <a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Meta AI Blog</a>
-        <a href="https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/">TechCrunch</a>
+        <a href="https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm">TechTimes</a>
+        <a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm">TechTimes (context)</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag">Healthcare</span><span class="tag">Research</span></div>
-      <h2>FDA Clears the First Patient-Facing LLM as a Medical Device - a Diabetes App Opening the Clinical AI Pathway</h2>
-      <p class="why">The FDA issued 510(k) clearance to UpDoc on June 25 for a type 2 diabetes medication management app that uses an LLM to collect patient data via voice or chat and execute provider-specified treatment plans - the first Software as a Medical Device cleared with a patient-facing large language model. Aidoc received Breakthrough Device Designation for AI-drafted radiology reports in the same period. Together, these moves signal that the FDA has resolved enough of its internal LLM safety framework to begin processing a backlog of clinical AI submissions at pace.</p>
+      <div class="tags"><span class="tag">Agents</span><span class="tag">Enterprise</span></div>
+      <h2>OpenAI Launches ChatGPT Work - GPT-5.6-Powered Agents That Stay on a Job for Hours</h2>
+      <p class="why">OpenAI shipped GPT-5.6 on July 9 as a three-model family (Luna, Terra, Sol) and followed the next day with ChatGPT Work - an agentic workspace where the flagship Sol model takes an outcome, gathers context across connected apps and files, breaks the work into steps, and executes autonomously for hours without supervision. Sol is 54% more token-efficient on agentic coding tasks than its predecessor. ChatGPT Work is the clearest signal yet that the next frontier for AI monetization is replacing task completion, not answering questions.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>UpDoc's clearance opens a pathway clinical AI developers have waited years for: a cleared device carries liability protection and insurance reimbursement access that uncleared AI cannot reach, meaning health system procurement teams will increasingly filter vendors by regulatory standing rather than clinical claims alone</li>
-        <li>The framework FDA used for UpDoc - grounding LLM output in a provider-specified protocol that prevents the model from independently modifying treatment - is expected to become the template for future clearances of patient-facing AI systems</li>
-        <li>Aidoc's Breakthrough Device Designation for AI-drafted radiology reports is a second high-profile regulatory signal in the same cycle; AI is already detecting brain hemorrhages in clinical trials in seconds with 95% sensitivity, and FDA clearance is the last barrier between those systems and billable clinical use</li>
+        <li>Ultra mode coordinates four parallel agents on demanding workflows - a direct product response to multi-agent frameworks from Anthropic and Gemini, shifting the compute model from single-thread inference to orchestrated parallelism as the new enterprise standard</li>
+        <li>Codex is merging into a revamped unified ChatGPT desktop with a built-in browser and computer-use capability - OpenAI is consolidating its surface area to one interface competing directly with full-stack agentic workspaces like Cursor, Windsurf, and Claude.ai</li>
+        <li>Max mode (extra compute per query) and Ultra mode (four-agent parallel) are priced above the standard tier, introducing compute-tiered pricing to the consumer workspace - the model that once competed on price-per-token now competes on price-per-outcome</li>
       </ul>
       <div class="sources">
-        <a href="https://www.mcguirewoods.com/client-resources/alerts/2026/7/a-pathway-for-clinical-ai-developers-opens-fda-clears-first-software-as-a-medical-device-with-patient-facing-llm/">McGuireWoods</a>
-        <a href="https://www.crescendo.ai/news/ai-in-healthcare-news">Crescendo AI Health</a>
+        <a href="https://www.axios.com/2026/07/09/ai-openai-gpt-release">Axios</a>
+        <a href="https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/">Forbes</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag">Hardware</span><span class="tag">Infrastructure</span></div>
-      <h2>South Korea Bets $880 Billion on AI Hardware - Four New HBM Fabs and a Decade-Long Memory Supremacy Play</h2>
-      <p class="why">South Korean President Lee Jae Myung announced a 10-year, $880 billion national AI investment plan on June 29, with Samsung and SK Hynix committing $518 billion toward four new semiconductor fabs and SK Group, GS Group, and Naver committing $356 billion to AI data centers. The bet is that high-bandwidth memory - the chip layer bottlenecking every frontier AI inference run - will remain the decisive hardware advantage through the decade. No G20 government has matched this commitment since the original CHIPS Act era.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Enterprise</span></div>
+      <h2>40% of Enterprise AI Agent Projects May Be Canceled - Governance Is Three Steps Behind Production</h2>
+      <p class="why">Gartner predicts 40% of enterprise applications will embed AI agents by year-end 2026 - up from under 5% in 2025 - and in the same report predicts over 40% of agentic AI projects will be canceled by end of 2027 due to rising costs, unclear business value, and inadequate risk controls. McKinsey's State of AI found only 23% of enterprises are actually scaling agents while 39% remain stuck in experimentation. The gap is not capability - it is the absence of governance frameworks that can audit, constrain, and roll back agents running multi-hour autonomous workflows.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Four new fabs in southwest South Korea - two for Samsung, two for SK Hynix - focus specifically on HBM3 and HBM4 production, the memory stack underpinning Nvidia AI chips and the inference infrastructure for every current frontier model including GPT-5.6, Fable 5, and Gemini 3.5 Flash</li>
-        <li>The SK Hynix Nasdaq IPO on July 9, raising $26.5 billion as the largest US listing by a foreign company, is already partially funding the expansion - giving the plan real capital behind the government commitment and validating AI memory as a tier-1 public markets asset class</li>
-        <li>South Korea now holds structural leverage over global AI compute supply that no G20 nation outside the US and China can match; the plan is accelerating pressure on the EU and Japan to respond with their own chip sovereignty programs before the next generation of HBM capacity is locked in</li>
+        <li>AI agent startup funding reached $1.8 billion across 12 deals in July alone - but nearly all of it targets enterprise automation and developer tools, not the governance and observability layer that risk teams need before they can approve production deployments</li>
+        <li>The highest-ROI agent deployments in 2025-2026 are narrow and auditable: document processing, compliance checks, data reconciliation, invoice handling - tasks where failure modes are bounded; general-purpose autonomous agents in unstructured workflows are the ones driving the projected cancellation wave</li>
+        <li>Gartner is framing agent governance as the new cybersecurity: organizations are deploying agents without controls and will spend the next several years cleaning up - the same pattern as the decade-long patch cycle that followed rushing everything onto the web in the 2010s</li>
       </ul>
       <div class="sources">
-        <a href="https://www.bloomberg.com/news/articles/2026-06-28/samsung-sk-reportedly-to-invest-1-3-trillion-over-10-years">Bloomberg</a>
-        <a href="https://www.aljazeera.com/news/2026/6/29/south-korea-announces-more-than-1-trillion-ai-chip-investment-drive">Al Jazeera</a>
+        <a href="https://www.hectorpincheira.com/en/news/technological-radar-july-2026-ai-agents-go-into-production-and-governance-doesnt-keep-up/">Technology Radar</a>
+        <a href="https://aifunding.me/insights/ai-agent-funding-july-2026">AI Funding</a>
       </div>
     </article>
 <!-- TOPICS:END -->
