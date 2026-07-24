@@ -29,6 +29,11 @@
     --teal: #2fe8d2;
     --toshi: #8fd9ff;
     --amber: #f0a500;
+    /* personal-app accents — each matches its own app's locked identity */
+    --ichikawa: #FF9DB2;   /* kawaii-bento sakura */
+    --toge:     #35C4B5;   /* KG light teal, night livery route */
+    --tetsu:    #d7dae0;   /* chrome — the only accent in monochrome metal */
+    --raiden:   #9dbf2e;   /* electric chartreuse — thunder */
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -320,6 +325,151 @@
     pointer-events: none;
   }
 
+  /* ── the private wing (personal apps) ── */
+  .wing {
+    width: 100%;
+    margin-top: 58px;
+  }
+  .wing-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .wing-head .lbl {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+  .wing-head .lbl i {
+    font-family: 'Noto Serif JP', serif;
+    font-style: normal;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .wing-head .rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--hairline), transparent);
+  }
+
+  .pets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  a.pet {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 176px;
+    padding: 20px 20px 18px;
+    text-decoration: none;
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform 0.4s cubic-bezier(.2,.7,.2,1),
+                border-color 0.4s ease,
+                background 0.4s ease,
+                box-shadow 0.4s ease;
+  }
+  a.pet::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    background: radial-gradient(92% 74% at 50% 0%, var(--accent-glow) 0%, transparent 64%);
+  }
+  a.pet:hover,
+  a.pet:focus-visible {
+    transform: translateY(-3px);
+    background: var(--panel-2);
+    border-color: var(--accent);
+    box-shadow: 0 14px 34px #0009, 0 0 20px var(--accent-shadow);
+    outline: none;
+  }
+  a.pet:hover::before,
+  a.pet:focus-visible::before { opacity: 1; }
+  a.pet:focus-visible {
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent), 0 14px 34px #0009;
+  }
+
+  a.pet .brush {
+    position: absolute;
+    top: -22px;
+    right: -8px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.07;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.45s ease;
+  }
+  a.pet:hover .brush,
+  a.pet:focus-visible .brush { opacity: 0.14; }
+
+  a.pet .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--accent);
+  }
+  a.pet h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text);
+    margin: 12px 0 3px;
+    line-height: 1.2;
+  }
+  a.pet .kicker {
+    font-family: ui-monospace, monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 10px;
+  }
+  a.pet p {
+    font-size: 13px;
+    line-height: 1.52;
+    color: var(--muted);
+  }
+  a.pet .go {
+    margin-top: auto;
+    padding-top: 14px;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  a.pet .go .arw { transition: transform 0.4s cubic-bezier(.2,.7,.2,1); }
+  a.pet:hover .go .arw,
+  a.pet:focus-visible .go .arw { transform: translateX(5px); }
+
+  a.pet-ichikawa { --accent: var(--ichikawa); --accent-glow: #ff9db21c; --accent-shadow: #ff9db233; }
+  a.pet-toge     { --accent: var(--toge);     --accent-glow: #35c4b51c; --accent-shadow: #35c4b533; }
+  a.pet-tetsu    { --accent: var(--tetsu);    --accent-glow: #d7dae016; --accent-shadow: #d7dae02b; }
+  a.pet-raiden   { --accent: var(--raiden);   --accent-glow: #9dbf2e1c; --accent-shadow: #9dbf2e33; }
+
   /* ── footer ── */
   footer {
     margin-top: 64px;
@@ -373,7 +523,9 @@
   html.preanim a.gate-left,
   html.preanim a.gate-right,
   html.preanim .seam,
+  html.preanim .wing,
   html.preanim footer   { opacity: 0; }
+  html.preanim .wing     { transform: translateY(16px); }
   html.preanim .logo     { transform: translateY(12px); }
   html.preanim .wordmark { transform: translateY(10px); }
   html.preanim .subtitle { transform: translateY(8px); }
@@ -390,6 +542,7 @@
   html.preanim a.gate-left,
   html.preanim a.gate-right,
   html.preanim .seam,
+  html.preanim .wing,
   html.preanim footer {
     transition: opacity 0.62s ease, transform 0.62s cubic-bezier(.2,.7,.2,1);
   }
@@ -406,7 +559,8 @@
   html.preanim.play a.gate-left  { opacity: 1; transform: none; transition-delay: 0.70s; }
   html.preanim.play a.gate-right { opacity: 1; transform: none; transition-delay: 0.82s; }
   html.preanim.play .seam     { opacity: 1; transform: scale(1); transition-delay: 1.0s; transition-timing-function: cubic-bezier(.34,1.56,.64,1); }
-  html.preanim.play footer    { opacity: 1; transform: none; transition-delay: 1.16s; }
+  html.preanim.play .wing     { opacity: 1; transform: none; transition-delay: 1.14s; }
+  html.preanim.play footer    { opacity: 1; transform: none; transition-delay: 1.30s; }
 
   /* one-time bloom on the logo (no resting glow) */
   @keyframes logoBloom {
@@ -415,6 +569,15 @@
     100% { text-shadow: none; }
   }
   html.preanim.play .logo { animation: logoBloom 1.1s ease 0.34s 1; }
+
+  /* ── responsive: the private wing folds to 2-up, then 1-up ── */
+  @media (max-width: 900px) {
+    .pets { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 460px) {
+    .pets { grid-template-columns: 1fr; }
+    a.pet { min-height: 0; }
+  }
 
   /* ── responsive: stack the two doors below 760px ── */
   @media (max-width: 760px) {
@@ -484,6 +647,51 @@
         <div class="go">Meet Tōshi <span class="arw">&rarr;</span></div>
       </a>
     </main>
+
+    <section class="wing" aria-labelledby="wing-title">
+      <div class="wing-head">
+        <div class="lbl" id="wing-title"><i>私</i> Private wing &middot; personal apps</div>
+        <div class="rule" aria-hidden="true"></div>
+      </div>
+
+      <div class="pets">
+        <a class="pet pet-ichikawa" href="/kage-gumi-presentation/ichikawa.html">
+          <span class="brush" aria-hidden="true">市</span>
+          <div class="jp">市川</div>
+          <h3>Ichikawa</h3>
+          <div class="kicker">The Market Scout</div>
+          <p>A week of dinners into one shopping list, ordered the way the shop is laid out.</p>
+          <div class="go">Open <span class="arw">&rarr;</span></div>
+        </a>
+
+        <a class="pet pet-toge" href="/kage-gumi-presentation/toge.html">
+          <span class="brush" aria-hidden="true">峠</span>
+          <div class="jp">峠</div>
+          <h3>Tōge</h3>
+          <div class="kicker">The Pass</div>
+          <p>Self-hosted navigation that optimises for the road, not the arrival time.</p>
+          <div class="go">Open <span class="arw">&rarr;</span></div>
+        </a>
+
+        <a class="pet pet-tetsu" href="/kage-gumi-presentation/tetsu.html">
+          <span class="brush" aria-hidden="true">鉄</span>
+          <div class="jp">鉄</div>
+          <h3>Tetsu</h3>
+          <div class="kicker">The Wrench</div>
+          <p>One motorcycle, documented properly - with the workshop manual searchable inside.</p>
+          <div class="go">Open <span class="arw">&rarr;</span></div>
+        </a>
+
+        <a class="pet pet-raiden" href="/kage-gumi-presentation/raiden.html">
+          <span class="brush" aria-hidden="true">雷</span>
+          <div class="jp">雷</div>
+          <h3>Raiden</h3>
+          <div class="kicker">The Appliance Tech</div>
+          <p>Manuals, fault codes and parts for every machine in the house. Scaffold.</p>
+          <div class="go">Open <span class="arw">&rarr;</span></div>
+        </a>
+      </div>
+    </section>
 
     <footer>
       <div class="punchline">The crew presents itself.</div>
