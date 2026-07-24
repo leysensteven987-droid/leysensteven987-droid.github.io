@@ -429,6 +429,18 @@
     line-height: 1;
     color: var(--accent);
   }
+  /* each app's own icon, inlined so the typeset-kanji marks (Tetsu, Raiden)
+     resolve against the Noto Serif JP this page already loads */
+  a.pet .logo {
+    display: block;
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+    box-shadow: 0 2px 10px #0006;
+    transition: transform 0.4s cubic-bezier(.2,.7,.2,1);
+  }
+  a.pet:hover .logo,
+  a.pet:focus-visible .logo { transform: scale(1.06) rotate(-1.5deg); }
   a.pet h3 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
@@ -657,7 +669,37 @@
       <div class="pets">
         <a class="pet pet-ichikawa" href="/kage-gumi-presentation/ichikawa.html">
           <span class="brush" aria-hidden="true">市</span>
-          <div class="jp">市川</div>
+          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Ichikawa app icon">
+            <rect x="16" y="16" width="480" height="480" rx="112" fill="#FF9DB2"/>
+            <rect x="16" y="16" width="480" height="480" rx="112" fill="#FFB6C6" opacity="0.35"/>
+            <g stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.45">
+              <path d="M150 300 q-14 -22 0 -44 q14 -22 0 -44"/>
+              <path d="M362 300 q14 -22 0 -44 q-14 -22 0 -44"/>
+            </g>
+            <circle cx="182" cy="118" r="38" fill="#40353C"/><circle cx="330" cy="118" r="38" fill="#40353C"/>
+            <circle cx="182" cy="118" r="18" fill="#FFB6C6"/><circle cx="330" cy="118" r="18" fill="#FFB6C6"/>
+            <circle cx="256" cy="190" r="112" fill="#FFFFFF"/>
+            <circle cx="180" cy="222" r="15" fill="#FFB6C6" opacity="0.8"/><circle cx="332" cy="222" r="15" fill="#FFB6C6" opacity="0.8"/>
+            <ellipse cx="210" cy="184" rx="33" ry="41" fill="#40353C" transform="rotate(-18 210 184)"/>
+            <ellipse cx="302" cy="184" rx="33" ry="41" fill="#40353C" transform="rotate(18 302 184)"/>
+            <circle cx="214" cy="192" r="13" fill="#FFFFFF"/><circle cx="298" cy="192" r="13" fill="#FFFFFF"/>
+            <circle cx="216" cy="194" r="7" fill="#2C2530"/><circle cx="296" cy="194" r="7" fill="#2C2530"/>
+            <circle cx="212" cy="189" r="3" fill="#FFFFFF"/><circle cx="294" cy="189" r="3" fill="#FFFFFF"/>
+            <ellipse cx="256" cy="226" rx="13" ry="9" fill="#2C2530"/>
+            <path d="M256 235 v9 M256 244 q-11 9 -21 4 M256 244 q11 9 21 4" stroke="#2C2530" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <path d="M104 342 C104 430 168 482 256 482 C344 482 408 430 408 342 Z" fill="#4B3B42"/>
+            <ellipse cx="256" cy="476" rx="46" ry="10" fill="#3A2E34"/>
+            <ellipse cx="256" cy="342" rx="152" ry="30" fill="#F0C27B"/>
+            <ellipse cx="256" cy="344" rx="134" ry="23" fill="#E6B36A"/>
+            <g stroke="#FFF6E5" stroke-width="8" stroke-linecap="round" fill="none">
+              <path d="M178 338 q22 -16 44 0 t44 0 t44 0"/>
+              <path d="M186 350 q22 14 44 0 t44 0 t40 0"/>
+            </g>
+            <rect x="196" y="304" width="42" height="54" rx="6" fill="#2C2530" transform="rotate(-8 217 331)"/>
+            <circle cx="316" cy="338" r="20" fill="#FFFFFF" stroke="#FF9DB2" stroke-width="4"/>
+            <path d="M316 338 m0 -12 a12 12 0 1 1 -10 6" stroke="#FF9DB2" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M116 348 a150 28 0 0 0 280 0" stroke="#FFFFFF" stroke-width="5" opacity="0.25" fill="none" stroke-linecap="round"/>
+          </svg>
           <h3>Ichikawa</h3>
           <div class="kicker">The Market Scout</div>
           <p>A week of dinners into one shopping list, ordered the way the shop is laid out.</p>
@@ -666,7 +708,22 @@
 
         <a class="pet pet-toge" href="/kage-gumi-presentation/toge.html">
           <span class="brush" aria-hidden="true">峠</span>
-          <div class="jp">峠</div>
+          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Tōge app icon">
+            <defs>
+              <clipPath id="togeSq"><rect x="0" y="0" width="512" height="512" rx="115"/></clipPath>
+              <linearGradient id="togeTeal" x1="0" y1="76" x2="0" y2="327" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#0E7C72"/><stop offset="1" stop-color="#0A5C55"/>
+              </linearGradient>
+            </defs>
+            <g clip-path="url(#togeSq)">
+              <rect width="512" height="512" fill="#0B0E13"/>
+              <g transform="translate(0,54)">
+                <path d="M60 320 L138 162 C142 154 148 154 152 162 L246 252 C251 259 259 259 264 250 L340 88 C345 76 355 76 360 88 L458 320 Z"
+                      fill="url(#togeTeal)" stroke="url(#togeTeal)" stroke-width="14" stroke-linejoin="round"/>
+                <path d="M292 190 L338 92 C343 80 353 80 358 92 L386 150 L372 168 L364 144 L348 178 L336 150 L320 196 L308 168 Z" fill="#F4F2EC"/>
+              </g>
+            </g>
+          </svg>
           <h3>Tōge</h3>
           <div class="kicker">The Pass</div>
           <p>Self-hosted navigation that optimises for the road, not the arrival time.</p>
@@ -675,7 +732,20 @@
 
         <a class="pet pet-tetsu" href="/kage-gumi-presentation/tetsu.html">
           <span class="brush" aria-hidden="true">鉄</span>
-          <div class="jp">鉄</div>
+          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Tetsu app icon">
+            <defs>
+              <linearGradient id="tetsuSteel" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#eef1f5"/><stop offset="0.5" stop-color="#c2c7cf"/><stop offset="1" stop-color="#8b9099"/>
+              </linearGradient>
+            </defs>
+            <rect x="16" y="16" width="480" height="480" rx="104" fill="#17191d"/>
+            <rect x="40" y="40" width="432" height="432" rx="84" fill="none" stroke="#2a2e34" stroke-width="6"/>
+            <circle cx="92" cy="92" r="12" fill="#3a3f47"/><circle cx="420" cy="92" r="12" fill="#3a3f47"/>
+            <circle cx="92" cy="420" r="12" fill="#3a3f47"/><circle cx="420" cy="420" r="12" fill="#3a3f47"/>
+            <text x="256" y="256" text-anchor="middle" dominant-baseline="central"
+                  font-family="'Yu Gothic','Hiragino Sans','Noto Sans JP','Noto Serif JP',serif"
+                  font-weight="700" font-size="272" fill="url(#tetsuSteel)">鉄</text>
+          </svg>
           <h3>Tetsu</h3>
           <div class="kicker">The Wrench</div>
           <p>One motorcycle, documented properly - with the workshop manual searchable inside.</p>
@@ -684,7 +754,13 @@
 
         <a class="pet pet-raiden" href="/kage-gumi-presentation/raiden.html">
           <span class="brush" aria-hidden="true">雷</span>
-          <div class="jp">雷</div>
+          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Raiden app icon">
+            <rect x="16" y="16" width="480" height="480" rx="112" fill="#0f1410"/>
+            <rect x="30" y="30" width="452" height="452" rx="100" fill="none" stroke="#9dbf2e" stroke-width="8" opacity="0.55"/>
+            <path d="M300 96 L188 288 h72 l-40 128 132-200 h-76 z" fill="#9dbf2e" opacity="0.22"/>
+            <text x="256" y="352" text-anchor="middle" font-family="'Noto Serif JP','Yu Mincho',serif"
+                  font-size="300" font-weight="700" fill="#9dbf2e">雷</text>
+          </svg>
           <h3>Raiden</h3>
           <div class="kicker">The Appliance Tech</div>
           <p>Manuals, fault codes and parts for every machine in the house. Scaffold.</p>
