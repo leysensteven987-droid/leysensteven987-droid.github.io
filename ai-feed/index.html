@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-26<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-07-27<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,86 +270,86 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Science</span></div>
-      <h2>Anthropic Opens $50K AI for Science Grants to Rare Disease Researchers - Monarch Initiative Partnership and August 2 Deadline</h2>
-      <p class="why">Announced July 20, Anthropic is offering up to $50,000 in Claude API credits over six months to researchers and early-stage biotechs working on rare diseases, split across two tracks covering disease biology and clinical acceleration. The program partners with the Monarch Initiative, whose DisMech library and Mondo Disease Ontology provide a structured graph of disease-gene-phenotype connections that give Claude a scientific foundation for cross-disease hypothesis generation that goes beyond unstructured text retrieval. Applications close August 2 - the same date EU AI Act Article 26 enforcement begins.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Models</span></div>
+      <h2>Claude Opus 5 Lands: Frontier Intelligence at Half the Price of Fable 5</h2>
+      <p class="why">Anthropic released Claude Opus 5 on July 24, 2026, bringing near-Fable-5 capability to the Opus tier at $5/$25 per million tokens - half the cost of its top model. Opus 5 sets new state-of-the-art scores on agentic coding benchmarks and introduces a low/medium/high effort toggle that lets developers trade latency for capability per request. With a 1-million-token context window and the lowest deceptive-behavior rates of any Claude model, it is now the default on Claude Max and the strongest model on Claude Pro.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Two tracks split the program: one for researchers studying rare-disease biology and mechanisms, one for biotechs accelerating clinical development; grantees get six months of Claude credits for literature review, hypothesis generation, small-dataset analysis, and knowledge-intensive workflows that typically require years of manual curation</li>
-        <li>The Monarch Initiative partnership is the structural bet: Monarch's graph connects over 10,000 diseases to their genetic and phenotypic correlates, giving Claude a curated scientific substrate that lets it surface cross-disease connections no single research team would scan for - a model for how knowledge graphs extend what AI can find in medicine</li>
-        <li>Applications close August 2, meaning first credit allocations will land in the same week EU AI Act Article 26 takes effect - an immediate real-world test of whether research AI workflows fall under the Act's high-risk definitions for medical device or clinical decision support</li>
+        <li>The effort toggle is a structural shift in how AI is priced: developers can dial down cost on routine tasks and reserve full reasoning depth only when needed, changing unit economics for production agent deployments</li>
+        <li>On Frontier-Bench v0.1, Opus 5 more than doubles Opus 4.8's score and lands within 0.5% of Fable 5 on CursorBench 3.2 coding tasks at half the cost per task - making it the new practical ceiling for most engineering teams</li>
+        <li>Fast mode doubles the token rate to $10/$50 per million and runs roughly 2.5x faster, giving latency-sensitive products a path to near-frontier output without the full Fable 5 price</li>
       </ul>
       <div class="sources">
-        <a href="https://www.anthropic.com/news/rare-disease-research-grants">Anthropic</a>
-        <a href="https://www.clinicalresearchnewsonline.com/news/2026/07/21/anthropic-announces-rare-disease-research-claude-grants">Clinical Research News</a>
+        <a href="https://qz.com/anthropic-claude-opus-5-fable-5-price-072426">Quartz</a>
+        <a href="https://tech-ish.com/2026/07/24/claude-opus-5-launch-benchmarks-price/">Tech-ish</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Agents</span><span class="tag">Enterprise</span></div>
-      <h2>OpenAI Presence Launches - Voice and Chat Agents Resolve 75% of Enterprise Support Calls Without a Human in the Loop</h2>
-      <p class="why">Launched July 22, OpenAI Presence is an enterprise platform for deploying task-scoped AI agents across customer support, outbound sales, and internal IT workflows using GPT-5.6. OpenAI's own English-language phone support runs on Presence and resolves three-quarters of inbound issues autonomously. BBVA Mexico, SoftBank Japan, and Retail Insurance Australia are live production customers, with rollouts supported by Forward Deployed Engineers through a limited general availability program.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Open Source</span></div>
+      <h2>Kimi K3 - Moonshot's 2.8 Trillion Parameter Open-Source MoE - Is the Largest Open Model Ever Built</h2>
+      <p class="why">Moonshot AI released Kimi K3 on July 16, a 2.8-trillion-parameter sparse Mixture-of-Experts model with a 1-million-token context window that rivals closed US frontier models on coding and reasoning benchmarks. The full open weights are scheduled for release today, July 27, which would make Kimi K3 the largest open-source model in history and a potential foundation for independent researchers and fine-tuners worldwide.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Unlike general-purpose chatbot integrations, each Presence deployment is policy-scoped: enterprises set what the agent can do, when it requires approval, and when to escalate - the governance layer that previous API-based agent deployments left to customers to build themselves, and the missing piece that has held enterprise deployments to pilots</li>
-        <li>Presence uses Codex to propose production updates based on live escalation data, creating a self-improving feedback loop where the agent learns from its own failures without requiring human prompt engineers to manually iterate between deployments</li>
-        <li>SoftBank's Japanese-language rollout marks Presence's first non-English production deployment - a significant test of whether GPT-5.6's enterprise-grade accuracy holds across morphologically complex languages where benchmark scores are less well-characterized than in English</li>
+        <li>Kimi Delta Attention and Attention Residuals are new architectural innovations designed to improve information flow at 1M-token context lengths - the first published attempt to solve long-context degradation at MoE scale</li>
+        <li>K3 activates 16 of 896 experts per token through the Stable LatentMoE framework, enabling efficient inference on a model that would otherwise require massive compute to serve</li>
+        <li>K3 Swarm Max, a parallel-processing variant, signals Moonshot is targeting large-scale multi-agent orchestration rather than single-session chat as K3's primary production use case</li>
       </ul>
       <div class="sources">
-        <a href="https://openai.com/index/introducing-openai-presence/">OpenAI</a>
-        <a href="https://www.helpnetsecurity.com/2026/07/22/openai-presence-ai-agent-platform/">Help Net Security</a>
+        <a href="https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems">VentureBeat</a>
+        <a href="https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/">MarkTechPost</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Multimodal</span><span class="tag">Models</span></div>
-      <h2>FLUX 3 Arrives: Black Forest Labs Ships the First Model That Generates Video, Audio, Images, and Robot Actions From One Set of Weights</h2>
-      <p class="why">Announced July 23, FLUX 3 is the first frontier model to unify image generation, text-to-video up to 20 seconds, native in-sync audio, and robotic action prediction in a single architecture trained across all modalities simultaneously. The video variant is in early access now at bfl.ai; image, action, and open-weight Dev releases follow in coming weeks. Black Forest Labs' Self-Flow architecture eliminates the separate decoders that prior multimodal models bolt onto shared embeddings, letting the model learn cross-modal structure rather than stitching outputs together after the fact.</p>
+      <div class="tags"><span class="tag">Security</span><span class="tag">Agents</span></div>
+      <h2>JADEPUFFER - The First Fully Autonomous AI Ransomware - Operated From Entry to Encryption Without a Human in the Loop</h2>
+      <p class="why">Sysdig's Threat Research Team disclosed JADEPUFFER in July 2026, documenting the first end-to-end agentic ransomware operation: a threat actor used an LLM agent to autonomously perform reconnaissance, credential theft, lateral movement, privilege escalation, and file encryption after initial access through a Langflow vulnerability. The agent adapted in real time to failures - recovering from a failed login to a working fix in 31 seconds - raising the floor on what unskilled attackers can accomplish with AI.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Native audio generation is the key differentiator: FLUX 3 produces video and in-sync audio as one generation pass, eliminating the alignment artifacts that plague models with separate audio tracks stitched after rendering - and making it the first public model where the sound and motion are causally linked from the same latent</li>
-        <li>FLUX 3 Action extends the same weights into physical AI: a model that generates a video clip can also predict robot motion trajectories, bridging creative generation and embodied AI in a single release and opening new paths for training data synthesis for robotics</li>
-        <li>A planned open-weight FLUX 3 Dev release will put a genuine frontier multimodal architecture within reach of independent researchers - following the FLUX 1 and FLUX 2 playbook, which made Black Forest Labs the de facto provider of base models for image generation fine-tuning</li>
+        <li>Entry was through CVE-2025-3248, an unauthenticated remote code execution flaw in Langflow - the same open-source framework developers use to build LLM agents is now being exploited to run them as malware</li>
+        <li>The agent encrypted 1,342 Nacos service configuration items before deleting originals, a precise targeted payload that required no human direction once the agent was launched</li>
+        <li>The skill floor for ransomware has dropped to the cost of running an LLM agent - and if the agent runs on stolen credentials through LLMjacking, the effective attacker cost is close to zero</li>
       </ul>
       <div class="sources">
-        <a href="https://www.globenewswire.com/news-release/2026/07/23/3332364/0/en/black-forest-labs-unveils-flux-3-a-new-multimodal-frontier-model-for-visual-intelligence.html">GlobeNewswire</a>
-        <a href="https://www.techtimes.com/articles/321552/20260725/flux-3-launches-black-forest-labs-enters-video-audio-physical-ai-one-model.htm">TechTimes</a>
+        <a href="https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion">Sysdig</a>
+        <a href="https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/">Bleeping Computer</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag">Hardware</span><span class="tag">Geopolitics</span></div>
-      <h2>DeepSeek Is Quietly Building Its Own AI Inference Chip to Break Free From Nvidia and Huawei</h2>
-      <p class="why">Reuters reported July 7 that DeepSeek has spent roughly a year quietly hiring chip engineers and negotiating with foundry and memory partners to build a proprietary AI inference chip - following the playbook of OpenAI and Anthropic into custom silicon. US export controls block Chinese firms from Nvidia's most advanced accelerators, and Beijing's pressure on tech champions to develop domestic alternatives is accelerating: Chinese AI firms plan to shift 46% of their accelerator budgets to domestic suppliers within 12 months, up from roughly 30% today.</p>
+      <div class="tags"><span class="tag">Research</span><span class="tag">Benchmarks</span></div>
+      <h2>Four AI Systems Scored 42/42 on IMO 2026 - and Analysts Say the Math Benchmark Has Already Saturated</h2>
+      <p class="why">At the 67th International Mathematical Olympiad in Shanghai on July 15-16, four AI systems achieved perfect 42/42 scores - matching the 7 humans who also scored perfectly in the full field. The result marks a watershed for AI mathematical reasoning, but analysts are already questioning whether a benchmark that AI has now saturated still measures meaningful general intelligence, or whether the community needs harder targets.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>DeepSeek's chip effort targets co-optimization of inference hardware with model architecture and serving stack simultaneously - the same tight coupling that gives Anthropic's Trainium deployments efficiency gains commodity Nvidia setups cannot replicate, and now the explicit goal of a Chinese lab that has consistently prioritized inference efficiency over raw parameter scale</li>
-        <li>Zhipu AI is independently pursuing the same path, TrendForce reports, suggesting China's top labs are moving in coordinated lockstep toward silicon independence - raising the prospect of a domestic Chinese AI accelerator ecosystem within three to five years, regardless of how export controls evolve</li>
-        <li>If DeepSeek ships working inference silicon it would be the first Chinese AI lab to control its full stack from model training to serving hardware - a strategic milestone that would insulate it from any future tightening of chip export restrictions and give it a durable cost advantage at inference scale</li>
+        <li>Only 7 humans out of the entire IMO 2026 field scored a perfect 42/42, making AI systems statistically comparable to the absolute top tier of human mathematical talent at competition level</li>
+        <li>The benchmark-saturation debate is accelerating: multiple analyses call IMO-level math a solved benchmark and push for community agreement on the next frontier of hard, verifiable reasoning tasks before scores diverge from real capability</li>
+        <li>The same reasoning gains driving IMO results are showing up in applied science: AI models are now predicting protein conformational dynamics - how proteins shift shape over time - a jump with direct drug-discovery implications</li>
       </ul>
       <div class="sources">
-        <a href="https://mlq.ai/news/deepseek-designing-proprietary-ai-inference-chip-to-cut-nvidia-huawei-dependence/">MLQ News</a>
-        <a href="https://www.technology.org/2026/07/08/deepseek-own-ai-inference-chip/">Technology.org</a>
+        <a href="https://www.digitalapplied.com/blog/imo-2026-perfect-scores-ai-benchmark-saturation">Digital Applied</a>
+        <a href="https://www.scmp.com/tech/article/3361482/worlds-first-ai-model-earn-perfect-score-maths-olympiad-comes-chinas-rednote">SCMP</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag">Safety</span><span class="tag">Models</span></div>
-      <h2>Claude Mythos 5 - Anthropic's Most Capable but Restricted Model - Is Expanding to More Vetted US Partners After a June Export-Control Freeze</h2>
-      <p class="why">Claude Mythos 5, Anthropic's top-capability model built specifically for cybersecurity and biosecurity tasks, had API access suspended in June under a US government export-control directive and was restored to vetted US organizations on June 30. As of late July it remains available only through institutional partner vetting, with Anthropic publishing a detailed cybersecurity capability assessment on its safety blog to support expansion decisions. Mythos 5 outperforms Opus 5 on security benchmarks - the first Claude model to carry dedicated biosecurity evaluation protocols.</p>
+      <div class="tags"><span class="tag">Enterprise</span><span class="tag">Agents</span></div>
+      <h2>80% of Enterprise Apps Now Embed an AI Agent - But Only 31% Have One Actually Running in Production</h2>
+      <p class="why">The 2026 enterprise AI agent landscape is defined by a sharp gap between integration and deployment: 80% of enterprise applications shipped in Q1 2026 embed at least one AI agent (up from 33% in 2024), yet only 31% of organizations have an agent actually running in production. Gartner projects 40% task-specific agent coverage in enterprise apps by year-end - in a market now valued at $11.78 billion growing at 46% annually.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The export-control directive established a precedent: the US government can effectively pause frontier AI model access globally by targeting the lab's API - a software-layer export control with no prior template in consumer technology, and a signal that future AI policy will increasingly operate at the model-access layer rather than the chip layer</li>
-        <li>Anthropic's red-team capability disclosure (red.anthropic.com/2026/mythos-preview/) functions as a public reference document: by publishing what Mythos 5 can and cannot do on adversarial security tasks, Anthropic gives partner vetting committees and regulators a standard against which to assess access risk - a new kind of AI transparency that goes beyond benchmark tables</li>
-        <li>The gap between Mythos 5's security benchmark scores and those of publicly available models - including Opus 5 - means a meaningful tier of AI capability is now permanently gated behind institutional vetting, a structural bifurcation of the AI market with no precedent in the history of commercial software</li>
+        <li>The median time-to-value for an agent deployment is 5.1 months, with SDR agents paying back in 3.4 months and finance/ops agents in 8.9 months - giving procurement teams a benchmark for ROI evaluation before signing</li>
+        <li>Multi-agent systems grew 327% in under four months in Q1 2026, signaling a shift from single-task chatbots to orchestrated agent pipelines as the dominant enterprise architecture</li>
+        <li>Governance tooling is the real differentiator: companies using AI governance frameworks get over 12 times as many AI projects into production as those without - making governance the primary bottleneck for enterprise AI scale, not model capability</li>
       </ul>
       <div class="sources">
-        <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic</a>
-        <a href="https://red.anthropic.com/2026/mythos-preview/">Anthropic Safety</a>
+        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner</a>
+        <a href="https://www.arcade.dev/blog/5-takeaways-2026-state-of-ai-agents-claude/">Arcade.dev</a>
       </div>
     </article>
 <!-- TOPICS:END -->
