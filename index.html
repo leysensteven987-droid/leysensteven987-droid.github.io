@@ -877,10 +877,85 @@
 })();
 </script>
 
-<!-- GoatCounter analytics - privacy-friendly, no cookies. View count + referrers + country.
-     Shares the "kage-gumi" site (kage-gumi.goatcounter.com) with the presentation deck; this root
-     page logs path "/" so its views stay separable from /kage-gumi-presentation/. -->
-<script data-goatcounter="https://kage-gumi.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<!-- KG analytics beacon - silent, no cookies, no gate. Identical to the beacon the
+     decks carry, with deck="landing" so the apex is separable from them. Replaces the
+     GoatCounter tag that sat here until 2026-08-03: GoatCounter was retired on
+     2026-06-27 and the decks moved to this beacon, but this page was never
+     migrated, so kage-gumi.com itself counted nothing for five weeks. -->
+<script>
+(function () {
+  var BASE = "https://kage-gate.kage-gumi.workers.dev";
+  var DECK = "landing";
+  // session id joins this view's hit to its engagement row (sid)
+  var sid = (function () {
+    try { if (crypto && crypto.randomUUID) return crypto.randomUUID(); } catch (e) {}
+    return "s-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 10);
+  })();
+
+  function send(path, obj) {
+    try {
+      var payload = JSON.stringify(obj);
+      var sent = false;
+      // text/plain Blob via sendBeacon avoids a CORS preflight; fetch keepalive is the fallback.
+      if (navigator.sendBeacon) {
+        try { sent = navigator.sendBeacon(BASE + path, new Blob([payload], { type: "text/plain" })); } catch (e) {}
+      }
+      if (!sent) {
+        fetch(BASE + path, { method: "POST", keepalive: true, body: payload }).catch(function () {});
+      }
+    } catch (e) {}
+  }
+
+  // load hit (carries sid so engagement can be joined to the view)
+  send("/hit", {
+    deck: DECK,
+    v: (new URLSearchParams(location.search).get("v") || ""),
+    referrer: document.referrer || "",
+    path: location.pathname,
+    sid: sid
+  });
+
+  // --- engagement: foreground dwell + scroll depth ---------------------
+  var dwellMs = 0;            // accumulated active (foreground) ms
+  var segStart = (document.visibilityState === "hidden") ? 0 : Date.now();
+  var maxDepth = 0;          // furthest scroll %, 0-100
+
+  function accrue() { if (segStart) { dwellMs += Date.now() - segStart; segStart = 0; } }
+
+  function measureDepth() {
+    try {
+      var doc = document.documentElement;
+      var scrollH = Math.max(doc.scrollHeight, document.body ? document.body.scrollHeight : 0);
+      if (scrollH <= 0) return;
+      var seen = (window.scrollY + window.innerHeight) / scrollH * 100;
+      if (seen > maxDepth) maxDepth = Math.min(100, seen);
+    } catch (e) {}
+  }
+  measureDepth();
+  window.addEventListener("scroll", measureDepth, { passive: true });
+  window.addEventListener("resize", measureDepth, { passive: true });
+
+  function sendEng() {
+    accrue();
+    measureDepth();
+    send("/eng", {
+      sid: sid,
+      deck: DECK,
+      dwellMs: dwellMs,
+      depth: Math.round(maxDepth),
+      depthKind: "scroll"
+    });
+    // box dedups by sid (max), so a later resend is safe
+  }
+
+  // A separate visibilitychange listener above drives the canvas loop; these are
+  // independent handlers on the same event, which is fine.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") { accrue(); sendEng(); }
+    else if (!segStart) { segStart = Date.now(); }   // resume the dwell timer
+  });
+  window.addEventListener("pagehide", sendEng);
+})();
+</script>
 </body>
 </html>
