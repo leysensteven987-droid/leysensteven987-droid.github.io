@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 5 most interesting and fast-moving AI topics right now -<br>curated nightly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-08-09<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-08-10<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,30 +270,46 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Enterprise</span></div>
-      <h2>Claude Opus 5 Becomes the New Default - Enterprise DLP Hooks and Open Source Push Deepen Anthropic's Reach</h2>
-      <p class="why">Claude Opus 5, which launched July 24 with a 1M-token context window and adaptive thinking on by default, is now the default model on Claude Max and the strongest on Claude Pro - marking a generational shift in Anthropic's flagship. Enterprise teams gained real-time DLP enforcement via new inference hooks in beta, letting compliance functions inspect prompts and tool calls before they reach the model. Anthropic also launched Claude for Open Source, handing 6 months of free Claude Max 20x - roughly $1,200 in value - to open-source maintainers.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Hardware</span></div>
+      <h2>Anthropic Is Building Its Own AI Chip Design Team to Make Claude Faster and Cheaper</h2>
+      <p class="why">Anthropic confirmed on August 5 that it is hiring a team of chip designers to co-design hardware and models in tandem - a strategic shift from renting compute to owning the silicon stack. The move follows a well-worn path: Google's TPUs, Amazon's Trainium, and Meta's MTIA all began as internal teams before becoming the economic engine underneath their AI products. For Anthropic, owning silicon means influencing the latency, throughput, and cost curves that currently constrain what Claude can do in production at scale.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Box benchmarks show Opus 5 outperforms Opus 4.8 by 8% overall, with 11% gains in data analysis and 17% in due diligence - the kind of domain-specific improvements that move enterprise procurement decisions.</li>
-        <li>Inference hooks give compliance and legal teams pre-call DLP enforcement across Claude chat, Claude Code, and Cowork, addressing the primary objection that has kept regulated industries cautious about deploying frontier models in production.</li>
-        <li>Claude Sonnet 5's promotional pricing of $2 per million input tokens ends August 31, with standard pricing of $3 per million taking effect September 1 - giving developers a clear end date for the current cost window.</li>
+        <li>The hiring effort targets engineers from established chip design teams, focusing on co-designing hardware with model architecture - an approach that yields efficiency gains unavailable when software and silicon are built separately.</li>
+        <li>Custom silicon gives Anthropic the ability to tune memory bandwidth and precision formats to Claude's specific inference patterns rather than accepting what general-purpose accelerators provide.</li>
+        <li>The initiative arrives as hyperscaler compute costs remain the single largest variable in Anthropic's cost structure, giving the chip team a clear financial mandate beyond raw performance gains.</li>
       </ul>
       <div class="sources">
-        <a href="https://venturebeat.com/orchestration/anthropic-launches-claude-opus-5-a-cheaper-ai-model-for-coding-agents-and-enterprise-workflows">VentureBeat</a>
-        <a href="https://claudelog.com/claude-news/">ClaudeLog</a>
+        <a href="https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/">TechCrunch</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag">Research</span><span class="tag">Science</span></div>
-      <h2>OpenAI Astra Solves 10 Decades-Old Math Problems for $2,000 in Compute - AI Crosses Into Original Research</h2>
-      <p class="why">OpenAI announced August 1 that an internal version of Astra - its next major model, not yet publicly released - generated solutions to 10 longstanding open problems in mathematics and theoretical computer science, then published a 249-page manuscript and Lean 4 proof certificates on GitHub with zero "sorry" count, meaning every proof step is fully machine-verified. The problems span group theory, high-dimensional geometry, coding theory, quantum complexity, lattice cryptography, and extremal combinatorics - real research territory, not benchmark puzzles. The cost: roughly $2,000 in API tokens.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Regulation</span></div>
+      <h2>EU AI Act Transparency Obligations Are Now Live - Disclosure Rules Enforced While High-Risk Annex III Waits Until 2027</h2>
+      <p class="why">The EU AI Act's Article 50 transparency requirements came into force on August 2, 2026, requiring AI systems interacting with people to identify themselves as AI, AI-generated content to carry machine-readable labels, and deepfakes to be explicitly disclosed - obligations covering virtually every AI product deployed in the EU. The Digital Omnibus amendment deferred Annex III high-risk system requirements to late 2027, but transparency was explicitly carved out and is enforced today. As of April 2026, 78% of organizations had not taken meaningful compliance steps, converting inaction into live regulatory exposure.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Chief among the results is an explicit construction of a non-sofic group, settling a question open since Mikhail Gromov introduced soficity in 1999 - a problem that attracted serious work from leading mathematicians for over two decades.</li>
-        <li>The Lean 4 proofs are machine-verifiable to Mathlib standards, meaning the results are independently auditable by any mathematician with a laptop - raising the bar for what "AI did math" actually means.</li>
+        <li>Article 50 covers chatbot identity disclosure, machine-readable labeling of AI-generated content, and explicit deepfake warnings - a broad sweep of requirements touching product interfaces, APIs, and content pipelines across the EU.</li>
+        <li>The Digital Omnibus delay to December 2027 applies only to Annex III high-risk systems such as recruitment AI, credit scoring, and critical infrastructure - with transparency obligations carved out and enforced on schedule from August 2.</li>
+        <li>Enforcement powers for the EU AI Office over general-purpose AI providers also activated August 2, giving regulators authority to investigate and fine GPAI developers operating in the EU market.</li>
+      </ul>
+      <div class="sources">
+        <a href="https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline">Holland &amp; Knight</a>
+        <a href="https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act">DLA Piper</a>
+      </div>
+    </article>
+
+    <article class="topic" style="animation-delay:.10s">
+      <span class="rank">03</span>
+      <div class="tags"><span class="tag">Research</span><span class="tag">Science</span></div>
+      <h2>OpenAI Astra Solves 10 Decades-Old Math Problems for $2,000 in Compute - AI Crosses Into Original Research</h2>
+      <p class="why">OpenAI announced on August 1 that an internal version of Astra - its next major model, not yet publicly released - generated solutions to 10 longstanding open problems in mathematics and theoretical computer science, then published a 249-page manuscript and Lean 4 proof certificates on GitHub with zero unverified steps. The problems span group theory, high-dimensional geometry, coding theory, quantum complexity, lattice cryptography, and extremal combinatorics - real research territory, not benchmark puzzles. The cost: roughly $2,000 in API tokens at Sol API rates.</p>
+      <div class="moving-label">What's moving</div>
+      <ul>
+        <li>The headline result is an explicit construction of a non-sofic group, settling a question open since Mikhail Gromov introduced soficity in 1999 - a problem that attracted serious work from leading mathematicians for over two decades.</li>
+        <li>Fields Medalist Tim Gowers said he would have recommended the proof for publication in a top mathematics journal without hesitation - the clearest peer endorsement yet that AI has entered genuine original research territory.</li>
         <li>The $2,000 compute figure reshapes the research economics argument: careers have been spent on some of these problems, and the model matched that effort at a cost comparable to a few weeks of a US graduate student's stipend.</li>
       </ul>
       <div class="sources">
@@ -302,16 +318,16 @@
       </div>
     </article>
 
-    <article class="topic" style="animation-delay:.10s">
-      <span class="rank">03</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Industry</span></div>
-      <h2>Inference Price War Intensifies - OpenAI Cuts GPT-5.6 Luna 80% as Nine Models Drop in the First Week of August</h2>
-      <p class="why">OpenAI slashed the price of GPT-5.6 Luna by 80% on July 30, bringing input costs to $0.20 per million tokens - a level that makes high-volume agentic workloads economically viable for mid-market teams that previously could not afford frontier capability. Alibaba released Qwen3.8 Max on August 2, DeepSeek dropped V4-Flash-0731, and FLUX 3 Video shipped with a first-party price list - nine dated model entries across five calendar dates in the first week of August alone. Inference is commoditizing faster than any 2025 analyst forecast suggested.</p>
+    <article class="topic" style="animation-delay:.14s">
+      <span class="rank">04</span>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Economics</span></div>
+      <h2>Nine Model Releases in One Week - Inference Price War Reshapes AI Economics as GPT-5.6 Luna Drops 80%</h2>
+      <p class="why">OpenAI slashed GPT-5.6 Luna pricing by 80% to $0.20 per million input tokens, while Alibaba released Qwen3.8 Max, DeepSeek shipped V4-Flash-0731, and FLUX 3 Video entered with a first-party price list - nine dated model entries across five calendar dates in the first week of August alone. Inference is commoditizing faster than any 2025 analyst forecast suggested, with the model race now running as a simultaneous speed contest, pricing war, and distribution battle across every tier of the stack.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The 80% cut on GPT-5.6 Luna follows OpenAI's playbook of releasing premium models then aggressively repricing to capture volume before open-weight alternatives close the gap - a cycle now running in months rather than years.</li>
-        <li>Qwen3.8 Max and DeepSeek V4-Flash entering simultaneously squeeze every tier of the pricing stack, with Chinese-origin models continuing to exert downward pressure on API pricing and the compute cost assumptions embedded in AI business models.</li>
-        <li>Claude Sonnet 5's promotional pricing of $2/$10 per million tokens expires August 31, making September 1 the most consequential API pricing reset date this month for teams building on Anthropic's mid-tier model.</li>
+        <li>The 80% Luna cut follows OpenAI's established playbook of releasing premium models then repricing aggressively to capture volume before open-weight alternatives close the capability gap - a cycle now compressing from years to months.</li>
+        <li>Qwen3.8 Max and DeepSeek V4-Flash entering simultaneously squeeze every pricing tier, with Chinese-origin models continuing to exert structural downward pressure on API pricing across the entire market.</li>
+        <li>New U.S. AI rules are inserting government review into product launches that could slow a release or force a model offline on national security grounds, adding a regulatory variable to a market that previously moved at pure commercial speed.</li>
       </ul>
       <div class="sources">
         <a href="https://llm-stats.com/ai-news">LLM Stats</a>
@@ -319,37 +335,20 @@
       </div>
     </article>
 
-    <article class="topic" style="animation-delay:.14s">
-      <span class="rank">04</span>
-      <div class="tags"><span class="tag">Industry</span><span class="tag">Finance</span></div>
-      <h2>OpenAI's Public S-1 Expected This Month - The $852B Company Makes Its Finances Public Ahead of a September IPO</h2>
-      <p class="why">OpenAI's public prospectus is expected mid-to-late August 2026 after the company confidentially filed its S-1 with the SEC on June 8, targeting a September IPO at a valuation above $1 trillion - up from the $852 billion set in its March 2026 financing round. For the first time, the full financial picture of the world's most valuable private AI company will be subject to public scrutiny: revenue composition, compute costs, loss trajectory, and how it accounts for its unusual capped-profit model. The filing will anchor AI valuation discussions for years.</p>
-      <div class="moving-label">What's moving</div>
-      <ul>
-        <li>Enterprise API and ChatGPT Plus subscriptions are expected to form the bulk of recognized revenue - numbers closely guarded until now that will anchor every AI business model sustainability debate that follows.</li>
-        <li>The $1 trillion+ target valuation against an $852 billion private-round price implies the IPO pricing assumes continued rapid revenue growth and leaves little margin for disappointment relative to expectations.</li>
-        <li>Palantir's Q2 +93% YoY to $1.94 billion, reported the same week the public S-1 window opened, has already given markets a concrete enterprise AI revenue benchmark to calibrate against.</li>
-      </ul>
-      <div class="sources">
-        <a href="https://www.buildmvpfast.com/blog/openai-ipo-filing-valuation-s1-2026">BuildMVPFast</a>
-        <a href="https://www.investing.com/analysis/the-trilliondollar-ipo-test-spacex-and-openai-face-public-markets-200680688">Investing.com</a>
-      </div>
-    </article>
-
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
       <div class="tags"><span class="tag">Enterprise</span><span class="tag">Agents</span></div>
-      <h2>Enterprise AI Agents Hit a Scale Inflection - Gartner Forecasts 40% of Apps Will Embed Agents by Year-End</h2>
-      <p class="why">Gartner now forecasts that 40% of enterprise applications will embed task-specific AI agents by end of 2026, up from fewer than 5% at the start of 2025 - a near-ten-fold shift representing the fastest enterprise software adoption cycle Gartner has measured. The AI agent market is expected to reach $11.78 billion in value this year at a 46.61% compound annual growth rate. The critical nuance from McKinsey's concurrent State of AI report: only 23% of enterprises are actually scaling agents in production, while 39% remain stuck in experimentation - the gap is the defining challenge of H2 2026.</p>
+      <h2>Enterprise AI Agents Move From Demos to Daily Plumbing - Gartner Calls It the Defining Inflection of 2026</h2>
+      <p class="why">Gartner forecasts that 40% of enterprise applications will embed task-specific AI agents by end of 2026, up from fewer than 5% at the start of 2025 - the fastest enterprise software adoption cycle on record. Agents are now owning defined responsibilities inside everyday business systems, watching cloud spending, triaging security incidents, and monitoring financial anomalies within boundaries set by human managers. The critical nuance: only 23% of enterprises are scaling agents in production while 39% remain stuck in experimentation - the gap between deployment and aspiration is the defining challenge of H2 2026.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>LangGraph surpassed CrewAI in GitHub stars in early 2026, driven by enterprise adoption, signaling a shift toward orchestration frameworks that offer fine-grained control and auditability rather than high-level abstraction.</li>
-        <li>The 40% Gartner figure covers task-specific agents - single-purpose automations for support, research, coding, and data workflows - rather than general agents, reflecting where enterprise IT is comfortable deploying autonomous systems today.</li>
-        <li>Governance and evaluation ranked as the top enterprise concerns in the 2026 State of AI Agents survey, ahead of capability and cost - a reversal from 2024 that marks the shift from proving AI works to proving it is reliable enough for production.</li>
+        <li>EY's Canvas platform now processes 1.4 trillion lines of audit data annually across 160,000 engagements spanning 150+ countries, one of the largest real-world deployments of orchestrated AI agents in enterprise use today.</li>
+        <li>The EU AI Act's August 2 enforcement classifies most multi-agent orchestration in high-impact sectors as high-risk, adding compliance pressure to the deployment calculus for European enterprises and global companies operating in the EU.</li>
+        <li>Governance and evaluation have overtaken capability and cost as the top enterprise concerns in the 2026 State of AI Agents survey, marking the shift from proving AI works to proving it is reliable enough for production.</li>
       </ul>
       <div class="sources">
         <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner</a>
-        <a href="https://beam.ai/agentic-insights/enterprise-ai-agent-trends-2026">Beam AI</a>
+        <a href="https://agentic.ai/news">Agentic.ai</a>
       </div>
     </article>
 <!-- TOPICS:END -->
