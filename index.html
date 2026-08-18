@@ -34,6 +34,13 @@
     --toge:     #35C4B5;   /* KG light teal, night livery route */
     --tetsu:    #d7dae0;   /* chrome — the only accent in monochrome metal */
     --raiden:   #9dbf2e;   /* electric chartreuse — thunder */
+    /* Echoes of the Monarch — the game's own brand, not a KG accent. Lifted from
+       echoesofthemonarch/branding/app-icon.svg + its site's :root. Void ground, teal
+       gateway rim, crimson ember; kept apart from --crimson/--teal above on purpose. */
+    --eotm:       #7fd6d0;
+    --eotm-ember: #e0455f;
+    --eotm-ink:   #9a8fbf;
+    --eotm-void:  #0c0a1c;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -482,6 +489,145 @@
   a.pet-tetsu    { --accent: var(--tetsu);    --accent-glow: #d7dae016; --accent-shadow: #d7dae02b; }
   a.pet-raiden   { --accent: var(--raiden);   --accent-glow: #9dbf2e1c; --accent-shadow: #9dbf2e33; }
 
+  /* ── 響 the game (Echoes of the Monarch) ──────────────────────────────────────
+     Deliberately NOT a fifth card in the private wing above. Everything in that row
+     is a personal tool that runs on hardware in the house; this is a game, out in
+     the open, on a domain of its own. So it takes a band of its own, in the game's
+     palette rather than the Sumi-e panel, and it reads as a different kind of thing
+     at a glance. The grid is a single wide row, not four columns. */
+  .realm { width: 100%; margin-top: 44px; }
+
+  a.realm-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 26px;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid #7fd6d038;
+    background:
+      radial-gradient(120% 150% at 20% -20%, #3c2460 0%, #1f1439 44%, var(--eotm-void) 100%);
+    transition: transform 0.4s cubic-bezier(.2,.7,.2,1),
+                border-color 0.4s ease,
+                box-shadow 0.4s ease;
+  }
+  /* the ember's bloom, pulled up and off the right edge: centred it tints the call
+     to action pink, which reads as a hover state the card is not in */
+  a.realm-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -150px; right: -120px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, #e0455f33 0%, transparent 62%);
+  }
+  a.realm-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%; left: -48px;
+    width: 340px; height: 340px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, #7fd6d02e 0%, transparent 65%);
+  }
+  a.realm-card:hover,
+  a.realm-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: #7fd6d08c;
+    box-shadow: 0 18px 44px #05030fa8, 0 0 22px #7fd6d02b;
+    outline: none;
+  }
+  a.realm-card:focus-visible {
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--eotm), 0 18px 44px #05030fa8;
+  }
+
+  a.realm-card .logo {
+    display: block;
+    width: 84px;
+    height: 84px;
+    border-radius: 19px;
+    box-shadow: 0 3px 14px #0008;
+    transition: transform 0.4s cubic-bezier(.2,.7,.2,1);
+  }
+  a.realm-card:hover .logo,
+  a.realm-card:focus-visible .logo { transform: scale(1.05) rotate(-1.5deg); }
+
+  .realm-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: ui-monospace, monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--eotm);
+    margin-bottom: 9px;
+  }
+  .realm-eyebrow .ember {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--eotm-ember);
+  }
+  a.realm-card h3 {
+    font-family: 'Noto Serif JP', Georgia, serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    margin: 0 0 6px;
+    background: linear-gradient(180deg, #eafffd 0%, #aef3ee 42%, #54b3ac 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .realm-tag {
+    font-family: 'Noto Serif JP', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--eotm-ink);
+    margin-bottom: 10px;
+  }
+  a.realm-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #b9d3e0b8;
+    max-width: 62ch;
+  }
+  .realm-go {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    color: #aef3ee;
+    border: 1px solid #7fd6d061;
+    border-radius: 7px;
+    padding: 10px 15px;
+    background: #7fd6d010;
+    transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+  }
+  a.realm-card:hover .realm-go,
+  a.realm-card:focus-visible .realm-go {
+    background: #7fd6d029;
+    border-color: #aef3eeb3;
+    color: #eafffd;
+  }
+  .realm-go .arw { transition: transform 0.4s cubic-bezier(.2,.7,.2,1); }
+  a.realm-card:hover .realm-go .arw,
+  a.realm-card:focus-visible .realm-go .arw { transform: translateX(5px); }
+
   /* ── footer ── */
   footer {
     margin-top: 64px;
@@ -536,8 +682,10 @@
   html.preanim a.gate-right,
   html.preanim .seam,
   html.preanim .wing,
+  html.preanim .realm,
   html.preanim footer   { opacity: 0; }
   html.preanim .wing     { transform: translateY(16px); }
+  html.preanim .realm    { transform: translateY(16px); }
   html.preanim .logo     { transform: translateY(12px); }
   html.preanim .wordmark { transform: translateY(10px); }
   html.preanim .subtitle { transform: translateY(8px); }
@@ -555,6 +703,7 @@
   html.preanim a.gate-right,
   html.preanim .seam,
   html.preanim .wing,
+  html.preanim .realm,
   html.preanim footer {
     transition: opacity 0.62s ease, transform 0.62s cubic-bezier(.2,.7,.2,1);
   }
@@ -572,7 +721,8 @@
   html.preanim.play a.gate-right { opacity: 1; transform: none; transition-delay: 0.82s; }
   html.preanim.play .seam     { opacity: 1; transform: scale(1); transition-delay: 1.0s; transition-timing-function: cubic-bezier(.34,1.56,.64,1); }
   html.preanim.play .wing     { opacity: 1; transform: none; transition-delay: 1.14s; }
-  html.preanim.play footer    { opacity: 1; transform: none; transition-delay: 1.30s; }
+  html.preanim.play .realm    { opacity: 1; transform: none; transition-delay: 1.26s; }
+  html.preanim.play footer    { opacity: 1; transform: none; transition-delay: 1.42s; }
 
   /* one-time bloom on the logo (no resting glow) */
   @keyframes logoBloom {
@@ -589,6 +739,17 @@
   @media (max-width: 460px) {
     .pets { grid-template-columns: 1fr; }
     a.pet { min-height: 0; }
+  }
+
+  /* the game band folds: mark + copy stack, and the call to action becomes a full
+     width row rather than a pill squeezed against the right edge */
+  @media (max-width: 760px) {
+    a.realm-card { grid-template-columns: auto 1fr; gap: 18px; padding: 20px; }
+    .realm-go { grid-column: 1 / -1; justify-content: center; }
+  }
+  @media (max-width: 460px) {
+    a.realm-card { grid-template-columns: 1fr; }
+    a.realm-card .logo { width: 64px; height: 64px; border-radius: 15px; }
   }
 
   /* ── responsive: stack the two doors below 760px ── */
@@ -767,6 +928,71 @@
           <div class="go">Open <span class="arw">&rarr;</span></div>
         </a>
       </div>
+    </section>
+
+    <!-- 響 Echoes of the Monarch. NOT a fifth card in the private wing above: everything
+         in that row is a personal tool that runs on hardware in the house, and this is a
+         game, out in the open, on a domain of its own. Its own band, in its own palette,
+         so the difference reads at a glance. The link leaves this site on purpose. -->
+    <section class="realm" aria-labelledby="realm-title">
+      <div class="wing-head">
+        <div class="lbl" id="realm-title"><i>響</i> The game &middot; out in the open</div>
+        <div class="rule" aria-hidden="true"></div>
+      </div>
+
+      <a class="realm-card" href="https://echoes-of-the-monarch.com" rel="noopener">
+        <!-- the game's own app icon, inlined: the gateway, teal rim, crimson ember at its
+             heart. Ids are eotm-prefixed so they cannot collide with the pet marks above. -->
+        <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Echoes of the Monarch app icon">
+          <defs>
+            <radialGradient id="eotmBg" cx="50%" cy="38%" r="82%">
+              <stop offset="0%" stop-color="#3c2460"/><stop offset="48%" stop-color="#1f1439"/><stop offset="100%" stop-color="#0c0a1c"/>
+            </radialGradient>
+            <linearGradient id="eotmVoid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#060412"/><stop offset="100%" stop-color="#170d2b"/>
+            </linearGradient>
+            <linearGradient id="eotmRim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e2fffc"/><stop offset="28%" stop-color="#aef3ee"/>
+              <stop offset="72%" stop-color="#7fd6d0"/><stop offset="100%" stop-color="#54b3ac"/>
+            </linearGradient>
+            <radialGradient id="eotmEmber" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffdde2"/><stop offset="32%" stop-color="#ff6177"/>
+              <stop offset="72%" stop-color="#e0455f"/><stop offset="100%" stop-color="#e0455f" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="eotmSoft" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="16"/></filter>
+            <filter id="eotmGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="6"/></filter>
+            <filter id="eotmHot" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.5"/></filter>
+            <path id="eotmArchR" fill-rule="evenodd" d="M -110 112 L -110 -28 C -110 -112 -62 -156 0 -156 C 62 -156 110 -112 110 -28 L 110 112 Z M -76 112 L -76 -28 C -76 -96 -48 -122 0 -122 C 48 -122 76 -96 76 -28 L 76 112 Z"/>
+            <path id="eotmArchI" d="M -76 112 L -76 -28 C -76 -96 -48 -122 0 -122 C 48 -122 76 -96 76 -28 L 76 112 Z"/>
+            <clipPath id="eotmArchClip"><use href="#eotmArchI"/></clipPath>
+          </defs>
+          <rect width="512" height="512" rx="112" fill="url(#eotmBg)"/>
+          <g transform="translate(256,256) scale(1.12)">
+            <use href="#eotmArchR" fill="#7fd6d0" opacity="0.6" filter="url(#eotmSoft)"/>
+            <use href="#eotmArchI" fill="url(#eotmVoid)"/>
+            <g clip-path="url(#eotmArchClip)">
+              <circle cx="0" cy="-10" r="78" fill="#e0455f" opacity="0.45" filter="url(#eotmSoft)"/>
+              <circle cx="0" cy="-10" r="44" fill="url(#eotmEmber)"/>
+            </g>
+            <circle cx="0" cy="-10" r="16" fill="#ff8fa0" filter="url(#eotmHot)"/>
+            <circle cx="0" cy="-10" r="9.5" fill="#ffecef"/>
+            <ellipse cx="0" cy="112" rx="120" ry="10" fill="#7fd6d0" opacity="0.5" filter="url(#eotmGlow)"/>
+            <use href="#eotmArchR" fill="url(#eotmRim)"/>
+            <path d="M -76 112 L -76 -28 C -76 -96 -48 -122 0 -122 C 48 -122 76 -96 76 -28 L 76 112" fill="none" stroke="#eafffd" stroke-width="3" opacity="0.9"/>
+            <circle cx="0" cy="-156" r="17" fill="#e0455f" opacity="0.6" filter="url(#eotmGlow)"/>
+            <circle cx="0" cy="-156" r="8.5" fill="#ff6177"/>
+          </g>
+        </svg>
+
+        <div class="realm-body">
+          <div class="realm-eyebrow"><span class="ember" aria-hidden="true"></span>Personal &middot; game project</div>
+          <h3>Echoes of the Monarch</h3>
+          <div class="realm-tag">Every shadow remembers its king.</div>
+          <p>A real-time co-op dark-fantasy dungeon crawler for a small party of friends. Raid the gates between worlds, harvest the dead into a shadow army, and grow a guild hall from the spoils. In build.</p>
+        </div>
+
+        <div class="realm-go">echoes-of-the-monarch.com <span class="arw">&rarr;</span></div>
+      </a>
     </section>
 
     <footer>
