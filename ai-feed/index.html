@@ -258,7 +258,7 @@
     <h1>Ryū AI Dispatch</h1>
     <p class="tagline">The 12 most interesting and fast-moving AI topics of the past week -<br>curated weekly by Ryū, the Night Runner. Claude and Anthropic included.</p>
     <div class="meta-row">
-      <div class="updated">Updated <b><!-- UPDATED:START -->2026-08-22<!-- UPDATED:END --></b> · KG-04</div>
+      <div class="updated">Updated <b><!-- UPDATED:START -->2026-08-23<!-- UPDATED:END --></b> · KG-04</div>
       <a class="rss-btn" href="/ai-feed/feed.xml">
         <svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9h2.5A11.5 11.5 0 0 0 4 8.5V11zm0 4a5 5 0 0 1 5 5h2.5A7.5 7.5 0 0 0 4 12.5V15zm1.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
         Subscribe via RSS
@@ -270,203 +270,205 @@
 <!-- TOPICS:START -->
     <article class="topic" style="animation-delay:.02s">
       <span class="rank">01</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Agents</span></div>
-      <h2>Nvidia's AVO Agent Clears All 183 ARC-AGI-3 Levels - Wrapped Around Claude Opus 5, Which Scores 30% Alone</h2>
-      <p class="why">On August 22 Nvidia disclosed that AVO, its general-purpose coding agent, completed all 183 levels across all 25 public ARC-AGI-3 environments and posted a perfect 100.00 on the benchmark's Relative Human Action Efficiency metric - working out what to do with no instructions, no stated rules and no stated goals. The striking part is the substrate: AVO runs on Claude Opus 5, which scores 30.2% on the same benchmark when tested bare. The harness - memory, tool use, recovery from failure, sustained context across a long task - accounted for the remaining seventy points. Nvidia published results on the public set only, not the private set ARC has historically used to guard against overfitting.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Regulation</span></div>
+      <h2>EU AI Act Enforcement Goes Live: Every Chatbot Must Declare AI, Every Deepfake Must Be Labeled</h2>
+      <p class="why">As of August 2, the European Commission's AI Office began enforcing Article 50 of the EU AI Act, requiring chatbots and interactive AI systems to tell users they are dealing with AI, and requiring AI-generated or AI-altered content to carry machine-readable marks. Non-compliance carries fines up to EUR 15 million or 3% of global annual turnover, whichever is higher. The December 2 grace date for models already on the market is now the operational deadline every AI provider is racing toward.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>AVO cleared all 183 levels in 6,624 actions, roughly 12% fewer than VISTA, the previous best comparable system - efficiency, not just completion, is now the scored axis.</li>
-        <li>The 30.2%-to-100% gap on an unchanged model is the clearest published evidence yet that agent scaffolding, not raw model capability, is the binding constraint on long-horizon autonomy.</li>
-        <li>Public-set-only disclosure leaves the result incomplete as a general-reasoning claim; ARC's private set is the test that would settle it.</li>
+        <li>Enforcement is immediate for systems placed on the market after August 2 - no grace period applies to new releases, meaning every product shipped since then is under live legal exposure.</li>
+        <li>National market surveillance authorities and the EU AI Office can inspect models, restrict market access, and issue fines; the first enforcement actions are expected in the coming months.</li>
+        <li>China activated its own AI agent regulations on July 15 - the first national framework to treat AI agents as a distinct legal category - meaning every major deployment now sits inside some regulatory envelope.</li>
       </ul>
       <div class="sources">
-        <a href="https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/">NVIDIA Technical Blog</a>
-        <a href="https://thenewstack.io/nvidia-avo-arcagi3-benchmark/">The New Stack</a>
+        <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714">European Commission</a>
+        <a href="https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026">Cooley</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.06s">
       <span class="rank">02</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Hardware</span></div>
-      <h2>Anthropic Hires Google's TPU Founder as Broadcom Seeks up to $100B in Debt to Build Its Silicon</h2>
-      <p class="why">Bloomberg reported on August 21 that Anthropic has hired Amir Salek - who helped lead Google's TPU programme and delivered its first seven generations of chips - into its compute team, reporting to James Bradbury. The day before, Broadcom was reported in talks with lenders to raise more than $60 billion, and potentially as much as $100 billion across senior-secured and junior tranches, to finance custom AI chip capacity for customers including Anthropic. Read together, the two signals describe one move: Anthropic standing up an in-house silicon function rather than remaining a pure buyer of Nvidia and Google compute.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Policy</span></div>
+      <h2>Anthropic Watermarks All Claude Output Worldwide Using C2PA - and Applies the Standard Globally</h2>
+      <p class="why">On August 11, Anthropic announced that all Claude text and file output now carries invisible machine-readable marks: imperceptible C2PA watermarks baked into generated text and C2PA metadata embedded in files, detectable even after copy and paste. The company applied the standard globally - not just for EU users - signaling that the EU AI Act's marking requirement is effectively becoming the world's. Models released before August 2 are in transition and must comply by December 2, 2026.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Salek's arrival gives Anthropic an executive who has designed and scaled seven TPU generations, and the company has begun hiring for its own silicon operation.</li>
-        <li>The Broadcom raise builds on the June Broadcom, Apollo and Blackstone partnership financing a $35 billion expansion of Anthropic's compute - an initial one gigawatt against a stated target of more than 20 gigawatts for leading AI labs by 2028.</li>
-        <li>Debt, not equity, is now the instrument funding frontier compute, which shifts the downside from AI investors onto credit markets.</li>
+        <li>Deploying watermarks worldwide rather than geofencing them to Europe is the most consequential aspect of the announcement - Anthropic is betting on one global standard rather than a patchwork.</li>
+        <li>The company is transparent about the limits: marks may be absent if content was edited, paraphrased, translated, or generated by pre-marking models - a real gap that governs how much weight detectors can place on a missing mark.</li>
+        <li>Every other major AI provider faces the same December 2 deadline; how their implementations compare to Anthropic's C2PA approach will define the watermarking ecosystem for years.</li>
       </ul>
       <div class="sources">
-        <a href="https://www.bloomberg.com/news/articles/2026-08-21/anthropic-taps-google-chip-veteran-as-part-of-push-into-hardware">Bloomberg</a>
-        <a href="https://qz.com/broadcom-debt-financing-ai-chips-anthropic-082126">Quartz</a>
+        <a href="https://thenextweb.com/news/anthropic-watermarks-claude-output-eu-ai-act-article-50">The Next Web</a>
+        <a href="https://www.axios.com/2026/08/12/anthropic-claude-watermarks-ai-detection">Axios</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.10s">
       <span class="rank">03</span>
-      <div class="tags"><span class="tag">Safety</span><span class="tag">Models</span></div>
-      <h2>OpenAI Pauses Frontier RL Training After Astra Approaches the Critical Cyber Threshold</h2>
-      <p class="why">On August 18 OpenAI published that preliminary evidence indicates Astra, one of its upcoming models, may meet the Critical cybersecurity capability threshold under its Preparedness Framework. The company slowed scaling in response: a two-week pause on reinforcement-learning training for models intended for deployment, with its largest planned frontier RL run still on hold. Once Astra was determined on August 7 to have critical cyber capabilities, OpenAI added a monitoring requirement covering all Astra inference that uses tools.</p>
+      <div class="tags"><span class="tag">Research</span><span class="tag">Models</span></div>
+      <h2>OpenAI's Astra Multi-Agent System Solves 10 Long-Unsolved Math Problems for $2,000</h2>
+      <p class="why">OpenAI published that an internal multi-agent version of Astra resolved ten long-standing open problems spanning group theory, coding theory, quantum complexity, and high-dimensional geometry - including a disproof of Connes's rigidity conjecture and the first construction proving non-sofic groups exist, a question Gromov posed in 1999. The company released a 249-page manuscript with machine-checkable Lean 4 certificates on GitHub, enabling trustless verification without traditional peer review. Total compute cost: roughly $2,000 at Sol API rates.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>OpenAI put monitoring overhead at roughly 20% of the inference compute being monitored - the first public number on what a frontier safety case actually costs in compute.</li>
-        <li>This is the first time a major lab has publicly halted a frontier training run on capability-threshold grounds rather than in response to an incident with a released model.</li>
-        <li>Anthropic moved the opposite way in the same week, pushing frontier cyber capability out to defenders - two labs, one dual-use problem, visibly diverging answers.</li>
+        <li>The real breakthrough is the Supervisor Architecture - a routing layer directing sub-tasks to specialized agents - not a single-model capability jump; it means the result is an engineering advance, not just a scaling one.</li>
+        <li>Lean 4 certificates on GitHub compress peer review from years to days; the traditional math community is now verifying the proofs while simultaneously debating what the result means for publication norms.</li>
+        <li>OpenAI also disclosed that Astra may meet the Critical cybersecurity capability threshold under its Preparedness Framework, prompting a pause on its largest planned frontier RL run - the math announcement and the safety pause arrived in the same disclosure cycle.</li>
       </ul>
       <div class="sources">
-        <a href="https://openai.com/index/pacing-model-development-cyber-capabilities/">OpenAI</a>
+        <a href="https://www.nextmsc.com/news/openai-astra-ai-solves-10-open-math-problems">NextMSC</a>
+        <a href="https://byteiota.com/openai-astra-multi-agent-model/">ByteIota</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.14s">
       <span class="rank">04</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Agents</span></div>
-      <h2>Anthropic Takes Computer Use, Browser Use, Skills and Files APIs to General Availability</h2>
-      <p class="why">Between August 19 and 20 Anthropic moved a block of agent primitives out of beta on the Claude Developer Platform: computer use (computer_toolset_20260801) with batch actions, a new browser use tool (browser_toolset_20260801) for driving hosted browsers, and the Skills API and Files API to general availability, alongside a GA Admin API for Claude Enterprise user management. The browser tool targets web elements via page structure rather than pixel coordinates. Skills and Files also ship through Microsoft Foundry.</p>
+      <div class="tags"><span class="tag">Compute</span><span class="tag">Finance</span></div>
+      <h2>NVIDIA Locks In $500B from Apollo, BlackRock, Brookfield, Goldman and KKR to Build AI Infrastructure</h2>
+      <p class="why">On August 10, NVIDIA formalized memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish financing platforms targeting more than $500 billion in third-party capital for AI data centers. CEO Jensen Huang positioned AI compute as an "investable asset class" - AI factories being underwritten like power grids and toll roads rather than depreciating hardware. The structure lets start-up AI companies borrow against compute rather than raise equity, shifting who owns the foundational infrastructure layer.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Structure-based element targeting is the direct fix for the fragility that has kept vision-driven computer use out of production, and batch actions cut the round-trips that made it slow and expensive.</li>
-        <li>Files API at GA brings automatic file expiration, 5x higher rate limits and 1 TB of storage - the state layer long-running agents were previously bolting on themselves.</li>
-        <li>Shipping the Skills API on Microsoft Foundry at the same time puts Anthropic's agent-packaging format inside the Azure enterprise perimeter, not only on Anthropic's own platform.</li>
+        <li>Treating NVIDIA GPUs as long-duration infrastructure rather than equipment fundamentally reprices the asset class - the same silicon changes depreciation schedule and balance-sheet treatment.</li>
+        <li>Debt financing rather than equity moves AI's buildout risk from venture investors to credit markets - a structural shift in who bears the downside if compute demand fails to meet projections.</li>
+        <li>Six of the world's largest alternative asset managers signing up simultaneously signals the financing community sees AI infrastructure demand as durable enough to underwrite at scale, independent of individual model outcomes.</li>
       </ul>
       <div class="sources">
-        <a href="https://www.anthropic.com/news">Anthropic News</a>
-        <a href="https://releasebot.io/updates/anthropic/claude-developer-platform">Release notes</a>
+        <a href="https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital">NVIDIA Newsroom</a>
+        <a href="https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html">CNBC</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.18s">
       <span class="rank">05</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Security</span></div>
-      <h2>Anthropic Puts Claude Mythos 5 Inside Security Tools and Backs Open-Source Defenders with $35M</h2>
-      <p class="why">On August 21 Anthropic made Claude Mythos 5, its most capable model, available inside Claude Security for enterprise customers - scanning codebases for vulnerabilities, rating severity with CWE classifications and proposing candidate patches - without granting direct model access. It is also embedding Mythos 5 into partner products for security operations, incident response, threat intelligence, detection engineering and software remediation, so defenders stay in familiar tools while the model runs narrowly scoped defensive tasks behind them. Alongside it, a $35 million Defender Advantage Fund provides Claude credits to organisations improving open-source software security.</p>
+      <div class="tags"><span class="tag">Models</span><span class="tag">Consumer</span></div>
+      <h2>GPT-5.6 Sol Drops 20% in Price; ChatGPT Crosses 1 Billion Weekly Active Users</h2>
+      <p class="why">On August 21 OpenAI reduced GPT-5.6 Sol API pricing by over 20%, extending a run of cuts that already saw Luna fall 80% at end of July. The announcement tracked alongside the disclosure that ChatGPT has reached approximately 1 billion weekly active users - a fourfold increase since 2024. The combination reframes the competitive landscape: capability gaps are narrowing as cost drops, and the central question shifts from "which model is best" to "who controls distribution at scale."</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Frontier cyber capability is being released as a product surface with no direct model access - the delivery mechanism is itself the safeguard.</li>
-        <li>The Cyber Verification Program expands in the coming weeks to broader dual-use capabilities on Opus and Sonnet, with Mythos-class access to follow.</li>
-        <li>Aiming $35 million of credits at open-source security is a bet that the defender side of the dual-use ledger scales through maintainers rather than vendors.</li>
+        <li>ChatGPT Free users now get unlimited text on GPT-5.6 Luna and a Think button for harder questions - the free tier is materially more capable today than the paid tier was a year ago.</li>
+        <li>OpenAI is retiring the standalone o3 model on August 26 and folding separate "Instant" and "reasoning" modes into a single Sol experience with a thought-depth slider, reducing product complexity while raising baseline capability.</li>
+        <li>Reaching 1 billion weekly users means ChatGPT's audience now rivals the largest social platforms; distribution has become as strategically significant as model performance.</li>
       </ul>
       <div class="sources">
-        <a href="https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders">Claude Blog</a>
-        <a href="https://www.marktechpost.com/2026/08/21/anthropic-brings-claude-mythos-5-to-claude-security/">MarkTechPost</a>
+        <a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/">OpenAI</a>
+        <a href="https://www.explainx.ai/blog/gpt-5-6-sol-luna-chatgpt-unlimited-free-august-2026">ExplainX</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.22s">
       <span class="rank">06</span>
-      <div class="tags"><span class="tag">Strategy</span><span class="tag">Business</span></div>
-      <h2>Nvidia Pays $7B for Poolside Without Buying It - the License-Plus-Hire Playbook Goes Mainstream</h2>
-      <p class="why">On August 21 Nvidia was reported to have committed roughly $7 billion to Poolside: $6 billion for a non-exclusive licence to the Model Factory, the system Poolside uses to build its open-weight Laguna coding models, plus $1 billion of equity at a $12 billion pre-money valuation, with job offers extended to 109 Poolside employees. Poolside's leadership told investors flatly that this is not an acquisition and not an acquihire, and the three founders are staying. It is the same structure Nvidia used with Groq.</p>
+      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Research</span></div>
+      <h2>Claude Designs Protein Binders at 22-35% Hit Rate - More than Double the Industry Baseline</h2>
+      <p class="why">Anthropic published lab-validated results on August 18 showing Claude designed protein binders against 14 of 15 targets tested by Adaptyv Bio and Twist Bioscience, achieving a 22-35% experimental success rate against the typical industry baseline of 10-15%. The results were confirmed by wet-lab synthesis and assay - not computational prediction alone. It is the clearest published evidence that a general-purpose frontier model can direct productive molecular biology work without a task-specific fine-tuned system.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Structuring a capability transfer as a licence plus a minority stake sidesteps the merger review a straight acquisition would trigger - a playbook now used twice in one month.</li>
-        <li>Paying $6 billion for the pipeline that produces models, rather than for the models themselves, prices the model factory above the model.</li>
-        <li>NVDA closed the week roughly 5% lower on the news, ahead of Q2 FY27 earnings on August 26.</li>
+        <li>Hitting 14 of 15 targets is a breadth result - Claude's generality across diverse protein families is what distinguishes this from a specialized structure-prediction tool optimized for one class.</li>
+        <li>Roughly doubling the experimental hit rate changes the economics of early-stage drug design: fewer synthesis cycles needed to find a viable candidate, compressing timelines and cost.</li>
+        <li>External validation by Adaptyv Bio and Twist Bioscience, rather than in an internal Anthropic lab, is what elevates this from a demo to a citable scientific result.</li>
       </ul>
       <div class="sources">
-        <a href="https://the-decoder.com/nvidia-is-acquiring-poolsides-model-factory-and-109-employees-for-6-billion/">The Decoder</a>
-        <a href="https://finance.yahoo.com/technology/ai/articles/nvidia-7-billion-poolside-deal-224313075.html">Yahoo Finance</a>
+        <a href="https://www.anthropic.com/news">Anthropic</a>
+        <a href="https://techstartups.com/2026/08/18/top-tech-news-today-august-18-2026-apple-baidu-bytedance-google-meta-openai-xiaomi-more/">TechStartups</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.26s">
       <span class="rank">07</span>
-      <div class="tags"><span class="tag">Policy</span><span class="tag">Energy</span></div>
-      <h2>Pennsylvania Signs the Strictest AI Data Centre Rules in the US - and Gives Towns a Veto</h2>
-      <p class="why">On August 18 Governor Josh Shapiro signed an executive order that stops state environmental permitting for a data centre unless the developer has already secured local approval and made a legally binding commitment to his GRID requirements: paying the full electricity cost of the facility and sourcing a significant share of that power from clean energy. All AI data centre projects were removed from Pennsylvania's Permit Fast Track Program immediately and will not be considered for it in future. Non-disclosure agreements on data centre projects are no longer permissible, and locally approved projects must negotiate a community benefits agreement.</p>
+      <div class="tags"><span class="tag">Open Source</span><span class="tag">Models</span></div>
+      <h2>Qwen3.8-Max Open Weights Land on Hugging Face: 2.4T MoE, Revenue-Share License, 27B Companion</h2>
+      <p class="why">Alibaba released Qwen3.8-Max on August 3 as a 2.4-trillion-parameter Mixture-of-Experts model with 95 billion active parameters and a 1 million-token context window, then shipped open weights on Hugging Face on August 12 and followed with Qwen3.8-27B on August 15. It is Alibaba's return to open-sourcing its top-tier model after keeping several 2026 flagship releases proprietary. August saw at least 11 major model releases in 20 days from five-plus providers, and cost per intelligence unit dropped roughly 50% across tiers.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>A governor who had actively courted data centre investment reversed into the tightest guardrails in the country - the clearest sign yet that pass-through of grid cost has become the politically decisive issue.</li>
-        <li>Making local approval a precondition for state permitting inverts the usual order and hands municipalities a practical veto over gigawatt-scale siting.</li>
-        <li>The ban on non-disclosure agreements forces the economics of these deals into public view, which is exactly where the political heat has been coming from.</li>
+        <li>The open-weight release ships as text-only under a new revenue-share license, with vision and the 1M context window stripped compared to the hosted product - a deliberate holdback that signals Alibaba is open-sourcing the base, not the full product.</li>
+        <li>Qwen3.8-27B hit #1 on Hacker News with 893 points on launch day, making it the most community-resonant open-weight release this month - locally runnable at the level that fits enthusiast hardware.</li>
+        <li>Open-source models now match proprietary performance on most standard benchmarks; the competitive gap has closed enough that licensing terms and inference cost have become the primary differentiators.</li>
       </ul>
       <div class="sources">
-        <a href="https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen">Pennsylvania Governor's Office</a>
-        <a href="https://whyy.org/articles/shapiro-data-centers-executive-order-pennsylvania/">WHYY</a>
+        <a href="https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/">MarkTechPost</a>
+        <a href="https://datanorth.ai/news/alibaba-releases-qwen3-8-max">DataNorth</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.30s">
       <span class="rank">08</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Open Weights</span></div>
-      <h2>DeepSeek Ships Its First Vision Model and Claims Near-Parity with Claude Opus 4.8</h2>
-      <p class="why">On August 21 DeepSeek released V4-Flash-Vision-Exp on its API platform, a multimodal variant of V4-Flash that adds image understanding while keeping the base model's agentic behaviour, reasoning and world knowledge. DeepSeek's headline claim is that on multimodal agent benchmarks the model comes close to Claude Opus 4.8, Anthropic's current flagship. It is DeepSeek's entry into the multimodal race, and it arrives from the smaller and faster of the two V4 models rather than from V4-Pro.</p>
+      <div class="tags"><span class="tag">Hardware</span><span class="tag">Compute</span></div>
+      <h2>Google Commits Up to $120B to Marvell for Custom AI Silicon Through 2033</h2>
+      <p class="why">On August 18, Google and Marvell Technology signed a strategic agreement under which Google can acquire up to $12.2 billion in Marvell shares while Marvell builds chips and networking components for Google's AI infrastructure - a partnership potentially generating approximately $120 billion in Marvell revenue by 2033. The deal formalizes Marvell as one of Google's primary compute partners alongside its internal TPU teams, bypassing the Nvidia ecosystem for a significant share of Google's long-horizon buildout.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>The comparison DeepSeek chose is against a frontier flagship rather than a mid-tier peer, and it is made from the cheap model - the pricing argument stated as a benchmark.</li>
-        <li>The model is live now as deepseek-v4-flash-vision-exp and already listed on OpenRouter, so the claim is independently testable in days rather than quarters.</li>
-        <li>The Exp suffix marks an experimental line, which means DeepSeek is holding V4-Pro's multimodal answer in reserve.</li>
+        <li>A $120B committed-revenue figure for one silicon supplier through 2033 puts AI chip procurement in the same category as decade-long utility contracts - compute treated as infrastructure, not equipment.</li>
+        <li>The equity investment component - up to $12.2B in Marvell shares - aligns the supplier's financial incentives with the hyperscaler's roadmap in a way that pure supply agreements cannot.</li>
+        <li>Combined with NVIDIA's $500B Wall Street financing and AMD's Helios rack system, August has produced three separate signals that the compute buildout is entering a multi-year infrastructure phase, not a speculative sprint.</li>
       </ul>
       <div class="sources">
-        <a href="https://api-docs.deepseek.com/news/news260821/">DeepSeek API Docs</a>
-        <a href="https://siliconangle.com/2026/08/21/deepseek-debuts-multimodal-language-model-competitive-with-opus-4-8/">SiliconANGLE</a>
+        <a href="https://techstartups.com/2026/08/18/top-tech-news-today-august-18-2026-apple-baidu-bytedance-google-meta-openai-xiaomi-more/">TechStartups</a>
+        <a href="https://unrot.co/blogs/ai-news-today-august-21-2026">Unrot</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.34s">
       <span class="rank">09</span>
-      <div class="tags"><span class="tag">Models</span><span class="tag">Open Weights</span></div>
-      <h2>A Free 1M-Context Stealth Model Called Ox Alpha Appears on OpenRouter - Fingerprinting Points to Zhipu</h2>
-      <p class="why">On August 20 an anonymous model named Ox Alpha launched on OpenRouter and OpenCode under the provider name stealth, carrying a 1,048,576-token context window, text, image and video input, function calling, and $0 input, output and cache-read pricing for a one-week preview. OpenRouter describes it as a reasoning model aimed at coding, sustained agentic work and production workloads. Independent fingerprinting by researcher Ben Davis puts it at 99% likelihood of belonging to Zhipu AI's GLM-5.x family - and since the public GLM-5.3 is text-only, Ox Alpha would be an unreleased multimodal variant.</p>
+      <div class="tags"><span class="tag">Open Source</span><span class="tag">Tooling</span></div>
+      <h2>GLM-5.2 Turbo Ships Under MIT License - Purpose-Built for Agentic Coding at Scale</h2>
+      <p class="why">Z.AI released GLM-5.2 Turbo on August 17 under the MIT license, making the model freely available for commercial use, modification, and redistribution without revenue-share or use-case restrictions. The model targets agentic engineering, software development, and long-horizon reasoning - designed from the ground up for tool-calling and multi-step agentic workflows rather than retrofitting a general model. MIT licensing for a frontier-adjacent agentic model removes the friction that has slowed enterprise adoption of open-weight releases from Chinese labs.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>This is the fifth anonymous release in roughly six months and the previous four all came from Chinese labs - stealth-on-OpenRouter is now a standard pre-launch evaluation channel.</li>
-        <li>A free week at 1M context on a frontier-adjacent coding model buys a large, self-selected agentic eval set at essentially zero marketing cost.</li>
-        <li>Nothing has been officially confirmed: treat the Zhipu attribution as strong inference, not established fact.</li>
+        <li>GLM-5.2 Turbo is optimized for agentic work from the architecture up - tool calling, sustained reasoning, and code generation are primary design objectives, not added capabilities.</li>
+        <li>MIT is the most permissive commercial license available; enterprises can embed, fine-tune, quantize, and ship it inside proprietary products without negotiating terms.</li>
+        <li>The release came one day before the Ox Alpha stealth model appeared on OpenRouter, also attributed to the GLM-5.x family - Z.AI appears to be running parallel public and stealth evaluation tracks simultaneously.</li>
       </ul>
       <div class="sources">
-        <a href="https://openrouter.ai/compare/stealth/ox-alpha/z-ai/glm-5.3">OpenRouter</a>
-        <a href="https://officechai.com/ai/stealth-model-ox-alpha-available-for-free-for-a-week-on-openrouter-and-opencode/">OfficeChai</a>
+        <a href="https://llm-stats.com/ai-news">LLM Stats</a>
+        <a href="https://local-ai-zone.github.io/blog/ai-updates-august-2026.html">Local AI Zone</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.38s">
       <span class="rank">10</span>
-      <div class="tags"><span class="tag">Policy</span><span class="tag">Product</span></div>
-      <h2>OpenAI Launches ChatGPT for Teens and Rewrites the Model Spec Around It</h2>
-      <p class="why">On August 18 OpenAI introduced ChatGPT for Teens, a separate experience with stronger default protections, parental controls, age-based onboarding and learning-focused tooling: Study Mode, quizzes, homework reminders, study hours and healthy-use cues. It updated the Model Spec the same day with clearer teen guidance, explicit capability limits and refined handling of unsupported premises - so the document that defines intended model behaviour now encodes an age-conditional policy.</p>
+      <div class="tags"><span class="tag">Tooling</span><span class="tag">Infrastructure</span></div>
+      <h2>Cloudflare Kitesurf: A Lightweight Browser Runtime Built Natively for AI Agent Workloads</h2>
+      <p class="why">Cloudflare launched Kitesurf this week, a browser runtime built for AI agent workloads running on its Workers edge platform. It uses 3-7 times less CPU and memory than Chromium while passing more than 235,000 web platform tests, making it compatible enough with the real web to handle production sites. The gap between what AI agents need from a browser and what Chromium costs to run has been a meaningful production bottleneck; Kitesurf is the first purpose-built attempt to close it at the platform level.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Age-tiered behaviour moves out of the moderation layer and into the model specification itself, which is where it becomes auditable rather than merely asserted.</li>
-        <li>Regulatory pressure over minors and chatbots has been the sharpest consumer-safety issue in AI this year; shipping a distinct product is a pre-emptive answer to it.</li>
-        <li>OpenAI paired the launch with a CodeAI partnership pitched at preparing the first AI generation - education distribution arriving alongside the safety framing.</li>
+        <li>A 3-7x reduction in CPU and memory versus Chromium means an agent can spin up a browser session as an ephemeral tool call rather than a persistent, expensive sidecar process.</li>
+        <li>Running on Workers puts browser-capable agents inside Cloudflare's edge network, placing compute close to target sites and avoiding the round-trip overhead that slows agent browsing.</li>
+        <li>235,000-plus web platform test passes is the credibility number: real-world sites use modern web APIs that lightweight browser alternatives historically break on, which is exactly where agent browsing has failed in production.</li>
       </ul>
       <div class="sources">
-        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI Release Notes</a>
-        <a href="https://openai.com/news/company-announcements/">OpenAI Newsroom</a>
+        <a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store</a>
+        <a href="https://www.aiapps.com/blog/ai-news-august-breakthroughs-launches-trends-cant-miss/">AIapps</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.42s">
       <span class="rank">11</span>
-      <div class="tags"><span class="tag">Business</span><span class="tag">Policy</span></div>
-      <h2>ChatGPT Ads Land in 31 European Markets - Weeks After the AI Act Switched On</h2>
-      <p class="why">On August 19 OpenAI expanded ChatGPT Ads to 31 European markets, rolling out through OpenAI Ads Solutions and agency partners. It is the fastest geographic expansion of the ads product since launch, and it puts a monetised surface in front of European users in the same month the EU AI Act's Article 50 transparency duties came into force - the rules requiring AI systems to disclose that they are AI and requiring AI-generated content to carry machine-readable marks.</p>
+      <div class="tags"><span class="tag">Policy</span><span class="tag">Safety</span></div>
+      <h2>Illinois Becomes First US State to Mandate Independent Third-Party AI Safety Audits</h2>
+      <p class="why">Illinois enacted legislation requiring independent third-party safety audits of frontier AI models, effective January 1, 2027 - the first US state to move beyond disclosure requirements and mandate an externally verified assessment process. Colorado enacted complementary chatbot-specific legislation protecting minors from psychological and safety harms in the same cycle. Together the two acts set the leading edge of US state-level AI governance, arriving as the EU's enforcement machinery switches on at the federal level abroad.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>Advertising inside an assistant is a different unit of inventory to search or feed: the placement sits inside an answer, which is exactly where disclosure rules bite hardest.</li>
-        <li>Thirty-one markets at once implies legal review cleared broadly rather than country by country - a signal about how OpenAI reads the AI Act's transparency perimeter.</li>
-        <li>Non-compliance with Article 50 runs to EUR 15 million or 3% of worldwide annual turnover, whichever is higher, with a 2 December 2026 grace date for generative systems already on the market.</li>
+        <li>"Third-party audit" means an external body must assess the model, not the lab's internal safety team - the shift from self-reporting to independent verification is the substantive change, regardless of what the audits ultimately require.</li>
+        <li>A January 2027 effective date gives labs less than six months to identify auditors, agree on evaluation scope, and complete assessments - a tight timeline for a process that has no standard methodology yet.</li>
+        <li>Colorado's minor-protection law and Illinois's capability audit cover complementary threat surfaces - psychological harm and technical capability - and set a template other states are watching.</li>
       </ul>
       <div class="sources">
-        <a href="https://openai.com/news/company-announcements/">OpenAI Newsroom</a>
-        <a href="https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august">European Commission</a>
+        <a href="https://www.helpnetsecurity.com/2026/08/19/openai-model-safety-updates/">Help Net Security</a>
+        <a href="https://www.mintz.com/insights-center/viewpoints/54941/2026-08-07-ai-washington-report-august-2026-edition">Mintz AI Washington Report</a>
       </div>
     </article>
 
     <article class="topic" style="animation-delay:.46s">
       <span class="rank">12</span>
-      <div class="tags"><span class="tag claude">Claude</span><span class="tag">Dev Tools</span></div>
-      <h2>Claude Code Ships /design, a Concise Output Style, and a Line Item for US-Only Inference</h2>
-      <p class="why">Claude Code's August 17 week-34 release added a /design skill preview for editable UI artboards, a concise output style in which the model leads with results and skips preamble, and took Remote Control mobile support out of research preview. Version 2.1.239 on August 22 then exposed cost estimates that include a US-only inference premium for data-residency workspaces, added /claude-api upgrade for the Python 0.x to 1.x migration, and fixed Bedrock streaming behind proxies that strip response headers.</p>
+      <div class="tags"><span class="tag">Hardware</span><span class="tag">Compute</span></div>
+      <h2>AMD Helios: A Full Rack-Scale AI System Bundling Epyc 9006, MI455X, Pensando, and ROCm</h2>
+      <p class="why">AMD revealed Helios, an integrated rack-scale AI system combining sixth-generation Epyc 9006 CPUs with new Instinct MI455X GPUs, Pensando networking, and the ROCm software stack - claiming higher AI compute density, greater memory and scale-out bandwidth, and better tokens-per-dollar than equivalent Nvidia configurations. It is AMD's most direct challenge to Nvidia's DGX rack strategy: not a chip or a card but a complete purchasable factory unit aimed at the same hyperscaler and enterprise buyer.</p>
       <div class="moving-label">What's moving</div>
       <ul>
-        <li>A visible US-only inference premium turns data residency from a procurement checkbox into a per-token line item a developer can see before running the job.</li>
-        <li>Remote Control leaving research preview makes phone-driven control of a local session a supported path rather than an experiment - the session still runs on your own machine.</li>
-        <li>Shipping a concise output style as a product feature is a quiet admission that verbosity is a cost rather than a courtesy.</li>
+        <li>Packaging CPU, GPU, networking, and software into one system mirrors Nvidia's DGX approach - AMD is competing at the system integration level, which is where margin and stickiness are concentrated.</li>
+        <li>The tokens-per-dollar metric is the one hyperscalers actually optimize for; claiming superiority there is a go-to-market positioning statement aimed at procurement teams, not just benchmark audiences.</li>
+        <li>ROCm compatibility has been the persistent friction point for AMD GPU adoption in ML production; shipping Helios with ROCm as the native software layer rather than an opt-in migration path is AMD's answer to that objection.</li>
       </ul>
       <div class="sources">
-        <a href="https://releasebot.io/updates/anthropic/claude-code">Claude Code Release Notes</a>
+        <a href="https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-august-2026">Data Center Knowledge</a>
+        <a href="https://www.hpcwire.com/2026/08/18/whats-hot-now-custom-ai-chips/">HPCwire</a>
       </div>
     </article>
 <!-- TOPICS:END -->
