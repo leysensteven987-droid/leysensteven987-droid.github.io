@@ -332,319 +332,65 @@
     pointer-events: none;
   }
 
-  /* ── the private wing (personal apps) ── */
-  .wing {
-    width: 100%;
-    margin-top: 58px;
+  /* visually hidden, still read aloud */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
   }
-  .wing-head {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-  .wing-head .lbl {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    font-family: ui-monospace, monospace;
-    font-size: 10.5px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--dim);
-    white-space: nowrap;
-  }
-  .wing-head .lbl i {
+
+  /* ── the vault ─────────────────────────────────────────────────────────────
+     One hairline disclosure in the footer holding the four sealed personal decks
+     and the game. They used to be full bands on this page; moved here 2026-08-31
+     because they are mine, not the crew's shopfront. This is discretion, not
+     security: each deck still opens only on the owner passphrase.
+     ────────────────────────────────────────────────────────────────────────── */
+  .vault { margin-top: 30px; }
+  .vault > summary {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
     font-family: 'Noto Serif JP', serif;
-    font-style: normal;
-    font-size: 15px;
-    color: var(--ink);
-  }
-  .wing-head .rule {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--hairline), transparent);
-  }
-
-  .wing-note {
-    margin: -8px 0 20px;
-    font-size: 12.5px;
-    line-height: 1.55;
-    color: var(--dim);
-    max-width: 62ch;
-  }
-  a.pet .go .lock {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 11px;
-    margin-right: 7px;
-    opacity: 0.75;
-  }
-
-  .pets {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
-
-  a.pet {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 176px;
-    padding: 20px 20px 18px;
-    text-decoration: none;
-    background: var(--panel);
-    border: 1px solid var(--hairline);
-    border-radius: 12px;
-    overflow: hidden;
-    isolation: isolate;
-    transition: transform 0.4s cubic-bezier(.2,.7,.2,1),
-                border-color 0.4s ease,
-                background 0.4s ease,
-                box-shadow 0.4s ease;
-  }
-  a.pet::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.45s ease;
-    background: radial-gradient(92% 74% at 50% 0%, var(--accent-glow) 0%, transparent 64%);
-  }
-  a.pet:hover,
-  a.pet:focus-visible {
-    transform: translateY(-3px);
-    background: var(--panel-2);
-    border-color: var(--accent);
-    box-shadow: 0 14px 34px #0009, 0 0 20px var(--accent-shadow);
-    outline: none;
-  }
-  a.pet:hover::before,
-  a.pet:focus-visible::before { opacity: 1; }
-  a.pet:focus-visible {
-    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent), 0 14px 34px #0009;
-  }
-
-  a.pet .brush {
-    position: absolute;
-    top: -22px;
-    right: -8px;
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 700;
-    font-size: 116px;
-    line-height: 1;
-    color: var(--accent);
-    opacity: 0.07;
-    pointer-events: none;
-    user-select: none;
-    transition: opacity 0.45s ease;
-  }
-  a.pet:hover .brush,
-  a.pet:focus-visible .brush { opacity: 0.14; }
-
-  a.pet .jp {
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1;
-    color: var(--accent);
-  }
-  /* each app's own icon, inlined so the typeset-kanji marks (Tetsu, Raiden)
-     resolve against the Noto Serif JP this page already loads */
-  a.pet .logo {
-    display: block;
-    width: 46px;
-    height: 46px;
-    border-radius: 11px;
-    box-shadow: 0 2px 10px #0006;
-    transition: transform 0.4s cubic-bezier(.2,.7,.2,1);
-  }
-  a.pet:hover .logo,
-  a.pet:focus-visible .logo { transform: scale(1.06) rotate(-1.5deg); }
-  a.pet h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    font-size: 17px;
-    color: var(--text);
-    margin: 12px 0 3px;
-    line-height: 1.2;
-  }
-  a.pet .kicker {
-    font-family: ui-monospace, monospace;
-    font-size: 9.5px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--dim);
-    margin-bottom: 10px;
-  }
-  a.pet p {
-    font-size: 13px;
-    line-height: 1.52;
-    color: var(--muted);
-  }
-  a.pet .go {
-    margin-top: auto;
-    padding-top: 14px;
-    font-family: ui-monospace, monospace;
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    color: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-  }
-  a.pet .go .arw { transition: transform 0.4s cubic-bezier(.2,.7,.2,1); }
-  a.pet:hover .go .arw,
-  a.pet:focus-visible .go .arw { transform: translateX(5px); }
-
-  a.pet-ichikawa { --accent: var(--ichikawa); --accent-glow: #ff9db21c; --accent-shadow: #ff9db233; }
-  a.pet-toge     { --accent: var(--toge);     --accent-glow: #35c4b51c; --accent-shadow: #35c4b533; }
-  a.pet-tetsu    { --accent: var(--tetsu);    --accent-glow: #d7dae016; --accent-shadow: #d7dae02b; }
-  a.pet-raiden   { --accent: var(--raiden);   --accent-glow: #9dbf2e1c; --accent-shadow: #9dbf2e33; }
-
-  /* ── the game (Echoes of the Monarch) ─────────────────────────────────────────
-     Deliberately NOT a fifth card in the private wing below. Everything in that row
-     is a personal tool that runs on hardware in the house; this is a game, out in
-     the open, on a domain of its own. So it takes a band of its own, in the game's
-     palette rather than the Sumi-e panel, and it reads as a different kind of thing
-     at a glance. The grid is a single wide row, not four columns.
-     ⚠ NO KANJI anywhere in this section, section label included. Every other row on
-     this page leads with one, so the omission looks like an oversight and will get
-     "fixed". It is not: EOTM has no Japanese in its identity at all, and borrowing
-     KG's would put someone else's mark on the game. */
-  .realm { width: 100%; margin-top: 44px; }
-
-  a.realm-card {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 24px;
-    padding: 24px 26px;
-    text-decoration: none;
-    border-radius: 12px;
-    overflow: hidden;
-    isolation: isolate;
-    border: 1px solid #7fd6d038;
-    background:
-      radial-gradient(120% 150% at 20% -20%, #3c2460 0%, #1f1439 44%, var(--eotm-void) 100%);
-    transition: transform 0.4s cubic-bezier(.2,.7,.2,1),
-                border-color 0.4s ease,
-                box-shadow 0.4s ease;
-  }
-  /* the ember's bloom, pulled up and off the right edge: centred it tints the call
-     to action pink, which reads as a hover state the card is not in */
-  a.realm-card::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -150px; right: -120px;
-    width: 340px; height: 340px;
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(circle, #e0455f33 0%, transparent 62%);
-  }
-  a.realm-card::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 50%; left: -48px;
-    width: 340px; height: 340px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(circle, #7fd6d02e 0%, transparent 65%);
-  }
-  a.realm-card:hover,
-  a.realm-card:focus-visible {
-    transform: translateY(-3px);
-    border-color: #7fd6d08c;
-    box-shadow: 0 18px 44px #05030fa8, 0 0 22px #7fd6d02b;
-    outline: none;
-  }
-  a.realm-card:focus-visible {
-    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--eotm), 0 18px 44px #05030fa8;
-  }
-
-  a.realm-card .logo {
-    display: block;
-    width: 84px;
-    height: 84px;
-    border-radius: 19px;
-    box-shadow: 0 3px 14px #0008;
-    transition: transform 0.4s cubic-bezier(.2,.7,.2,1);
-  }
-  a.realm-card:hover .logo,
-  a.realm-card:focus-visible .logo { transform: scale(1.05) rotate(-1.5deg); }
-
-  .realm-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: ui-monospace, monospace;
-    font-size: 9.5px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--eotm);
-    margin-bottom: 9px;
-  }
-  .realm-eyebrow .ember {
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--eotm-ember);
-  }
-  a.realm-card h3 {
-    font-family: 'Noto Serif JP', Georgia, serif;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 1.15;
-    letter-spacing: 0.03em;
-    margin: 0 0 6px;
-    background: linear-gradient(180deg, #eafffd 0%, #aef3ee 42%, #54b3ac 100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-  .realm-tag {
-    font-family: 'Noto Serif JP', Georgia, serif;
-    font-style: italic;
     font-size: 14px;
-    color: var(--eotm-ink);
-    margin-bottom: 10px;
+    line-height: 1;
+    color: var(--dim);
+    opacity: 0.4;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: opacity 0.4s ease, color 0.4s ease;
   }
-  a.realm-card p {
-    font-size: 13px;
-    line-height: 1.55;
-    color: #b9d3e0b8;
-    max-width: 62ch;
+  .vault > summary::-webkit-details-marker { display: none; }
+  .vault > summary::marker { content: ''; }
+  .vault > summary:hover,
+  .vault > summary:focus-visible,
+  .vault[open] > summary { opacity: 1; color: var(--muted); }
+  .vault > summary:focus-visible { outline: 1px solid var(--border-card); outline-offset: 2px; }
+  .vault-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    margin-top: 14px;
   }
-  .realm-go {
-    flex: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
+  .vault-links a {
     font-family: ui-monospace, monospace;
-    font-size: 10.5px;
-    letter-spacing: 0.1em;
-    color: #aef3ee;
-    border: 1px solid #7fd6d061;
-    border-radius: 7px;
-    padding: 10px 15px;
-    background: #7fd6d010;
-    transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
-  a.realm-card:hover .realm-go,
-  a.realm-card:focus-visible .realm-go {
-    background: #7fd6d029;
-    border-color: #aef3eeb3;
-    color: #eafffd;
-  }
-  .realm-go .arw { transition: transform 0.4s cubic-bezier(.2,.7,.2,1); }
-  a.realm-card:hover .realm-go .arw,
-  a.realm-card:focus-visible .realm-go .arw { transform: translateX(5px); }
+  .vault-links a:hover,
+  .vault-links a:focus-visible { border-bottom-color: currentColor; }
+  /* each keeps its own app's locked accent, only on reach */
+  .vault-links a.v-ichikawa:hover, .vault-links a.v-ichikawa:focus-visible { color: var(--ichikawa); }
+  .vault-links a.v-toge:hover,     .vault-links a.v-toge:focus-visible     { color: var(--toge); }
+  .vault-links a.v-tetsu:hover,    .vault-links a.v-tetsu:focus-visible    { color: var(--tetsu); }
+  .vault-links a.v-raiden:hover,   .vault-links a.v-raiden:focus-visible   { color: var(--raiden); }
+  .vault-links a.v-eotm:hover,     .vault-links a.v-eotm:focus-visible     { color: var(--eotm); }
+
 
   /* ── footer ── */
   footer {
@@ -677,11 +423,7 @@
   html.preanim a.gate-left,
   html.preanim a.gate-right,
   html.preanim .seam,
-  html.preanim .wing,
-  html.preanim .realm,
   html.preanim footer   { opacity: 0; }
-  html.preanim .wing     { transform: translateY(16px); }
-  html.preanim .realm    { transform: translateY(16px); }
   html.preanim .logo     { transform: translateY(12px); }
   html.preanim .wordmark { transform: translateY(10px); }
   html.preanim .subtitle { transform: translateY(8px); }
@@ -698,8 +440,6 @@
   html.preanim a.gate-left,
   html.preanim a.gate-right,
   html.preanim .seam,
-  html.preanim .wing,
-  html.preanim .realm,
   html.preanim footer {
     transition: opacity 0.62s ease, transform 0.62s cubic-bezier(.2,.7,.2,1);
   }
@@ -716,9 +456,7 @@
   html.preanim.play a.gate-left  { opacity: 1; transform: none; transition-delay: 0.70s; }
   html.preanim.play a.gate-right { opacity: 1; transform: none; transition-delay: 0.82s; }
   html.preanim.play .seam     { opacity: 1; transform: scale(1); transition-delay: 1.0s; transition-timing-function: cubic-bezier(.34,1.56,.64,1); }
-  html.preanim.play .realm    { opacity: 1; transform: none; transition-delay: 1.14s; }
-  html.preanim.play .wing     { opacity: 1; transform: none; transition-delay: 1.26s; }
-  html.preanim.play footer    { opacity: 1; transform: none; transition-delay: 1.42s; }
+  html.preanim.play footer    { opacity: 1; transform: none; transition-delay: 1.14s; }
 
   /* one-time bloom on the logo (no resting glow) */
   @keyframes logoBloom {
@@ -727,26 +465,6 @@
     100% { text-shadow: none; }
   }
   html.preanim.play .logo { animation: logoBloom 1.1s ease 0.34s 1; }
-
-  /* ── responsive: the private wing folds to 2-up, then 1-up ── */
-  @media (max-width: 900px) {
-    .pets { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 460px) {
-    .pets { grid-template-columns: 1fr; }
-    a.pet { min-height: 0; }
-  }
-
-  /* the game band folds: mark + copy stack, and the call to action becomes a full
-     width row rather than a pill squeezed against the right edge */
-  @media (max-width: 760px) {
-    a.realm-card { grid-template-columns: auto 1fr; gap: 18px; padding: 20px; }
-    .realm-go { grid-column: 1 / -1; justify-content: center; }
-  }
-  @media (max-width: 460px) {
-    a.realm-card { grid-template-columns: 1fr; }
-    a.realm-card .logo { width: 64px; height: 64px; border-radius: 15px; }
-  }
 
   /* ── responsive: stack the two doors below 760px ── */
   @media (max-width: 760px) {
@@ -817,185 +535,23 @@
       </a>
     </main>
 
-    <!-- Echoes of the Monarch. NOT a fifth card in the private wing below: everything
-         in that row is a personal tool that runs on hardware in the house, and this is a
-         game, out in the open, on a domain of its own. Its own band, in its own palette,
-         so the difference reads at a glance. The link leaves this site on purpose.
-         No kanji in this section, label included: EOTM does not do that. -->
-    <section class="realm" aria-labelledby="realm-title">
-      <div class="wing-head">
-        <div class="lbl" id="realm-title">The game - Descend in the shadows</div>
-        <div class="rule" aria-hidden="true"></div>
-      </div>
-
-      <a class="realm-card" href="https://echoes-of-the-monarch.com" rel="noopener">
-        <!-- the game's own app icon, inlined: the gateway, teal rim, crimson ember at its
-             heart. Ids are eotm-prefixed so they cannot collide with the pet marks above. -->
-        <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Echoes of the Monarch app icon">
-          <defs>
-            <radialGradient id="eotmBg" cx="50%" cy="38%" r="82%">
-              <stop offset="0%" stop-color="#3c2460"/><stop offset="48%" stop-color="#1f1439"/><stop offset="100%" stop-color="#0c0a1c"/>
-            </radialGradient>
-            <linearGradient id="eotmVoid" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#060412"/><stop offset="100%" stop-color="#170d2b"/>
-            </linearGradient>
-            <linearGradient id="eotmRim" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#e2fffc"/><stop offset="28%" stop-color="#aef3ee"/>
-              <stop offset="72%" stop-color="#7fd6d0"/><stop offset="100%" stop-color="#54b3ac"/>
-            </linearGradient>
-            <radialGradient id="eotmEmber" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ffdde2"/><stop offset="32%" stop-color="#ff6177"/>
-              <stop offset="72%" stop-color="#e0455f"/><stop offset="100%" stop-color="#e0455f" stop-opacity="0"/>
-            </radialGradient>
-            <filter id="eotmSoft" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="16"/></filter>
-            <filter id="eotmGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="6"/></filter>
-            <filter id="eotmHot" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.5"/></filter>
-            <path id="eotmArchR" fill-rule="evenodd" d="M -110 112 L -110 -28 C -110 -112 -62 -156 0 -156 C 62 -156 110 -112 110 -28 L 110 112 Z M -76 112 L -76 -28 C -76 -96 -48 -122 0 -122 C 48 -122 76 -96 76 -28 L 76 112 Z"/>
-            <path id="eotmArchI" d="M -76 112 L -76 -28 C -76 -96 -48 -122 0 -122 C 48 -122 76 -96 76 -28 L 76 112 Z"/>
-            <clipPath id="eotmArchClip"><use href="#eotmArchI"/></clipPath>
-          </defs>
-          <rect width="512" height="512" rx="112" fill="url(#eotmBg)"/>
-          <g transform="translate(256,256) scale(1.12)">
-            <use href="#eotmArchR" fill="#7fd6d0" opacity="0.6" filter="url(#eotmSoft)"/>
-            <use href="#eotmArchI" fill="url(#eotmVoid)"/>
-            <g clip-path="url(#eotmArchClip)">
-              <circle cx="0" cy="-10" r="78" fill="#e0455f" opacity="0.45" filter="url(#eotmSoft)"/>
-              <circle cx="0" cy="-10" r="44" fill="url(#eotmEmber)"/>
-            </g>
-            <circle cx="0" cy="-10" r="16" fill="#ff8fa0" filter="url(#eotmHot)"/>
-            <circle cx="0" cy="-10" r="9.5" fill="#ffecef"/>
-            <ellipse cx="0" cy="112" rx="120" ry="10" fill="#7fd6d0" opacity="0.5" filter="url(#eotmGlow)"/>
-            <use href="#eotmArchR" fill="url(#eotmRim)"/>
-            <path d="M -76 112 L -76 -28 C -76 -96 -48 -122 0 -122 C 48 -122 76 -96 76 -28 L 76 112" fill="none" stroke="#eafffd" stroke-width="3" opacity="0.9"/>
-            <circle cx="0" cy="-156" r="17" fill="#e0455f" opacity="0.6" filter="url(#eotmGlow)"/>
-            <circle cx="0" cy="-156" r="8.5" fill="#ff6177"/>
-          </g>
-        </svg>
-
-        <div class="realm-body">
-          <div class="realm-eyebrow"><span class="ember" aria-hidden="true"></span>Personal &middot; game project</div>
-          <h3>Echoes of the Monarch</h3>
-          <div class="realm-tag">Every shadow remembers its king.</div>
-          <p>A real-time co-op dark-fantasy dungeon crawler for a small party of friends. Raid the gates between worlds, harvest the dead into a shadow army, and grow a guild hall from the spoils. In build.</p>
-        </div>
-
-        <div class="realm-go">echoes-of-the-monarch.com <span class="arw">&rarr;</span></div>
-      </a>
-    </section>
-
-    <section class="wing" aria-labelledby="wing-title">
-      <div class="wing-head">
-        <div class="lbl" id="wing-title"><i>私</i> Private wing &middot; sealed</div>
-        <div class="rule" aria-hidden="true"></div>
-      </div>
-      <p class="wing-note">Personal apps, for my own eyes. Each deck is encrypted at rest and opens on the owner passphrase.</p>
-
-      <div class="pets">
-        <a class="pet pet-ichikawa" href="/kage-gumi-presentation/ichikawa.html">
-          <span class="brush" aria-hidden="true">市</span>
-          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Ichikawa app icon">
-            <rect x="16" y="16" width="480" height="480" rx="112" fill="#FF9DB2"/>
-            <rect x="16" y="16" width="480" height="480" rx="112" fill="#FFB6C6" opacity="0.35"/>
-            <g stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.45">
-              <path d="M150 300 q-14 -22 0 -44 q14 -22 0 -44"/>
-              <path d="M362 300 q14 -22 0 -44 q-14 -22 0 -44"/>
-            </g>
-            <circle cx="182" cy="118" r="38" fill="#40353C"/><circle cx="330" cy="118" r="38" fill="#40353C"/>
-            <circle cx="182" cy="118" r="18" fill="#FFB6C6"/><circle cx="330" cy="118" r="18" fill="#FFB6C6"/>
-            <circle cx="256" cy="190" r="112" fill="#FFFFFF"/>
-            <circle cx="180" cy="222" r="15" fill="#FFB6C6" opacity="0.8"/><circle cx="332" cy="222" r="15" fill="#FFB6C6" opacity="0.8"/>
-            <ellipse cx="210" cy="184" rx="33" ry="41" fill="#40353C" transform="rotate(-18 210 184)"/>
-            <ellipse cx="302" cy="184" rx="33" ry="41" fill="#40353C" transform="rotate(18 302 184)"/>
-            <circle cx="214" cy="192" r="13" fill="#FFFFFF"/><circle cx="298" cy="192" r="13" fill="#FFFFFF"/>
-            <circle cx="216" cy="194" r="7" fill="#2C2530"/><circle cx="296" cy="194" r="7" fill="#2C2530"/>
-            <circle cx="212" cy="189" r="3" fill="#FFFFFF"/><circle cx="294" cy="189" r="3" fill="#FFFFFF"/>
-            <ellipse cx="256" cy="226" rx="13" ry="9" fill="#2C2530"/>
-            <path d="M256 235 v9 M256 244 q-11 9 -21 4 M256 244 q11 9 21 4" stroke="#2C2530" stroke-width="4" stroke-linecap="round" fill="none"/>
-            <path d="M104 342 C104 430 168 482 256 482 C344 482 408 430 408 342 Z" fill="#4B3B42"/>
-            <ellipse cx="256" cy="476" rx="46" ry="10" fill="#3A2E34"/>
-            <ellipse cx="256" cy="342" rx="152" ry="30" fill="#F0C27B"/>
-            <ellipse cx="256" cy="344" rx="134" ry="23" fill="#E6B36A"/>
-            <g stroke="#FFF6E5" stroke-width="8" stroke-linecap="round" fill="none">
-              <path d="M178 338 q22 -16 44 0 t44 0 t44 0"/>
-              <path d="M186 350 q22 14 44 0 t44 0 t40 0"/>
-            </g>
-            <rect x="196" y="304" width="42" height="54" rx="6" fill="#2C2530" transform="rotate(-8 217 331)"/>
-            <circle cx="316" cy="338" r="20" fill="#FFFFFF" stroke="#FF9DB2" stroke-width="4"/>
-            <path d="M316 338 m0 -12 a12 12 0 1 1 -10 6" stroke="#FF9DB2" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M116 348 a150 28 0 0 0 280 0" stroke="#FFFFFF" stroke-width="5" opacity="0.25" fill="none" stroke-linecap="round"/>
-          </svg>
-          <h3>Ichikawa</h3>
-          <div class="kicker">The Market Scout</div>
-          <p>A week of dinners into one shopping list, ordered the way the shop is laid out.</p>
-          <div class="go"><span class="lock" aria-hidden="true">錠</span>Unseal <span class="arw">&rarr;</span></div>
-        </a>
-
-        <a class="pet pet-toge" href="/kage-gumi-presentation/toge.html">
-          <span class="brush" aria-hidden="true">峠</span>
-          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Tōge app icon">
-            <defs>
-              <clipPath id="togeSq"><rect x="0" y="0" width="512" height="512" rx="115"/></clipPath>
-              <linearGradient id="togeTeal" x1="0" y1="76" x2="0" y2="327" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#0E7C72"/><stop offset="1" stop-color="#0A5C55"/>
-              </linearGradient>
-            </defs>
-            <g clip-path="url(#togeSq)">
-              <rect width="512" height="512" fill="#0B0E13"/>
-              <g transform="translate(0,54)">
-                <path d="M60 320 L138 162 C142 154 148 154 152 162 L246 252 C251 259 259 259 264 250 L340 88 C345 76 355 76 360 88 L458 320 Z"
-                      fill="url(#togeTeal)" stroke="url(#togeTeal)" stroke-width="14" stroke-linejoin="round"/>
-                <path d="M292 190 L338 92 C343 80 353 80 358 92 L386 150 L372 168 L364 144 L348 178 L336 150 L320 196 L308 168 Z" fill="#F4F2EC"/>
-              </g>
-            </g>
-          </svg>
-          <h3>Tōge</h3>
-          <div class="kicker">The Pass</div>
-          <p>Self-hosted navigation that optimises for the road, not the arrival time.</p>
-          <div class="go"><span class="lock" aria-hidden="true">錠</span>Unseal <span class="arw">&rarr;</span></div>
-        </a>
-
-        <a class="pet pet-tetsu" href="/kage-gumi-presentation/tetsu.html">
-          <span class="brush" aria-hidden="true">鉄</span>
-          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Tetsu app icon">
-            <defs>
-              <linearGradient id="tetsuSteel" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#eef1f5"/><stop offset="0.5" stop-color="#c2c7cf"/><stop offset="1" stop-color="#8b9099"/>
-              </linearGradient>
-            </defs>
-            <rect x="16" y="16" width="480" height="480" rx="104" fill="#17191d"/>
-            <rect x="40" y="40" width="432" height="432" rx="84" fill="none" stroke="#2a2e34" stroke-width="6"/>
-            <circle cx="92" cy="92" r="12" fill="#3a3f47"/><circle cx="420" cy="92" r="12" fill="#3a3f47"/>
-            <circle cx="92" cy="420" r="12" fill="#3a3f47"/><circle cx="420" cy="420" r="12" fill="#3a3f47"/>
-            <text x="256" y="256" text-anchor="middle" dominant-baseline="central"
-                  font-family="'Yu Gothic','Hiragino Sans','Noto Sans JP','Noto Serif JP',serif"
-                  font-weight="700" font-size="272" fill="url(#tetsuSteel)">鉄</text>
-          </svg>
-          <h3>Tetsu</h3>
-          <div class="kicker">The Wrench</div>
-          <p>One motorcycle, documented properly - with the workshop manual searchable inside.</p>
-          <div class="go"><span class="lock" aria-hidden="true">錠</span>Unseal <span class="arw">&rarr;</span></div>
-        </a>
-
-        <a class="pet pet-raiden" href="/kage-gumi-presentation/raiden.html">
-          <span class="brush" aria-hidden="true">雷</span>
-          <svg class="logo" viewBox="0 0 512 512" role="img" aria-label="Raiden app icon">
-            <rect x="16" y="16" width="480" height="480" rx="112" fill="#0f1410"/>
-            <rect x="30" y="30" width="452" height="452" rx="100" fill="none" stroke="#9dbf2e" stroke-width="8" opacity="0.55"/>
-            <path d="M300 96 L188 288 h72 l-40 128 132-200 h-76 z" fill="#9dbf2e" opacity="0.22"/>
-            <text x="256" y="352" text-anchor="middle" font-family="'Noto Serif JP','Yu Mincho',serif"
-                  font-size="300" font-weight="700" fill="#9dbf2e">雷</text>
-          </svg>
-          <h3>Raiden</h3>
-          <div class="kicker">The Appliance Tech</div>
-          <p>Manuals, fault codes and parts for every machine in the house. Scaffold.</p>
-          <div class="go"><span class="lock" aria-hidden="true">錠</span>Unseal <span class="arw">&rarr;</span></div>
-        </a>
-      </div>
-    </section>
-
     <footer>
       <div class="punchline">The crew presents itself.</div>
       <div class="footnote">影組 &middot; KAGE-GUMI</div>
+
+      <!-- The private wing and the game, folded out of the page body. The four decks
+           are encrypted at rest and open on the owner passphrase; the game link leaves
+           this site. Kept as a plain <details> so it works with no JS. -->
+      <details class="vault">
+        <summary title="Private"><span aria-hidden="true">私</span><span class="sr-only">Private</span></summary>
+        <nav class="vault-links" aria-label="Private">
+          <a class="v-ichikawa" href="/kage-gumi-presentation/ichikawa.html">Ichikawa</a>
+          <a class="v-toge"     href="/kage-gumi-presentation/toge.html">Tōge</a>
+          <a class="v-tetsu"    href="/kage-gumi-presentation/tetsu.html">Tetsu</a>
+          <a class="v-raiden"   href="/kage-gumi-presentation/raiden.html">Raiden</a>
+          <a class="v-eotm"     href="https://echoes-of-the-monarch.com" rel="noopener">Echoes of the Monarch</a>
+        </nav>
+      </details>
     </footer>
   </div>
 
