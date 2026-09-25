@@ -664,19 +664,31 @@
   var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
   var root = document.documentElement;
 
-  /* "Hear it": a Japanese voice reads かげぐみ; with none installed, an English
-     voice reads the respelling. Button stays hidden without speech synthesis. */
+  /* "Hear it": a pre-rendered clip (male Japanese neural voice, pitched down) so
+     every device hears the same thing. Browser speech is only the fallback if the
+     clip can't play: prefer a male Japanese voice, lower the pitch. */
   var sayBtn = document.getElementById('say-btn');
-  if (sayBtn && 'speechSynthesis' in window) {
+  if (sayBtn) {
     sayBtn.hidden = false;
-    sayBtn.addEventListener('click', function () {
+    var clip = new Audio('/say-kage-gumi.mp3');
+    clip.preload = 'auto';
+    var synthSay = function () {
+      if (!('speechSynthesis' in window)) return;
       var synth = window.speechSynthesis;
       synth.cancel();
-      var ja = synth.getVoices().filter(function (v) { return /^ja/i.test(v.lang); })[0];
-      var u = new SpeechSynthesisUtterance(ja ? 'かげぐみ' : 'kah geh, goo mee');
-      if (ja) { u.voice = ja; u.lang = ja.lang; } else { u.lang = 'en-US'; }
+      var ja = synth.getVoices().filter(function (v) { return /^ja/i.test(v.lang); });
+      var male = ja.filter(function (v) { return /ichiro|keita|otoya|hattori|daichi|naoki|male/i.test(v.name); })[0];
+      var v = male || ja[0];
+      var u = new SpeechSynthesisUtterance(v ? 'かげぐみ' : 'kah geh, goo mee');
+      if (v) { u.voice = v; u.lang = v.lang; } else { u.lang = 'en-US'; }
       u.rate = 0.8;
+      u.pitch = 0.6;
       synth.speak(u);
+    };
+    sayBtn.addEventListener('click', function () {
+      clip.currentTime = 0;
+      var p = clip.play();
+      if (p && p.catch) p.catch(synthSay);
     });
   }
 
