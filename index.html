@@ -128,10 +128,93 @@
     text-transform: uppercase;
   }
 
+  /* ── say it: pronunciation card, sits between the header and the doors ── */
+  .say {
+    width: 100%;
+    max-width: 640px;
+    margin-top: 44px;
+    padding: 24px 28px 22px;
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    text-align: center;
+  }
+  .say-q {
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .say-big {
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin-top: 12px;
+  }
+  .say-big .sep { color: var(--dim); font-weight: 400; margin: 0 0.12em; }
+  .say-q .nw { white-space: nowrap; }
+  .say-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .say-syl {
+    padding: 10px 6px 9px;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    background: var(--bg);
+  }
+  .say-syl b {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .say-syl span {
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .say-note {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-top: 16px;
+  }
+  .say-note .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--crimson);
+  }
+  .say-btn {
+    margin-top: 14px;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--teal);
+    background: transparent;
+    border: 1px solid var(--border-card);
+    border-radius: 999px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .say-btn:hover,
+  .say-btn:focus-visible { border-color: var(--teal); background: #2fe8d20f; outline: none; }
+  .say-btn[hidden] { display: none; }
+
   /* ── the two gateways ── */
   .gateways {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 44px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: stretch;
@@ -420,10 +503,12 @@
   html.preanim .logo,
   html.preanim .wordmark,
   html.preanim .subtitle,
+  html.preanim .say,
   html.preanim a.gate-left,
   html.preanim a.gate-right,
   html.preanim .seam,
   html.preanim footer   { opacity: 0; }
+  html.preanim .say      { transform: translateY(12px); }
   html.preanim .logo     { transform: translateY(12px); }
   html.preanim .wordmark { transform: translateY(10px); }
   html.preanim .subtitle { transform: translateY(8px); }
@@ -437,6 +522,7 @@
   html.preanim .logo,
   html.preanim .wordmark,
   html.preanim .subtitle,
+  html.preanim .say,
   html.preanim a.gate-left,
   html.preanim a.gate-right,
   html.preanim .seam,
@@ -453,6 +539,7 @@
   html.preanim.play .wordmark { opacity: 1; transform: none; transition-delay: 0.44s; }
   html.preanim.play .subtitle { opacity: 1; transform: none; transition-delay: 0.52s; }
   html.preanim.play header    { opacity: 1; }
+  html.preanim.play .say      { opacity: 1; transform: none; transition-delay: 0.60s; }
   html.preanim.play a.gate-left  { opacity: 1; transform: none; transition-delay: 0.70s; }
   html.preanim.play a.gate-right { opacity: 1; transform: none; transition-delay: 0.82s; }
   html.preanim.play .seam     { opacity: 1; transform: scale(1); transition-delay: 1.0s; transition-timing-function: cubic-bezier(.34,1.56,.64,1); }
@@ -491,6 +578,9 @@
     a.gate:hover::after, a.gate:focus-visible::after { transform: scaleX(1); }
     .logo { font-size: 60px; }
     footer { margin-top: 48px; }
+    .say { padding: 22px 18px 20px; }
+    .say-big { font-size: 26px; }
+    .say-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -509,6 +599,19 @@
       <div class="wordmark">KAGE-GUMI</div>
       <div class="subtitle">Shadow Crew Protocol</div>
     </header>
+
+    <section class="say" aria-labelledby="say-q">
+      <div class="say-q" id="say-q">How the hell do I pronounce <span class="nw">Kage-Gumi?</span></div>
+      <div class="say-big">kah<span class="sep">&middot;</span>geh&nbsp;&nbsp;goo<span class="sep">&middot;</span>mee</div>
+      <div class="say-grid">
+        <div class="say-syl"><b>kah</b><span>as in "car", drop the r</span></div>
+        <div class="say-syl"><b>geh</b><span>as in "get", drop the t</span></div>
+        <div class="say-syl"><b>goo</b><span>as in "goo"</span></div>
+        <div class="say-syl"><b>mee</b><span>as in "me"</span></div>
+      </div>
+      <p class="say-note">Hard g both times, and the same weight on every syllable. Not "cage gummy".<br><span class="jp">影</span> kage, shadow &middot; <span class="jp">組</span> gumi, crew.</p>
+      <button type="button" class="say-btn" id="say-btn" hidden>&#9654; Hear it</button>
+    </section>
 
     <main class="gateways">
       <a class="gate gate-left" href="/kage-gumi-presentation/">
@@ -560,6 +663,22 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
   var root = document.documentElement;
+
+  /* "Hear it": a Japanese voice reads かげぐみ; with none installed, an English
+     voice reads the respelling. Button stays hidden without speech synthesis. */
+  var sayBtn = document.getElementById('say-btn');
+  if (sayBtn && 'speechSynthesis' in window) {
+    sayBtn.hidden = false;
+    sayBtn.addEventListener('click', function () {
+      var synth = window.speechSynthesis;
+      synth.cancel();
+      var ja = synth.getVoices().filter(function (v) { return /^ja/i.test(v.lang); })[0];
+      var u = new SpeechSynthesisUtterance(ja ? 'かげぐみ' : 'kah geh, goo mee');
+      if (ja) { u.voice = ja; u.lang = ja.lang; } else { u.lang = 'en-US'; }
+      u.rate = 0.8;
+      synth.speak(u);
+    });
+  }
 
   /* entrance: only arm when motion is allowed */
   if (!reduce) {
