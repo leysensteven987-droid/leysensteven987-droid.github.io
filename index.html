@@ -69,6 +69,7 @@
     --accent-wash: rgba(91,141,239,.10);
     --seal-bg: #5b8def;
     --seal-ink: #121826;
+    --seal-red: #e0644a;            /* the house seal: 影 only, once per surface */
     --grid-minor: rgba(44,53,72,.55);
     --grid-major: rgba(63,74,97,.55);
     --shadow: 0 1px 2px rgba(0,0,0,.28), 0 12px 32px -16px rgba(0,0,0,.55);
@@ -100,6 +101,7 @@
     --accent-wash: rgba(37,99,235,.07);
     --seal-bg: #2563eb;
     --seal-ink: #f9fbfd;
+    --seal-red: #a8331f;            /* the house seal: 影 only, once per surface */
     --grid-minor: rgba(203,213,225,.45);
     --grid-major: rgba(148,163,184,.30);
     --shadow: 0 1px 2px rgba(15,23,42,.05), 0 12px 32px -18px rgba(15,23,42,.16);
@@ -231,7 +233,7 @@
     font-family: var(--serif);
     font-weight: 700;
     font-size: 56px;
-    color: var(--text);
+    color: var(--seal-red);         /* the main kanji carries the seal red */
     line-height: 1;
     letter-spacing: .04em;
     margin-top: 26px;
@@ -551,6 +553,8 @@
   a.gate:hover .go .arw,
   a.gate:focus-visible .go .arw { transform: translateX(4px); }
 
+  /* the 影 door seal is the house seal: seal red, not house blue */
+  .seam .seal { background: var(--seal-red); }
   /* ── seal divider between the doors ── */
   .seam {
     position: relative;
