@@ -672,6 +672,23 @@
   .vault-links a.v-tetsu    { --hue: var(--v-tetsu); }
   .vault-links a.v-raiden   { --hue: var(--v-raiden); }
   .vault-links a.v-eotm     { --hue: var(--v-eotm); }
+  /* vault gate */
+  .vault-gate { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 14px; }
+  .vault-gate[hidden], .vault-links[hidden] { display: none; }
+  .vault-gate input {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--text);
+    background: transparent; border: 1px solid var(--border-strong); border-radius: 5px;
+    padding: 6px 10px; width: 170px; outline: none;
+  }
+  .vault-gate input:focus-visible { border-color: var(--accent); }
+  .vault-gate button {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--dim); background: transparent; border: 1px solid var(--border-strong);
+    border-radius: 5px; padding: 6px 12px; cursor: pointer;
+    transition: color .25s ease, border-color .25s ease;
+  }
+  .vault-gate button:hover, .vault-gate button:focus-visible { color: var(--text); border-color: var(--accent); outline: none; }
+  .vault-msg { flex-basis: 100%; min-height: 1em; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
   /* ─────────── entrance choreography ───────────
      Motion-safe pages get .preanim (set pre-paint) which hides elements; .play
@@ -832,19 +849,39 @@
       <div class="punchline">The crew presents itself.</div>
       <div class="footnote"><span class="jp">影組</span> &middot; KAGE-GUMI</div>
 
-      <!-- The private wing and the game, folded out of the page body. The four decks
-           are encrypted at rest and open on the owner passphrase; the game link leaves
-           this site. Kept as a plain <details> so it works with no JS. -->
-      <details class="vault">
-        <summary title="Private"><span aria-hidden="true">私</span><span class="sr-only">Private</span></summary>
-        <nav class="vault-links" aria-label="Private">
-          <a class="v-ichikawa" href="/kage-gumi-presentation/ichikawa.html">Ichikawa</a>
-          <a class="v-toge"     href="/kage-gumi-presentation/toge.html">Tōge</a>
-          <a class="v-tetsu"    href="/kage-gumi-presentation/tetsu.html">Tetsu</a>
-          <a class="v-raiden"   href="/kage-gumi-presentation/raiden.html">Raiden</a>
-          <a class="v-eotm"     href="https://echoes-of-the-monarch.com" rel="noopener">Echoes of the Monarch</a>
-        </nav>
-      </details>
+      <!-- vault:begin -->
+<!-- The private wing and the game. The link list is NOT in this page: it is an
+     AES-256-GCM payload that opens in the browser on the owner passphrase
+     (scripts/seal-landing-vault.mjs). Rebuild with that script; never hand-edit. -->
+<details class="vault">
+  <summary title="Private"><span aria-hidden="true">私</span><span class="sr-only">Private</span></summary>
+  <form class="vault-gate" id="vault-gate" autocomplete="off" novalidate>
+    <input type="password" id="vault-pw" placeholder="passphrase" aria-label="Passphrase" autocomplete="off" spellcheck="false">
+    <button type="submit">Open</button>
+    <span class="vault-msg" id="vault-msg" role="status" aria-live="polite"></span>
+  </form>
+  <nav class="vault-links" id="vault-links" aria-label="Private" hidden></nav>
+</details>
+<script>
+(function(){
+  const SALT="3fP2CvjOtYcxZyCYMc77bg==", IV="ZcZnT7PcfQOvHfGg", CT="Me1bPtCIxeEzkTTdrxdgnqFQLMQgx6013/9BPUDJYwUhEDAQ1iIGNbuhcSK+kOkmDLwZpH4C2fgoHKdeO3ImgaAnVnSlxPsF6SpMV3bWBLD7wplItvHcor3A5V+ZldoFWigCxQwWylr6MwCffqdyCqFzqqhCfT5TGh+12l79HT/05bsm52LGCR5swj8AP6/QmUureuZgGGDJSNLGBxcS5ZYMzGCnvw3n7A84GZE1sCYTR+HAWsD06TqcHI5MOosLL3OpHSJ9l/Oaa3ExVo0xE2rSWb/aSMj5nAcHN8pAGvVyYOjYvf0ZWmNqbNOfPkA/rN83IMFaqV85fjDik2d2SP1pnH2kYfCn0/dgBUXv+OfwNzJ3MVpn7cCmbZjFPstZAuJhYJu/B1mXrPQAuLfku6gRkRoRIKEh1dpEithN/i/AtOouzTWRnD+PYa1Ix87/ZkO1ZOK8SuPCj20PIw8aQi1o0ZbgfxteoyHScaxaEsQ58xM6n875bOriJ4MVSGhj6ImKqnzFReh8+Wtrvjif9n5PqSk5WbatQw==", ITER=250000;
+  var form=document.getElementById("vault-gate"), pw=document.getElementById("vault-pw"),
+      msg=document.getElementById("vault-msg"), nav=document.getElementById("vault-links");
+  function b64(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;}
+  form.addEventListener("submit",async function(e){
+    e.preventDefault(); msg.textContent="";
+    if(!pw.value||!window.crypto||!crypto.subtle){msg.textContent="Needs a secure page.";return;}
+    try{
+      var km=await crypto.subtle.importKey("raw",new TextEncoder().encode(pw.value),"PBKDF2",false,["deriveKey"]);
+      var key=await crypto.subtle.deriveKey({name:"PBKDF2",salt:b64(SALT),iterations:ITER,hash:"SHA-256"},km,{name:"AES-GCM",length:256},false,["decrypt"]);
+      var pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(IV)},key,b64(CT));
+      nav.innerHTML=new TextDecoder().decode(pt);
+      nav.hidden=false; form.hidden=true; pw.value="";
+    }catch(err){msg.textContent="Not the passphrase."; pw.select();}
+  });
+})();
+</script>
+<!-- vault:end -->
     </footer>
   </div>
 
